@@ -9,8 +9,19 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
+    const hideThreshold = 180; // scrollY at which top bar hides
+    const showThreshold = 120; // scrollY at which top bar reappears
+    let lastState = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      const scrollY = window.scrollY;
+      if (!lastState && scrollY > hideThreshold) {
+        setIsScrolled(true);
+        lastState = true;
+      } else if (lastState && scrollY < showThreshold) {
+        setIsScrolled(false);
+        lastState = false;
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
