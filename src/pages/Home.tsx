@@ -173,7 +173,7 @@ const Home = () => {
             {faqs.map((faq, index) => (
               <Card key={index} className="mb-4">
                 <CardHeader 
-                  className="cursor-pointer hover:bg-muted/50 transition-colors"
+                  className="cursor-pointer hover:bg-muted/50 transition-colors py-4"
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <div className="flex justify-between items-center">
@@ -187,7 +187,7 @@ const Home = () => {
                 </CardHeader>
                 {openFaq === index && (
                   <CardContent>
-                    <p className="text-muted-foreground">{faq.answer}</p>
+                    <p className="text-muted-foreground pt-4">{faq.answer}</p>
                   </CardContent>
                 )}
               </Card>
