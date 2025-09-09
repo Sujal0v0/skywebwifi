@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CTASection = () => {
   return (
@@ -9,14 +9,19 @@ const CTASection = () => {
           Ready for Your Mountain Adventure?
         </h2>
         <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-          Book your stay today and experience the perfect blend of nature and comfort at Pine Ridge RV Resort.
+          Book your stay today and experience the perfect blend of nature and
+          comfort at Pine Ridge RV Resort.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="cta" size="lg" asChild>
-            <Link to="/reservations">Book Now</Link>
+            <Link href="/reservations">Book Now</Link>
           </Button>
-          <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-            <Link to="/rates">View Rates</Link>
+          <Button
+            variant="outline"
+            size="lg"
+            className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+          >
+            <Link href="/rates">View Rates</Link>
           </Button>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   Phone,
   Mail,
@@ -7,6 +6,7 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -58,37 +58,37 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <nav className="flex flex-col gap-2">
               <Link
-                to="/"
+                href="/"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Home
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 About Us
               </Link>
               <Link
-                to="/amenities"
+                href="/amenities"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Amenities
               </Link>
               <Link
-                to="/rates"
+                href="/rates"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Rates & Pricing
               </Link>
               <Link
-                to="/reservations"
+                href="/reservations"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Reservations
               </Link>
               <Link
-                to="/about/rules"
+                href="/about/rules"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Park Rules

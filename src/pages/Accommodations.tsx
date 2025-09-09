@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { 
   Tent, 
   Home, 
@@ -13,6 +12,7 @@ import {
   Mountain,
   Users
 } from 'lucide-react';
+import Link from 'next/link';
 
 const Accommodations = () => {
   const siteTypes = [
@@ -239,10 +239,10 @@ const Accommodations = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/reservations">Check Availability</Link>
+              <Link href="/reservations">Check Availability</Link>
             </Button>
             <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
-              <Link to="/amenities">View Amenities</Link>
+              <Link href="/amenities">View Amenities</Link>
             </Button>
           </div>
         </div>

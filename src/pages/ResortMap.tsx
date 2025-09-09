@@ -6,7 +6,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import {
   MapPin,
   Navigation,
@@ -19,7 +18,7 @@ import {
   Download,
   Info,
 } from "lucide-react";
-import rvMap from "@/assets/rv-map.png";
+import Link from "next/link";
 
 const ResortMap = () => {
   const mapAreas = [
@@ -202,7 +201,10 @@ const ResortMap = () => {
         </div>
       </section>
 
-      <img src={rvMap} className="container mx-auto pt-10 max-w-[1000px]" />
+      <img
+        src={"/assets/rv-map.png"}
+        className="container mx-auto pt-10 max-w-[1000px]"
+      />
       {/* Quick Navigation */}
       <section className="py-12 bg-background border-b border-border">
         <div className="container mx-auto px-4">
@@ -470,7 +472,7 @@ const ResortMap = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/reservations">Reserve Your Site</Link>
+              <Link href="/reservations">Reserve Your Site</Link>
             </Button>
             <Button
               variant="outline"
@@ -478,7 +480,7 @@ const ResortMap = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link to="/accommodations">View Accommodations</Link>
+              <Link href="/accommodations">View Accommodations</Link>
             </Button>
           </div>
         </div>

@@ -1,12 +1,14 @@
+"use client";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
 
@@ -79,12 +81,12 @@ const Header = () => {
     { name: "Reservations", href: "/reservations" },
   ];
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: string) => pathname === href;
   const isActiveSection = (href: string, submenu?: any[]) => {
     if (submenu) {
-      return submenu.some((item) => location.pathname === item.href);
+      return submenu.some((item) => pathname === item.href);
     }
-    return location.pathname === href;
+    return pathname === href;
   };
 
   return (
@@ -113,7 +115,7 @@ const Header = () => {
 
         {/* Main navigation */}
         <div className="flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="w-12 h-12 bg-hero-gradient rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
               RV
             </div>
@@ -139,7 +141,7 @@ const Header = () => {
                 {item.submenu ? (
                   <>
                     <Link
-                      to={item.href}
+                      href={item.href}
                       className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
                         isActiveSection(item.href, item.submenu)
                           ? "text-primary"
@@ -160,7 +162,7 @@ const Header = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          to={subItem.href}
+                          href={subItem.href}
                           className={`block px-4 py-3 text-sm hover:bg-muted transition-colors first:rounded-t-lg last:rounded-b-lg ${
                             isActive(subItem.href)
                               ? "text-primary bg-muted"
@@ -174,7 +176,7 @@ const Header = () => {
                   </>
                 ) : (
                   <Link
-                    to={item.href}
+                    href={item.href}
                     className={`text-sm font-medium transition-colors hover:text-primary ${
                       isActive(item.href) ? "text-primary" : "text-foreground"
                     }`}
@@ -189,7 +191,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="cta" asChild>
-              <Link to="/reservations">Book Now</Link>
+              <Link href="/reservations">Book Now</Link>
             </Button>
           </div>
 
@@ -214,7 +216,7 @@ const Header = () => {
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
-                    to={item.href}
+                    href={item.href}
                     className={`block text-sm font-medium py-2 transition-colors hover:text-primary ${
                       isActiveSection(item.href, item.submenu)
                         ? "text-primary"
@@ -229,7 +231,7 @@ const Header = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          to={subItem.href}
+                          href={subItem.href}
                           className={`block text-sm py-1 transition-colors hover:text-primary ${
                             isActive(subItem.href)
                               ? "text-primary"
@@ -245,7 +247,7 @@ const Header = () => {
                 </div>
               ))}
               <Button variant="cta" asChild className="mt-2">
-                <Link to="/reservations" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/reservations" onClick={() => setIsMenuOpen(false)}>
                   Book Now
                 </Link>
               </Button>

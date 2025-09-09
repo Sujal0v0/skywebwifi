@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
 import { Wifi, Car, Waves, Trees, Coffee, Shirt } from "lucide-react";
-import amenitiesImage from "@/assets/amenities.jpg";
-
+import Link from "next/link";
+import Image from "next/image";
 const AmenitiesHighlight = () => {
   const amenities = [
     {
@@ -53,9 +52,11 @@ const AmenitiesHighlight = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <img
-              src={amenitiesImage}
+            <Image
+              src={"/assets/amenities.jpg"}
               alt="Modern campground facilities"
+              width={1400}
+              height={933}
               className="w-full h-full object-cover rounded-lg shadow-medium"
             />
           </div>
@@ -85,7 +86,7 @@ const AmenitiesHighlight = () => {
 
         <div className="text-center">
           <Button variant="nature" size="lg" asChild>
-            <Link to="/amenities">View All Amenities</Link>
+            <Link href="/amenities">View All Amenities</Link>
           </Button>
         </div>
       </div>

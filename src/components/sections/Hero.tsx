@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import {
   Star,
   Wifi,
@@ -9,7 +8,7 @@ import {
   MapPin,
   LucideIcon,
 } from "lucide-react";
-import heroImage from "@/assets/hero-campground.jpg";
+import Link from "next/link";
 
 interface quickFeaturesItem {
   icon: LucideIcon;
@@ -41,7 +40,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src={"/assets/hero-campground.jpg"}
           alt="Beautiful RV campground with mountain views"
           className="w-full h-full object-cover"
         />
@@ -73,14 +72,14 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/reservations">Book Your Stay</Link>
+              <Link href="/reservations">Book Your Stay</Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
             >
-              <Link to="/amenities">Explore Amenities</Link>
+              <Link href="/amenities">Explore Amenities</Link>
             </Button>
           </div>
 

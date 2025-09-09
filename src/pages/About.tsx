@@ -6,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "react-router-dom";
 import {
   Award,
   Users,
@@ -17,6 +16,7 @@ import {
   Clock,
   MapPin,
 } from "lucide-react";
+import Link from "next/link";
 
 const About = () => {
   const features = [
@@ -221,7 +221,7 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="lg" asChild>
-              <Link to="/reservations">Book Your Stay</Link>
+              <Link href="/reservations">Book Your Stay</Link>
             </Button>
             <Button
               variant="outline"
@@ -229,7 +229,7 @@ const About = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link to="/rules">View Park Rules</Link>
+              <Link href="/rules">View Park Rules</Link>
             </Button>
           </div>
         </div>
