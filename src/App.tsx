@@ -18,6 +18,8 @@ import GalleryActivities from "./pages/GalleryActivities";
 import GalleryAmenities from "./pages/GalleryAmenities";
 import Reservations from "./pages/Reservations";
 import NotFound from "./pages/NotFound";
+import Rates from "./pages/Rates";
+import CancellationPolicy from "./pages/CancellationPolicy";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +33,9 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-            <Route path="about/rules" element={<AboutRules />} />
+            <Route path="rates" element={<Rates />} />
+            <Route path="cancellation" element={<CancellationPolicy />} />
+            <Route path="rules" element={<AboutRules />} />
             <Route path="amenities" element={<Amenities />} />
             <Route path="accommodations" element={<Accommodations />} />
             <Route path="events" element={<Events />} />

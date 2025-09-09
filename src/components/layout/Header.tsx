@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, MapPin, ChevronDown } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,41 +24,50 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { 
-      name: 'Campground Info', 
-      href: '/amenities',
+    { name: "Home", href: "/" },
+    {
+      name: "About",
+      href: "/about",
       submenu: [
-        { name: 'Amenities', href: '/amenities' },
-        { name: 'Accommodations', href: '/accommodations' },
-        { name: 'Events', href: '/events' },
-        { name: 'Resort Map', href: '/resort-map' }
-      ]
+        { name: "About Us", href: "/about" },
+        { name: "Campground Rules", href: "/rules" },
+        { name: "Rates & Pricing", href: "/events" },
+        { name: "Cancellation Policy", href: "/cancellation" },
+      ],
     },
-    { name: 'Special Offers', href: '/special' },
-    { 
-      name: 'Gallery', 
-      href: '/gallery',
+    {
+      name: "Campground Info",
+      href: "/amenities",
       submenu: [
-        { name: 'Photo Gallery', href: '/gallery' },
-        { name: 'Site Views', href: '/gallery/sites' },
-        { name: 'Activities', href: '/gallery/activities' },
-        { name: 'Amenities Photos', href: '/gallery/amenities' }
-      ]
+        { name: "Amenities", href: "/amenities" },
+        { name: "Accommodations", href: "/accommodations" },
+        { name: "Events", href: "/events" },
+        { name: "Resort Map", href: "/resort-map" },
+      ],
     },
-    { name: 'Reservations', href: '/reservations' }
+    { name: "Special Offers", href: "/special" },
+    {
+      name: "Gallery",
+      href: "/gallery",
+      submenu: [
+        { name: "Photo Gallery", href: "/gallery" },
+        { name: "Site Views", href: "/gallery/sites" },
+        { name: "Activities", href: "/gallery/activities" },
+        { name: "Amenities Photos", href: "/gallery/amenities" },
+      ],
+    },
+    { name: "Reservations", href: "/reservations" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
   const isActiveSection = (href: string, submenu?: any[]) => {
     if (submenu) {
-      return submenu.some(item => location.pathname === item.href);
+      return submenu.some((item) => location.pathname === item.href);
     }
     return location.pathname === href;
   };
@@ -67,7 +76,11 @@ const Header = () => {
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-soft">
       <div className="container mx-auto px-4">
         {/* Top bar with contact info */}
-        <div className={`hidden md:flex items-center justify-between py-2 text-sm text-muted-foreground border-b border-border/50 transition-all duration-300 ${isScrolled ? 'h-0 py-0 overflow-hidden opacity-0' : 'h-auto'}`}>
+        <div
+          className={`hidden md:flex items-center justify-between py-2 text-sm text-muted-foreground border-b border-border/50 transition-all duration-300 ${
+            isScrolled ? "h-0 py-0 overflow-hidden opacity-0" : "h-auto"
+          }`}
+        >
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
@@ -90,8 +103,12 @@ const Header = () => {
               RV
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Pine Ridge RV Resort</h1>
-              <p className="text-sm text-muted-foreground">Your Home Away From Home</p>
+              <h1 className="text-xl font-bold text-foreground">
+                Pine Ridge RV Resort
+              </h1>
+              <p className="text-sm text-muted-foreground">
+                Your Home Away From Home
+              </p>
             </div>
           </Link>
 
@@ -104,7 +121,9 @@ const Header = () => {
                     <Link
                       to={item.href}
                       className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
-                        isActiveSection(item.href, item.submenu) ? 'text-primary' : 'text-foreground'
+                        isActiveSection(item.href, item.submenu)
+                          ? "text-primary"
+                          : "text-foreground"
                       }`}
                     >
                       {item.name}
@@ -116,7 +135,9 @@ const Header = () => {
                           key={subItem.name}
                           to={subItem.href}
                           className={`block px-4 py-3 text-sm hover:bg-muted transition-colors first:rounded-t-lg last:rounded-b-lg ${
-                            isActive(subItem.href) ? 'text-primary bg-muted' : 'text-foreground'
+                            isActive(subItem.href)
+                              ? "text-primary bg-muted"
+                              : "text-foreground"
                           }`}
                         >
                           {subItem.name}
@@ -128,7 +149,7 @@ const Header = () => {
                   <Link
                     to={item.href}
                     className={`text-sm font-medium transition-colors hover:text-primary ${
-                      isActive(item.href) ? 'text-primary' : 'text-foreground'
+                      isActive(item.href) ? "text-primary" : "text-foreground"
                     }`}
                   >
                     {item.name}
@@ -151,7 +172,11 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -164,7 +189,9 @@ const Header = () => {
                   <Link
                     to={item.href}
                     className={`block text-sm font-medium py-2 transition-colors hover:text-primary ${
-                      isActiveSection(item.href, item.submenu) ? 'text-primary' : 'text-foreground'
+                      isActiveSection(item.href, item.submenu)
+                        ? "text-primary"
+                        : "text-foreground"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -177,7 +204,9 @@ const Header = () => {
                           key={subItem.name}
                           to={subItem.href}
                           className={`block text-sm py-1 transition-colors hover:text-primary ${
-                            isActive(subItem.href) ? 'text-primary' : 'text-muted-foreground'
+                            isActive(subItem.href)
+                              ? "text-primary"
+                              : "text-muted-foreground"
                           }`}
                           onClick={() => setIsMenuOpen(false)}
                         >
