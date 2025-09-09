@@ -176,6 +176,139 @@ const About = () => {
         </div>
       </section>
 
+      {/* Rates & Pricing Section */}
+      <section className="py-20 bg-warm-gradient text-orange-foreground">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Rates & Pricing</h2>
+            <p className="text-xl text-orange-foreground/90 mb-8">
+              Competitive rates for premium RV camping experiences
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+            <Card className="bg-white/10 border-white/20">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-white">Daily Rate</CardTitle>
+                <CardDescription className="text-orange-foreground/80">Perfect for weekend getaways</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="text-center space-y-2">
+                  <div className="space-y-1">
+                    <p className="text-sm text-orange-foreground/80">Standard Sites</p>
+                    <p className="text-3xl font-bold text-white">$45</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-sm text-orange-foreground/80">Premium Sites</p>
+                    <p className="text-2xl font-semibold text-white">$55</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/10 border-white/20">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-white">Weekly Rate</CardTitle>
+                <CardDescription className="text-orange-foreground/80">Great value for extended stays</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="text-center space-y-2">
+                  <div className="space-y-1">
+                    <p className="text-sm text-orange-foreground/80">Standard Sites</p>
+                    <p className="text-3xl font-bold text-white">$280</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-sm text-orange-foreground/80">Premium Sites</p>
+                    <p className="text-2xl font-semibold text-white">$350</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/10 border-white/20">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-white">Monthly Rate</CardTitle>
+                <CardDescription className="text-orange-foreground/80">Best value for long-term guests</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="text-center space-y-2">
+                  <div className="space-y-1">
+                    <p className="text-sm text-orange-foreground/80">Standard Sites</p>
+                    <p className="text-3xl font-bold text-white">$1,000</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-sm text-orange-foreground/80">Premium Sites</p>
+                    <p className="text-2xl font-semibold text-white">$1,300</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <p className="text-orange-foreground/90 mb-6">
+              Seasonal discounts available • Military & Senior discounts • Extended stay savings
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Cancellation Policy Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Cancellation Policy
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Fair and transparent cancellation terms for your peace of mind
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+            <Card className="border-2 bg-green-50 border-green-200">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">48+ Hours Before</h3>
+                <div className="text-2xl font-bold text-green-600 mb-3">Full Refund</div>
+                <p className="text-sm text-muted-foreground">Cancel up to 48 hours before arrival</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 bg-orange-50 border-orange-200">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-orange-600" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">24-48 Hours Before</h3>
+                <div className="text-2xl font-bold text-orange-600 mb-3">50% Refund</div>
+                <p className="text-sm text-muted-foreground">Partial refund with advance notice</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 bg-red-50 border-red-200">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-red-600" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">Less than 24 Hours</h3>
+                <div className="text-2xl font-bold text-red-600 mb-3">No Refund</div>
+                <p className="text-sm text-muted-foreground">No refund for last-minute cancellations</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center bg-muted/50 p-6 rounded-lg max-w-4xl mx-auto">
+            <h3 className="text-lg font-semibold mb-2">Special Circumstances</h3>
+            <p className="text-muted-foreground mb-4">
+              Exceptions may apply for severe weather, medical emergencies, or military deployments. Documentation required.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-nature-gradient text-primary-foreground">
         <div className="container mx-auto px-4 text-center">

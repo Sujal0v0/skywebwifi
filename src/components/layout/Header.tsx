@@ -30,21 +30,26 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { 
-      name: 'About', 
-      href: '/about',
+      name: 'Campground Info', 
+      href: '/amenities',
       submenu: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Campground Rules', href: '/about/rules' }
+        { name: 'Amenities', href: '/amenities' },
+        { name: 'Accommodations', href: '/accommodations' },
+        { name: 'Events', href: '/events' },
+        { name: 'Resort Map', href: '/resort-map' }
       ]
     },
-    { name: 'Amenities', href: '/amenities' },
+    { name: 'Special Offers', href: '/special' },
     { 
-      name: 'Rates', 
-      href: '/rates',
+      name: 'Gallery', 
+      href: '/gallery',
       submenu: [
-        { name: 'Rates & Pricing', href: '/rates' },
-        { name: 'Cancellation Policy', href: '/rates/cancellation' }
+        { name: 'Photo Gallery', href: '/gallery' },
+        { name: 'Site Views', href: '/gallery/sites' },
+        { name: 'Activities', href: '/gallery/activities' },
+        { name: 'Amenities Photos', href: '/gallery/amenities' }
       ]
     },
     { name: 'Reservations', href: '/reservations' }

@@ -8,8 +8,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import AboutRules from "./pages/AboutRules";
 import Amenities from "./pages/Amenities";
-import Rates from "./pages/Rates";
-import CancellationPolicy from "./pages/CancellationPolicy";
+import Accommodations from "./pages/Accommodations";
+import Events from "./pages/Events";
+import ResortMap from "./pages/ResortMap";
+import Special from "./pages/Special";
+import Gallery from "./pages/Gallery";
+import GallerySites from "./pages/GallerySites";
+import GalleryActivities from "./pages/GalleryActivities";
+import GalleryAmenities from "./pages/GalleryAmenities";
 import Reservations from "./pages/Reservations";
 import NotFound from "./pages/NotFound";
 
@@ -27,8 +33,14 @@ const App = () => (
             <Route path="about" element={<About />} />
             <Route path="about/rules" element={<AboutRules />} />
             <Route path="amenities" element={<Amenities />} />
-            <Route path="rates" element={<Rates />} />
-            <Route path="rates/cancellation" element={<CancellationPolicy />} />
+            <Route path="accommodations" element={<Accommodations />} />
+            <Route path="events" element={<Events />} />
+            <Route path="resort-map" element={<ResortMap />} />
+            <Route path="special" element={<Special />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="gallery/sites" element={<GallerySites />} />
+            <Route path="gallery/activities" element={<GalleryActivities />} />
+            <Route path="gallery/amenities" element={<GalleryAmenities />} />
             <Route path="reservations" element={<Reservations />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
