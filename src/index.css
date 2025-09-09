@@ -52,10 +52,27 @@ All colors MUST be HSL.
     --ring: 150 45% 25%;
 
     /* Design System Extensions */
-    --hero-gradient: linear-gradient(135deg, hsl(150 45% 25%) 0%, hsl(180 35% 30%) 50%, hsl(25 65% 60%) 100%);
-    --nature-gradient: linear-gradient(180deg, hsl(150 35% 35%) 0%, hsl(150 25% 45%) 100%);
-    --warm-gradient: linear-gradient(135deg, hsl(25 65% 60%) 0%, hsl(15 85% 55%) 100%);
-    --subtle-gradient: linear-gradient(180deg, hsl(45 25% 97%) 0%, hsl(35 15% 90%) 100%);
+    --hero-gradient: linear-gradient(
+      135deg,
+      hsl(150 45% 25%) 0%,
+      hsl(180 35% 30%) 50%,
+      hsl(83, 71%, 37%) 100%
+    );
+    --nature-gradient: linear-gradient(
+      180deg,
+      hsl(150 35% 35%) 0%,
+      hsl(150 25% 45%) 100%
+    );
+    --warm-gradient: linear-gradient(
+      135deg,
+      hsl(25 65% 60%) 0%,
+      hsl(15 85% 55%) 100%
+    );
+    --subtle-gradient: linear-gradient(
+      180deg,
+      hsl(45 25% 97%) 0%,
+      hsl(35 15% 90%) 100%
+    );
 
     /* Shadows with natural colors */
     --shadow-soft: 0 4px 20px -4px hsl(150 25% 25% / 0.1);
@@ -124,10 +141,27 @@ All colors MUST be HSL.
     --ring: 150 35% 45%;
 
     /* Dark gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(150 35% 15%) 0%, hsl(180 25% 20%) 50%, hsl(25 60% 40%) 100%);
-    --nature-gradient: linear-gradient(180deg, hsl(150 25% 25%) 0%, hsl(150 15% 35%) 100%);
-    --warm-gradient: linear-gradient(135deg, hsl(25 60% 40%) 0%, hsl(15 80% 35%) 100%);
-    --subtle-gradient: linear-gradient(180deg, hsl(150 20% 12%) 0%, hsl(150 10% 18%) 100%);
+    --hero-gradient: linear-gradient(
+      135deg,
+      hsl(150 35% 15%) 0%,
+      hsl(180 25% 20%) 50%,
+      hsl(25 60% 40%) 100%
+    );
+    --nature-gradient: linear-gradient(
+      180deg,
+      hsl(150 25% 25%) 0%,
+      hsl(150 15% 35%) 100%
+    );
+    --warm-gradient: linear-gradient(
+      135deg,
+      hsl(25 60% 40%) 0%,
+      hsl(15 80% 35%) 100%
+    );
+    --subtle-gradient: linear-gradient(
+      180deg,
+      hsl(150 20% 12%) 0%,
+      hsl(150 10% 18%) 100%
+    );
 
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
     --shadow-medium: 0 8px 30px -6px hsl(0 0% 0% / 0.4);

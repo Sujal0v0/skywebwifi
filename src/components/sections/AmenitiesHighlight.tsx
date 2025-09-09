@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Wifi, Car, Waves, Trees, Coffee, ShoppingCart } from "lucide-react";
+import { Wifi, Car, Waves, Trees, Coffee, Shirt } from "lucide-react";
 import amenitiesImage from "@/assets/amenities.jpg";
 
 const AmenitiesHighlight = () => {
@@ -32,7 +32,7 @@ const AmenitiesHighlight = () => {
       description: "Convenience store with essentials",
     },
     {
-      icon: ShoppingCart,
+      icon: Shirt,
       title: "Laundry",
       description: "Clean, modern laundry facilities",
     },

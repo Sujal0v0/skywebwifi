@@ -229,7 +229,7 @@ const About = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link to="/about/rules">View Park Rules</Link>
+              <Link to="/rules">View Park Rules</Link>
             </Button>
           </div>
         </div>
