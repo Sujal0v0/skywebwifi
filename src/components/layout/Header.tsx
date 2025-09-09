@@ -7,6 +7,21 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = (name: string) => {
+    if (closeTimeout) clearTimeout(closeTimeout); // cancel any pending close
+    setHoveredMenu(name);
+  };
+
+  const handleMouseLeave = () => {
+    setCloseTimeout(
+      setTimeout(() => {
+        setHoveredMenu(null);
+      }, 400) // delay in ms before submenu closes
+    );
+  };
 
   useEffect(() => {
     const hideThreshold = 180; // scrollY at which top bar hides
@@ -115,7 +130,12 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+              <div
+                key={item.name}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(item.name)}
+                onMouseLeave={handleMouseLeave}
+              >
                 {item.submenu ? (
                   <>
                     <Link
@@ -129,7 +149,14 @@ const Header = () => {
                       {item.name}
                       <ChevronDown className="h-3 w-3" />
                     </Link>
-                    <div className="absolute top-full left-0 mt-8 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+
+                    <div
+                      className={`absolute top-full left-0 mt-[30px] w-48 bg-background border border-border rounded-lg shadow-lg transition-all duration-200 z-50 ${
+                        hoveredMenu === item.name
+                          ? "opacity-100 visible"
+                          : "opacity-0 invisible"
+                      }`}
+                    >
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
