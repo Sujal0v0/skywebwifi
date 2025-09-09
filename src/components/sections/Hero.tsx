@@ -1,9 +1,41 @@
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { Star, Wifi, Car, Trees, Waves, MapPin } from 'lucide-react';
-import heroImage from '@/assets/hero-campground.jpg';
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import {
+  Star,
+  Wifi,
+  Car,
+  Trees,
+  Waves,
+  MapPin,
+  LucideIcon,
+} from "lucide-react";
+import heroImage from "@/assets/hero-campground.jpg";
+
+interface quickFeaturesItem {
+  icon: LucideIcon;
+  text: string;
+}
 
 const Hero = () => {
+  const quickFeatures: quickFeaturesItem[] = [
+    {
+      icon: Wifi,
+      text: "Free WiFi",
+    },
+    {
+      icon: Car,
+      text: "Full Hookups",
+    },
+    {
+      icon: Trees,
+      text: "Nature Trails",
+    },
+    {
+      icon: Waves,
+      text: "Lake Access",
+    },
+  ];
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -34,8 +66,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Experience the ultimate RV camping adventure surrounded by pristine nature, 
-            modern amenities, and breathtaking mountain views.
+            Experience the ultimate RV camping adventure surrounded by pristine
+            nature, modern amenities, and breathtaking mountain views.
           </p>
 
           {/* CTA Buttons */}
@@ -43,37 +75,30 @@ const Hero = () => {
             <Button variant="hero" size="lg" asChild>
               <Link to="/reservations">Book Your Stay</Link>
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
+            <Button
+              variant="outline"
+              size="lg"
+              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+            >
               <Link to="/amenities">Explore Amenities</Link>
             </Button>
           </div>
 
           {/* Quick Features */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <Wifi className="h-6 w-6" />
-              </div>
-              <span className="text-sm font-medium">Free WiFi</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <Car className="h-6 w-6" />
-              </div>
-              <span className="text-sm font-medium">Full Hookups</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <Trees className="h-6 w-6" />
-              </div>
-              <span className="text-sm font-medium">Nature Trails</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <Waves className="h-6 w-6" />
-              </div>
-              <span className="text-sm font-medium">Lake Access</span>
-            </div>
+            {quickFeatures.map((feature, index) => {
+              return (
+                <div key={index} className="flex flex-col items-center gap-2">
+                  <div className="w-12 h-12 bg-black/30 rounded-full flex items-center justify-center">
+                    <feature.icon className="h-6 w-6" />
+                  </div>
+                  <span className="relative inline-block text-sm font-medium">
+                    <span className="absolute inset-0 bg-black/100 blur-lg rounded-lg"></span>
+                    <span className="relative px-2">{feature.text}</span>
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

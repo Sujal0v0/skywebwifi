@@ -1,24 +1,41 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Link } from 'react-router-dom';
-import { 
-  Wifi, 
-  Car, 
-  Waves, 
-  Trees, 
-  Coffee, 
-  ShoppingCart
-} from 'lucide-react';
-import amenitiesImage from '@/assets/amenities.jpg';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { Wifi, Car, Waves, Trees, Coffee, ShoppingCart } from "lucide-react";
+import amenitiesImage from "@/assets/amenities.jpg";
 
 const AmenitiesHighlight = () => {
   const amenities = [
-    { icon: Wifi, title: 'Free WiFi', description: 'High-speed internet throughout the park' },
-    { icon: Car, title: 'Full Hookups', description: '30/50 amp electrical, water & sewer' },
-    { icon: Waves, title: 'Lake Access', description: 'Private fishing and swimming lake' },
-    { icon: Trees, title: 'Nature Trails', description: 'Miles of hiking and walking paths' },
-    { icon: Coffee, title: 'Camp Store', description: 'Convenience store with essentials' },
-    { icon: ShoppingCart, title: 'Laundry', description: 'Clean, modern laundry facilities' }
+    {
+      icon: Wifi,
+      title: "Free WiFi",
+      description: "High-speed internet throughout the park",
+    },
+    {
+      icon: Car,
+      title: "Full Hookups",
+      description: "30/50 amp electrical, water & sewer",
+    },
+    {
+      icon: Waves,
+      title: "Lake Access",
+      description: "Private fishing and swimming lake",
+    },
+    {
+      icon: Trees,
+      title: "Nature Trails",
+      description: "Miles of hiking and walking paths",
+    },
+    {
+      icon: Coffee,
+      title: "Camp Store",
+      description: "Convenience store with essentials",
+    },
+    {
+      icon: ShoppingCart,
+      title: "Laundry",
+      description: "Clean, modern laundry facilities",
+    },
   ];
 
   return (
@@ -29,7 +46,8 @@ const AmenitiesHighlight = () => {
             Premium Amenities & Facilities
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Everything you need for a comfortable and memorable stay in the great outdoors
+            Everything you need for a comfortable and memorable stay in the
+            great outdoors
           </p>
         </div>
 
@@ -38,20 +56,27 @@ const AmenitiesHighlight = () => {
             <img
               src={amenitiesImage}
               alt="Modern campground facilities"
-              className="w-full h-96 object-cover rounded-lg shadow-medium"
+              className="w-full h-full object-cover rounded-lg shadow-medium"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {amenities.map((amenity, index) => (
-              <Card key={index} className="border-border hover:shadow-soft transition-shadow">
+              <Card
+                key={index}
+                className="border-border hover:shadow-soft transition-shadow"
+              >
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-3">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                       <amenity.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-foreground">{amenity.title}</h3>
+                    <h3 className="font-semibold text-foreground">
+                      {amenity.title}
+                    </h3>
                   </div>
-                  <p className="text-muted-foreground text-sm">{amenity.description}</p>
+                  <p className="text-muted-foreground text-sm">
+                    {amenity.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
