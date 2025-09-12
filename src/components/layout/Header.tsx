@@ -5,6 +5,12 @@ import { Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+type NavItem = {
+  name: string;
+  href: string;
+  submenu?: { name: string; href: string }[];
+};
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -82,7 +88,7 @@ const Header = () => {
   ];
 
   const isActive = (href: string) => pathname === href;
-  const isActiveSection = (href: string, submenu?: any[]) => {
+  const isActiveSection = (href: string, submenu?: NavItem[]) => {
     if (submenu) {
       return submenu.some((item) => pathname === item.href);
     }
