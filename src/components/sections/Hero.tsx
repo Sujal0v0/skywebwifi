@@ -36,7 +36,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[95vh] py-16 flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -51,7 +51,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-orange/90 text-orange-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="hidden md:inline-flex items-center gap-2 bg-orange/90 text-orange-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Star className="h-4 w-4 fill-current" />
             <span>5-Star Rated RV Resort</span>
           </div>
@@ -103,7 +103,7 @@ const Hero = () => {
       </div>
 
       {/* Location Badge */}
-      <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm text-primary px-4 py-3 rounded-lg shadow-medium">
+      <div className="hidden md:absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm text-primary px-4 py-3 rounded-lg shadow-medium">
         <div className="flex items-center gap-2">
           <MapPin className="h-4 w-4 text-orange" />
           <div className="text-sm">
