@@ -346,15 +346,6 @@ const CancellationPolicy = () => {
           </div>
         </div>
       </section>
-
-      {/* Back to Rates */}
-      <section className="py-12 bg-muted/30">
-        <div className="container mx-auto px-4 text-center">
-          <Button variant="cta" asChild>
-            <Link href="/rates">← Back to Rates & Pricing</Link>
-          </Button>
-        </div>
-      </section>
     </div>
   );
 };

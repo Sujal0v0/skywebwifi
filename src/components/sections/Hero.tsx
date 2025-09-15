@@ -78,6 +78,7 @@ const Hero = () => {
               variant="outline"
               size="lg"
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+              asChild
             >
               <Link href="/amenities">Explore Amenities</Link>
             </Button>

@@ -59,7 +59,7 @@ const Header = () => {
       submenu: [
         { name: "About Us", href: "/about" },
         { name: "Campground Rules", href: "/rules" },
-        { name: "Rates & Pricing", href: "/events" },
+        { name: "Rates & Pricing", href: "/rates" },
         { name: "Cancellation Policy", href: "/cancellation" },
       ],
     },
