@@ -53,8 +53,8 @@ export default function FeaturedCaseStudy() {
               <Image
                 src={"/case-study.png"}
                 alt="Case Study"
-                width={800}
-                height={800}
+                width={1400}
+                height={1400}
                 className="h-full w-full object-cover"
               />
             </CardContent>
