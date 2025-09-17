@@ -1,3 +1,4 @@
+import ProofSection from "@/components/sections/ProofSection";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,42 +16,59 @@ import {
   Leaf,
   Clock,
   MapPin,
+  Wifi,
+  Monitor,
+  ShieldCheck,
+  DollarSign,
+  Headphones,
 } from "lucide-react";
 import Link from "next/link";
 
 const About = () => {
   const features = [
     {
-      icon: TreePine,
-      title: "Pristine Natural Setting",
-      description:
-        "Nestled among towering pines with breathtaking mountain views and crystal-clear lake access.",
-    },
-    {
-      icon: Shield,
-      title: "Safe & Secure",
-      description:
-        "24/7 security, well-lit pathways, and emergency services available on-site for your peace of mind.",
-    },
-    {
       icon: Users,
-      title: "Family-Friendly",
+      title: "800+ Properties Served",
       description:
-        "Designed with families in mind, featuring playgrounds, recreational activities, and quiet zones.",
+        "Trusted by campgrounds, RV parks, and marinas nationwide with proven results and satisfied clients.",
     },
     {
-      icon: Leaf,
-      title: "Eco-Conscious",
+      icon: Wifi,
+      title: "Proprietary Traffic-Shaping",
       description:
-        "Committed to sustainable practices and preserving the natural beauty of our environment.",
+        "Advanced technology ensures smooth streaming for thousands of devices simultaneously without lag or buffering.",
+    },
+    {
+      icon: DollarSign,
+      title: "30-Day Money-Back Guarantee",
+      description:
+        "We stand behind our solutions with a risk-free guarantee that ensures your complete satisfaction.",
+    },
+    {
+      icon: Monitor,
+      title: "24/7 Monitoring & Support",
+      description:
+        "Our team constantly monitors your network and is always available to resolve any issues before guests notice.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Industry Partnerships",
+      description:
+        "Official partnerships with Ubiquiti, Mikrotik, and other industry leaders ensure top-quality hardware and solutions.",
+    },
+    {
+      icon: Headphones,
+      title: "Complete Revenue Solution",
+      description:
+        "Turn WiFi from an expense into profit with branded portals, paid access tiers, and sponsor advertising.",
     },
   ];
 
   const awards = [
-    "RV Travel Magazine - Best Mountain Resort 2023",
-    "California Tourism Board - Excellence Award 2022",
-    "Family RV Network - Top Family Destination 2023",
-    "Green Camping Initiative - Eco-Friendly Certification",
+    "RV Park & Campground Association - Technology Excellence Award 2023",
+    "Marina Operators Association - Best WiFi Solution 2022",
+    "Hospitality Technology Network - Innovation Award 2023",
+    "Customer Satisfaction - 98% Client Retention Rate",
   ];
 
   return (
@@ -60,23 +78,23 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About Pine Ridge RV Resort
+              About SkyWeb WiFi Solutions
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-              Creating unforgettable outdoor experiences since 1985
+              Revolutionizing connectivity for outdoor hospitality since 2010
             </p>
             <div className="flex flex-wrap gap-4 justify-center text-sm">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
                 <Clock className="h-4 w-4" />
-                <span>38+ Years of Excellence</span>
+                <span>13+ Years of Innovation</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
                 <MapPin className="h-4 w-4" />
-                <span>200+ Premium Sites</span>
+                <span>800+ Properties Served</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
                 <Award className="h-4 w-4" />
-                <span>Award-Winning Resort</span>
+                <span>Industry-Recognized Excellence</span>
               </div>
             </div>
           </div>
@@ -93,25 +111,26 @@ const About = () => {
               </h2>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                 <p>
-                  Pine Ridge RV Resort began as a dream of the Morrison family
-                  in 1985 - to create a place where families could reconnect
-                  with nature without sacrificing comfort. What started as a
-                  small campground with 50 sites has grown into Northern
-                  California's premier RV destination.
+                  SkyWeb began in 2010 with a simple mission: to solve the
+                  frustrating WiFi experience at campgrounds, RV parks, and
+                  marinas. Founded by technology experts with a passion for the
+                  outdoors, we recognized that poor connectivity was impacting
+                  both guest satisfaction and property revenues.
                 </p>
                 <p>
-                  Over the decades, we've carefully expanded our facilities
-                  while preserving the natural beauty that makes our location so
-                  special. Every decision we make is guided by our commitment to
-                  providing exceptional hospitality and environmental
-                  stewardship.
+                  We developed proprietary traffic-shaping technology
+                  specifically designed for high-density environments where
+                  hundreds of devices need to stream simultaneously. Our
+                  solutions have since been deployed at over 800 properties
+                  across North America, from small family campgrounds to major
+                  destinations like Navy Pier Marina.
                 </p>
                 <p>
-                  Today, Pine Ridge RV Resort spans 300 acres of pristine
-                  wilderness, featuring over 200 premium RV sites, modern
-                  amenities, and endless opportunities for outdoor adventure.
-                  We're proud to be a family-owned business serving families for
-                  over three generations.
+                  Today, SkyWeb is the leading provider of connectivity
+                  solutions for outdoor hospitality, helping properties
+                  transform their WiFi from a cost center into a profit
+                  generator while dramatically improving guest experiences and
+                  reviews.
                 </p>
               </div>
             </div>
@@ -122,9 +141,10 @@ const About = () => {
                     Our Mission
                   </h3>
                   <p className="text-muted-foreground">
-                    To provide exceptional RV camping experiences that reconnect
-                    people with nature, each other, and themselves in a safe,
-                    comfortable, and inspiring environment.
+                    To deliver reliable, high-performance WiFi and camera
+                    solutions that enhance guest experiences, increase property
+                    revenues, and provide peace of mind through exceptional
+                    support and monitoring.
                   </p>
                 </CardContent>
               </Card>
@@ -134,9 +154,9 @@ const About = () => {
                     Our Vision
                   </h3>
                   <p className="text-muted-foreground">
-                    To be the premier RV resort destination where lasting
-                    memories are made, natural beauty is preserved, and every
-                    guest feels like part of our family.
+                    To be the indispensable technology partner for every
+                    campground, RV park, and marina, enabling them to thrive
+                    through connected experiences and new revenue opportunities.
                   </p>
                 </CardContent>
               </Card>
@@ -150,14 +170,15 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose Pine Ridge RV Resort?
+              Why Choose SkyWeb?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover what sets us apart from other RV parks and resorts
+              Discover what makes us the preferred WiFi solution for 800+
+              properties
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
                 key={index}
@@ -188,7 +209,8 @@ const About = () => {
               Awards & Recognition
             </h2>
             <p className="text-xl text-muted-foreground">
-              Honored to be recognized for our commitment to excellence
+              Honored to be recognized for our innovation and excellence in
+              outdoor hospitality technology
             </p>
           </div>
 
@@ -208,20 +230,20 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      <ProofSection />
       {/* CTA Section */}
       <section className="py-20 bg-nature-gradient text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Experience Pine Ridge?
+            Ready to Transform Your Property's WiFi?
           </h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Join thousands of satisfied guests who have made Pine Ridge their
-            home away from home.
+            Join 800+ properties that have eliminated WiFi complaints and
+            created new revenue streams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="lg" asChild>
-              <Link href="/reservations">Book Your Stay</Link>
+              <Link href="/reservations">Get a Free Quote</Link>
             </Button>
             <Button
               variant="outline"
@@ -229,7 +251,7 @@ const About = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link href="/rules">View Park Rules</Link>
+              <Link href="/case-studies">View Case Studies</Link>
             </Button>
           </div>
         </div>

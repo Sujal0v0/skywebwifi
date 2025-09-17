@@ -36,6 +36,8 @@ import {
   CreditCard,
   Shield,
   Star,
+  Wifi,
+  Zap,
 } from "lucide-react";
 
 const Reservations = () => {
@@ -47,7 +49,8 @@ const Reservations = () => {
     e.preventDefault();
     toast({
       title: "Reservation Request Submitted!",
-      description: "We'll contact you within 24 hours to confirm your booking.",
+      description:
+        "Our team will contact you within 24 hours to set up your SkyWeb service.",
     });
   };
 
@@ -55,27 +58,27 @@ const Reservations = () => {
     {
       icon: Shield,
       title: "Secure Booking",
-      description: "SSL encrypted and secure payment processing",
+      description: "Your information is SSL encrypted and safe with us",
     },
     {
       icon: CheckCircle,
-      title: "Instant Confirmation",
-      description: "Receive confirmation within 24 hours",
+      title: "Fast Setup",
+      description: "Schedule installation and service activation quickly",
     },
     {
       icon: Star,
-      title: "Best Rate Guarantee",
-      description: "Book direct for the lowest rates available",
+      title: "Reliable Service",
+      description: "Trusted by 800+ campgrounds and RV parks nationwide",
     },
   ];
 
   const bookingInfo = [
-    "Check-in: 2:00 PM - 8:00 PM",
-    "Check-out: 11:00 AM",
-    "Minimum stay: 2 nights on weekends during peak season",
-    "Maximum occupancy: 6 people per site",
-    "Pet fee: $5 per night, per pet",
-    "Cancellation: Free cancellation up to 48 hours before arrival",
+    "Service activation within 24 hours after confirmation",
+    "Flexible site coverage options: campsites, cabins, pools, and rec halls",
+    "Paid and free guest WiFi tiers",
+    "Optional camera system integration",
+    "24/7 monitoring and support",
+    "Custom branded login portals for guests",
   ];
 
   return (
@@ -85,10 +88,11 @@ const Reservations = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Make a Reservation
+              Reserve Your SkyWeb WiFi & Camera Service
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-              Book your perfect mountain getaway at Pine Ridge RV Resort
+              Deliver fast, secure WiFi to your guests while generating new
+              revenue streams
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
               {features.map((feature, index) => (
@@ -119,11 +123,11 @@ const Reservations = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-2">
-                    <CalendarIcon className="h-6 w-6 text-primary" />
-                    Reservation Details
+                    <Wifi className="h-6 w-6 text-primary" />
+                    Service Reservation
                   </CardTitle>
                   <CardDescription>
-                    Fill out the form below to request your reservation
+                    Fill out the form below to request your SkyWeb installation
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -131,7 +135,7 @@ const Reservations = () => {
                     {/* Dates */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="checkin">Check-in Date</Label>
+                        <Label htmlFor="checkin">Preferred Start Date</Label>
                         <Popover>
                           <PopoverTrigger asChild>
                             <Button
@@ -155,7 +159,7 @@ const Reservations = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="checkout">Check-out Date</Label>
+                        <Label htmlFor="checkout">Preferred End Date</Label>
                         <Popover>
                           <PopoverTrigger asChild>
                             <Button
@@ -184,45 +188,40 @@ const Reservations = () => {
                       </div>
                     </div>
 
-                    {/* Site Preference & Guests */}
+                    {/* Property & Devices */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="siteType">Site Preference</Label>
+                        <Label htmlFor="siteType">Property Type</Label>
                         <Select>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select site type" />
+                            <SelectValue placeholder="Select property type" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="standard">
-                              Standard Site ($45/night)
+                            <SelectItem value="campground">
+                              Campground
                             </SelectItem>
-                            <SelectItem value="premium">
-                              Premium Site ($55/night)
-                            </SelectItem>
-                            <SelectItem value="no-preference">
-                              No Preference
-                            </SelectItem>
+                            <SelectItem value="rv-park">RV Park</SelectItem>
+                            <SelectItem value="marina">Marina</SelectItem>
+                            <SelectItem value="resort">Resort</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="guests">Number of Guests</Label>
+                        <Label htmlFor="devices">Number of Devices</Label>
                         <Select>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select guests" />
+                            <SelectValue placeholder="Select devices" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="1">1 Guest</SelectItem>
-                            <SelectItem value="2">2 Guests</SelectItem>
-                            <SelectItem value="3">3 Guests</SelectItem>
-                            <SelectItem value="4">4 Guests</SelectItem>
-                            <SelectItem value="5">
-                              5 Guests (+$5/night)
+                            <SelectItem value="50">Up to 50 devices</SelectItem>
+                            <SelectItem value="100">
+                              Up to 100 devices
                             </SelectItem>
-                            <SelectItem value="6">
-                              6 Guests (+$10/night)
+                            <SelectItem value="200">
+                              Up to 200 devices
                             </SelectItem>
+                            <SelectItem value="500">500+ devices</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -266,40 +265,6 @@ const Reservations = () => {
                       </div>
                     </div>
 
-                    {/* RV Information */}
-                    <div className="space-y-4">
-                      <h3 className="text-lg font-semibold">RV Information</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="rvLength">RV Length (feet)</Label>
-                          <Input id="rvLength" type="number" placeholder="32" />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="rvType">RV Type</Label>
-                          <Select>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select RV type" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="motorhome">
-                                Motorhome
-                              </SelectItem>
-                              <SelectItem value="travel-trailer">
-                                Travel Trailer
-                              </SelectItem>
-                              <SelectItem value="fifth-wheel">
-                                Fifth Wheel
-                              </SelectItem>
-                              <SelectItem value="popup">
-                                Pop-up Camper
-                              </SelectItem>
-                              <SelectItem value="tent">Tent</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
-                      </div>
-                    </div>
-
                     {/* Additional Options */}
                     <div className="space-y-4">
                       <h3 className="text-lg font-semibold">
@@ -307,40 +272,26 @@ const Reservations = () => {
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="pets">Number of Pets</Label>
+                          <Label htmlFor="camera">Include Camera System?</Label>
                           <Select>
                             <SelectTrigger>
-                              <SelectValue placeholder="Select pets" />
+                              <SelectValue placeholder="Select option" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="0">No Pets</SelectItem>
-                              <SelectItem value="1">
-                                1 Pet (+$5/night)
-                              </SelectItem>
-                              <SelectItem value="2">
-                                2 Pets (+$10/night)
-                              </SelectItem>
+                              <SelectItem value="yes">Yes</SelectItem>
+                              <SelectItem value="no">No</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="electrical">
-                            Electrical Preference
-                          </Label>
+                          <Label htmlFor="paidWifi">Enable Paid WiFi?</Label>
                           <Select>
                             <SelectTrigger>
-                              <SelectValue placeholder="Select electrical" />
+                              <SelectValue placeholder="Select option" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="30amp">
-                                30 Amp (Standard)
-                              </SelectItem>
-                              <SelectItem value="50amp">
-                                50 Amp (+$3/night)
-                              </SelectItem>
-                              <SelectItem value="no-preference">
-                                No Preference
-                              </SelectItem>
+                              <SelectItem value="yes">Yes</SelectItem>
+                              <SelectItem value="no">No</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
@@ -350,11 +301,11 @@ const Reservations = () => {
                     {/* Special Requests */}
                     <div className="space-y-2">
                       <Label htmlFor="requests">
-                        Special Requests or Comments
+                        Additional Notes or Requests
                       </Label>
                       <Textarea
                         id="requests"
-                        placeholder="Any special requests, accessibility needs, or additional information..."
+                        placeholder="Any special requests, accessibility needs, or additional details..."
                         className="min-h-[100px]"
                       />
                     </div>
@@ -372,32 +323,30 @@ const Reservations = () => {
               </Card>
             </div>
 
-            {/* Booking Information Sidebar */}
+            {/* Sidebar */}
             <div className="space-y-6">
               {/* Quick Contact */}
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl">Need Help?</CardTitle>
+                  <CardTitle className="text-xl">Need Assistance?</CardTitle>
                   <CardDescription>
-                    Call us directly for immediate assistance
+                    Call or email our support team for immediate help
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-semibold">(555) 123-4567</p>
+                      <p className="font-semibold">(555) 987-6543</p>
                       <p className="text-sm text-muted-foreground">
-                        Daily 8 AM - 8 PM
+                        Mon-Fri 8 AM - 8 PM
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-semibold">
-                        reservations@pineridgerv.com
-                      </p>
+                      <p className="font-semibold">support@skywebwifi.com</p>
                       <p className="text-sm text-muted-foreground">
                         Response within 24 hours
                       </p>
@@ -409,7 +358,7 @@ const Reservations = () => {
               {/* Booking Information */}
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl">Booking Information</CardTitle>
+                  <CardTitle className="text-xl">Service Information</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
@@ -431,17 +380,17 @@ const Reservations = () => {
                 <CardHeader>
                   <CardTitle className="text-xl flex items-center gap-2">
                     <Users className="h-5 w-5 text-orange" />
-                    Group Reservations
+                    Group Installations
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Planning a family reunion, rally, or group event? We offer
-                    special group rates and reserved sections.
+                    Planning multiple properties or large-scale installations?
+                    Contact us for group rates and special packages.
                   </p>
                   <Button variant="outline" size="sm" className="w-full">
                     <Mail className="h-4 w-4 mr-2" />
-                    Contact for Group Rates
+                    Contact for Group Services
                   </Button>
                 </CardContent>
               </Card>
@@ -452,12 +401,12 @@ const Reservations = () => {
                   <div className="flex items-center gap-2 mb-2">
                     <Shield className="h-5 w-5 text-green-600" />
                     <span className="font-semibold text-green-700">
-                      Secure Booking
+                      Secure & Trusted
                     </span>
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    Your information is protected with SSL encryption. We accept
-                    all major credit cards and PayPal.
+                    SSL encryption protects your information. We accept all
+                    major payment methods.
                   </p>
                 </CardContent>
               </Card>
@@ -466,35 +415,33 @@ const Reservations = () => {
         </div>
       </section>
 
-      {/* Availability Calendar Info */}
+      {/* Availability Info */}
       <section className="py-16 bg-subtle-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Check Real-Time Availability
+              Check Real-Time Service Availability
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Want to see our current availability? Call us or visit our office
-              for real-time booking assistance.
+              Want to see coverage and service options? Call or email our team
+              for real-time support.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-center gap-3 bg-white/80 p-4 rounded-lg">
                 <CalendarIcon className="h-6 w-6 text-primary" />
                 <div className="text-left">
-                  <p className="font-semibold text-sm">
-                    Real-Time Availability
-                  </p>
+                  <p className="font-semibold text-sm">Real-Time Scheduling</p>
                   <p className="text-xs text-muted-foreground">
-                    Updated every hour
+                    Updated hourly for installations
                   </p>
                 </div>
               </div>
               <div className="flex items-center gap-3 bg-white/80 p-4 rounded-lg">
                 <MapPin className="h-6 w-6 text-orange" />
                 <div className="text-left">
-                  <p className="font-semibold text-sm">Site Selection</p>
+                  <p className="font-semibold text-sm">Property Coverage</p>
                   <p className="text-xs text-muted-foreground">
-                    Choose your preferred location
+                    Choose areas and devices for service
                   </p>
                 </div>
               </div>
@@ -503,7 +450,7 @@ const Reservations = () => {
                 <div className="text-left">
                   <p className="font-semibold text-sm">Instant Confirmation</p>
                   <p className="text-xs text-muted-foreground">
-                    Book now, pay later option
+                    Confirm your reservation and payment online
                   </p>
                 </div>
               </div>

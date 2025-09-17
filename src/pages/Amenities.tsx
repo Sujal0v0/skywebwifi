@@ -1,27 +1,11 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Wifi,
-  Car,
-  Waves,
-  Trees,
-  Coffee,
-  ShoppingCart,
-  Bath,
   Zap,
-  Droplets,
-  Trash2,
+  Coffee,
+  BarChart3,
   PlaySquare,
-  Utensils,
-  Dumbbell,
-  Fish,
-  Mountain,
   Camera,
   Clock,
 } from "lucide-react";
@@ -30,71 +14,49 @@ import Link from "next/link";
 const Amenities = () => {
   const essentialAmenities = [
     {
-      icon: Bath,
-      title: "Modern Restrooms & Showers",
-      description:
-        "Clean, heated facilities with private shower stalls, available 24/7",
-      details: [
-        "Hot water guaranteed",
-        "Handicap accessible",
-        "Family restrooms available",
-        "Climate controlled",
-      ],
-    },
-    {
-      icon: ShoppingCart,
-      title: "Laundry Facilities",
-      description: "Coin-operated washers and dryers with soap dispensers",
-      details: [
-        "8 washers & 8 dryers",
-        "Open 6 AM - 10 PM",
-        "Change machine available",
-        "Folding tables provided",
-      ],
-    },
-    {
       icon: Wifi,
-      title: "Free High-Speed WiFi",
-      description: "Complimentary internet access throughout the entire park",
+      title: "WiFi That Campers Rave About",
+      description:
+        "SkyWeb powers 800+ campgrounds and RV parks nationwide, eliminating guest WiFi complaints and creating new revenue streams.",
       details: [
-        "Fiber optic connection",
-        "No data limits",
-        "Password protected",
-        "Tech support available",
+        "Coverage for campsites, cabins, pools, and rec halls",
+        "Branded splash pages for guest login and upsells",
+        "Paid and free guest access tiers",
+        "24/7 monitoring and rapid support",
+      ],
+    },
+    {
+      icon: Coffee,
+      title: "Splash Pages & Branding",
+      description:
+        "Every guest connects through a login portal branded for your property.",
+      details: [
+        "Your logo, your colors, your upsells",
+        "Sponsor ads or local business promotions",
+        "Guest data capture for marketing campaigns",
+        "Visual splash page mockups",
+      ],
+    },
+    {
+      icon: BarChart3,
+      title: "Revenue Generation",
+      description: "Turn WiFi into a profit center with paid plans and ads.",
+      details: [
+        "Paid guest plans",
+        "Sponsor ads on splash pages",
+        "Upsells for rentals/events",
+        "Real-time dashboards for tracking revenue",
       ],
     },
     {
       icon: Zap,
-      title: "Full Electrical Hookups",
-      description: "30/50 amp service with circuit breaker protection",
-      details: [
-        "All sites have power",
-        "Surge protection available",
-        "Multiple outlet options",
-        "LED lighting throughout",
-      ],
-    },
-    {
-      icon: Droplets,
-      title: "Fresh Water & Sewer",
+      title: "Camera Systems",
       description:
-        "Direct connections at every site with excellent water pressure",
+        "Protect your property with smart cameras integrated with WiFi.",
       details: [
-        "City water supply",
-        "Full sewer hookups",
-        "Water pressure tested daily",
-        "Hose bibs at each site",
-      ],
-    },
-    {
-      icon: Trash2,
-      title: "Dump Stations",
-      description: "Multiple RV waste disposal stations for your convenience",
-      details: [
-        "4 dump stations",
-        "Fresh water rinse",
-        "Accessible design",
-        "Regular maintenance",
+        "Standard Cameras: Reduce theft, improve safety",
+        "AI Cameras: License plate recognition, people counting, dock monitoring",
+        "One network powers WiFi + cameras",
       ],
     },
   ];
@@ -102,100 +64,80 @@ const Amenities = () => {
   const recreationalFacilities = [
     {
       icon: PlaySquare,
-      title: "Children's Playground",
-      description: "Safe, modern playground equipment for kids of all ages",
-      details: [
-        "Ages 2-12 equipment",
-        "Rubber safety surface",
-        "Shaded seating",
-        "Security fencing",
-      ],
-    },
-    {
-      icon: Utensils,
-      title: "Picnic Areas",
-      description: "Spacious areas with tables, grills, and beautiful views",
-      details: [
-        "20+ picnic tables",
-        "Built-in BBQ grills",
-        "Covered pavilions",
-        "Group reservation options",
-      ],
-    },
-    {
-      icon: Waves,
-      title: "Swimming Pool",
+      title: "Site Survey & Design",
       description:
-        "Heated outdoor pool with lap lanes and shallow end for kids",
+        "A detailed site survey ensures optimal WiFi coverage for your property.",
       details: [
-        "Heated to 82°F",
-        "Lifeguard on duty",
-        "Pool hours: 8 AM - 9 PM",
-        "Pool furniture provided",
+        "Analyze site layout and building structures",
+        "Plan access point placement",
+        "Map coverage zones",
+        "Identify potential interference",
       ],
     },
     {
-      icon: Fish,
-      title: "Fishing Pond",
-      description: "Stocked fishing pond with bass, trout, and catfish",
-      details: [
-        "California fishing license required",
-        "Catch & release encouraged",
-        "Fishing pier available",
-        "Bait shop on-site",
-      ],
-    },
-    {
-      icon: Trees,
-      title: "Hiking Trails",
+      icon: Coffee,
+      title: "Professional Installation",
       description:
-        "Miles of well-maintained trails through pristine wilderness",
+        "Expert technicians install WiFi hardware for seamless connectivity.",
       details: [
-        "5 different trail options",
-        "Difficulty levels marked",
-        "Trail maps available",
-        "Wildlife viewing opportunities",
+        "Mount access points and antennas",
+        "Configure network settings",
+        "Test signal strength",
+        "Ensure safe and secure installation",
       ],
     },
     {
-      icon: Mountain,
-      title: "Nature Center",
-      description: "Educational exhibits about local flora, fauna, and geology",
+      icon: BarChart3,
+      title: "Branded Portal Setup",
+      description:
+        "Set up a login portal that reflects your property brand and offers upsells.",
       details: [
-        "Interactive displays",
-        "Guided tours available",
-        "Educational programs",
-        "Gift shop",
+        "Custom logos and colors",
+        "Sponsor or local business ads",
+        "Guest login & access tiers",
+        "Data capture for marketing campaigns",
+      ],
+    },
+    {
+      icon: Wifi,
+      title: "24/7 Monitoring & Revenue Tracking",
+      description:
+        "Continuous monitoring to maintain service quality and track revenue.",
+      details: [
+        "Real-time dashboards",
+        "Rapid support for guest issues",
+        "Track revenue from paid access and ads",
+        "Analytics and reporting",
       ],
     },
   ];
 
   const onsiteServices = [
     {
-      icon: Coffee,
-      title: "Camp Store & Café",
+      icon: Wifi,
+      title: "SkyWeb WiFi Solutions",
       description:
-        "Convenience store with camping supplies, snacks, and fresh coffee",
+        "Reliable WiFi coverage for campgrounds, RV parks, and marinas.",
       details: [
-        "Open 7 AM - 8 PM",
-        "Fresh pastries daily",
-        "Camping essentials",
-        "Ice & firewood sales",
+        "Eliminate guest complaints",
+        "Create new revenue streams",
+        "Branded splash pages",
+        "24/7 monitoring",
       ],
-      hours: "7:00 AM - 8:00 PM",
+      hours: "Available 24/7",
     },
     {
-      icon: Dumbbell,
-      title: "Fitness Center",
+      icon: Camera,
+      title: "Smart Camera Systems",
       description:
-        "Small but well-equipped gym with cardio and strength equipment",
+        "Integrate cameras with your WiFi network for enhanced security.",
       details: [
-        "24/7 access with key card",
-        "Cardio machines",
-        "Free weights",
-        "Yoga mats available",
+        "Standard & AI cameras",
+        "License plate recognition",
+        "People counting and dock monitoring",
+        "One network powers WiFi + cameras",
       ],
-      hours: "24/7 (Key Card Access)",
+      hours: "Available 24/7",
     },
   ];
 
@@ -206,11 +148,26 @@ const Amenities = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Amenities & Facilities
+              WiFi & Camera Systems for Campgrounds, RV Parks & Marinas
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-              Everything you need for the perfect RV camping experience
+              Trusted by 800+ properties — including Navy Pier Marina — SkyWeb
+              delivers reliable connectivity, advanced security, and new revenue
+              through branded portals and splash pages.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="cta" size="lg" asChild>
+                <Link href="/quote">Get a Free Quote</Link>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+                asChild
+              >
+                <Link href="/revenue">See Revenue Examples</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -220,10 +177,12 @@ const Amenities = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Essential Amenities
+              Campground & RV Park WiFi Solutions
             </h2>
             <p className="text-xl text-muted-foreground">
-              Modern conveniences and necessities for comfortable camping
+              SkyWeb powers 800+ campgrounds and RV parks nationwide,
+              eliminating guest WiFi complaints and creating new revenue
+              streams.
             </p>
           </div>
 
@@ -231,12 +190,12 @@ const Amenities = () => {
             <div>
               <img
                 src={"/assets/amenities.jpg"}
-                alt="Modern campground amenities and facilities"
+                alt="Campground WiFi solutions and hardware"
                 className="w-full h-96 object-cover rounded-lg shadow-medium"
               />
             </div>
             <div className="grid grid-cols-1 gap-6">
-              {essentialAmenities.slice(0, 3).map((amenity, index) => (
+              {essentialAmenities.map((amenity, index) => (
                 <Card
                   key={index}
                   className="border-border hover:shadow-soft transition-shadow"
@@ -268,116 +227,50 @@ const Amenities = () => {
               ))}
             </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {essentialAmenities.slice(3).map((amenity, index) => (
-              <Card
-                key={index}
-                className="border-border hover:shadow-soft transition-shadow"
-              >
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <amenity.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2 text-center">
-                    {amenity.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-3 text-center">
-                    {amenity.description}
-                  </p>
-                  <ul className="text-xs text-muted-foreground space-y-1">
-                    {amenity.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-primary rounded-full" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Recreational Facilities */}
+      {/* How It Works */}
       <section className="py-20 bg-subtle-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Recreational Facilities
+              How It Works
             </h2>
             <p className="text-xl text-muted-foreground">
-              Fun activities and adventures for the whole family
+              A simple, proven process to deliver reliable WiFi and generate
+              revenue.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="order-2 lg:order-1 grid grid-cols-1 gap-6">
-              {recreationalFacilities.slice(0, 3).map((facility, index) => (
-                <Card
-                  key={index}
-                  className="border-border hover:shadow-soft transition-shadow"
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <facility.icon className="h-6 w-6 text-orange" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-2">
-                          {facility.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm mb-3">
-                          {facility.description}
-                        </p>
-                        <ul className="text-xs text-muted-foreground space-y-1">
-                          {facility.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-center gap-2">
-                              <div className="w-1 h-1 bg-orange rounded-full" />
-                              {detail}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <div className="order-1 lg:order-2">
-              <img
-                src={"/assets/recreation.jpg"}
-                alt="Recreational facilities and activities"
-                className="w-full h-96 object-cover rounded-lg shadow-medium"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {recreationalFacilities.slice(3).map((facility, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {recreationalFacilities.map((step, index) => (
               <Card
                 key={index}
                 className="border-border hover:shadow-soft transition-shadow"
               >
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <facility.icon className="h-6 w-6 text-orange" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <step.icon className="h-6 w-6 text-orange" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        {step.description}
+                      </p>
+                      <ul className="text-xs text-muted-foreground space-y-1">
+                        {step.details.map((detail, idx) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <div className="w-1 h-1 bg-orange rounded-full" />
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2 text-center">
-                    {facility.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-3 text-center">
-                    {facility.description}
-                  </p>
-                  <ul className="text-xs text-muted-foreground space-y-1">
-                    {facility.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-orange rounded-full" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
                 </CardContent>
               </Card>
             ))}
@@ -393,7 +286,7 @@ const Amenities = () => {
               On-site Services
             </h2>
             <p className="text-xl text-muted-foreground">
-              Additional conveniences to enhance your stay
+              Additional conveniences to enhance your property.
             </p>
           </div>
 
@@ -440,15 +333,15 @@ const Amenities = () => {
       <section className="py-20 bg-nature-gradient text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Experience All Our Amenities
+            Let’s Build Your WiFi & Revenue Plan
           </h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Book your stay today and enjoy access to all our premium facilities
-            and services.
+            Book your consultation today and start delivering reliable WiFi
+            while generating revenue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="lg" asChild>
-              <Link href="/reservations">Book Now</Link>
+              <Link href="/quote">Get a Free Quote</Link>
             </Button>
             <Button
               variant="outline"
@@ -456,7 +349,7 @@ const Amenities = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link href="/rates">View Rates</Link>
+              <Link href="/demo">Book a Demo</Link>
             </Button>
           </div>
         </div>
