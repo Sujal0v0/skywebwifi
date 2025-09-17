@@ -33,29 +33,29 @@ const Hero = () => {
           alt="Beautiful RV campground with mountain views"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/30 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="hidden md:inline-flex items-center gap-2 bg-red-600/90 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="hidden md:inline-flex items-center gap-2 bg-warm-gradient px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Circle className="h-2 w-2 fill-current" />
             <span>Trusted by 800+ Campgrounds</span>
           </div>
 
           {/* Main Headline */}
-          {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="block bg-warm-gradient bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <span className="block bg-hero-title-gradient bg-clip-text text-transparent">
               WiFi & Camera Systems
             </span>
             for Campgrounds, RV Parks & Marinas
-          </h1> */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          </h1>
+          {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="block text-[#01C6EA]">WiFi & Camera Systems</span>
             for Campgrounds, RV Parks & Marinas
-          </h1>
+          </h1> */}
 
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
             Trusted by 800+ properties — including Navy Pier Marina — SkyWeb
