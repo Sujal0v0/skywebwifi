@@ -136,6 +136,7 @@ export default function HowItWorks() {
             className={`sticky top-32 ${
               addMargin ? "mb-[430px]" : "mb-12"
             } z-20 text-center`}
+            style={{ willChange: "margin" }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               How It Works
