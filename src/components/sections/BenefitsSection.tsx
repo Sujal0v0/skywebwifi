@@ -52,7 +52,7 @@ const BenefitsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+          <div className="h-full">
             <Image
               src={"/assets/amenities.jpg"}
               alt="Modern campground facilities"
@@ -80,7 +80,7 @@ const BenefitsSection = () => {
                 </CardContent>
               </Card>
             ))}
-            <div className="col-span-2 text-center mx-auto mt-4">
+            <div className="col-span-1 md:col-span-2 text-center mx-auto mt-4">
               <Button variant="nature" size="lg" asChild>
                 <Link href="/amenities">See Case Studies</Link>
               </Button>

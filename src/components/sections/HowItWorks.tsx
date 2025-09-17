@@ -59,7 +59,7 @@ function StepCard({ step, index, sectionRef }) {
                 </span>
               </div>
 
-              <div>
+              <div className="flex-1">
                 <h3 className="font-semibold text-xl text-foreground pb-4">
                   {step.title}
                 </h3>
