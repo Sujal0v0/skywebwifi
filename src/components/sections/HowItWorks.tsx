@@ -30,7 +30,7 @@ function StepCard({ step, index, sectionRef }) {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [controls, sectionRef]);
+  }, [controls, sectionRef, index]);
 
   return (
     <motion.div
