@@ -66,15 +66,15 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button variant="hero" size="lg" asChild>
-              <Link href="/reservations">Get Connected</Link>
+              <Link href="/reservations">Get a Free Quote</Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+              className="bg-black/10 border-white/30 text-white hover:bg-white/20 "
               asChild
             >
-              <Link href="/amenities">Learn More</Link>
+              <Link href="/amenities">See Revenue Examples</Link>
             </Button>
           </div>
 
