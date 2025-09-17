@@ -20,7 +20,6 @@ function StepCard({ step, index, sectionRef }) {
       if (!ref.current || !sectionRef.current) return;
 
       const cardRect = ref.current.getBoundingClientRect();
-      console.log(cardRect.bottom + "good" + index);
       if (cardRect.bottom <= 700 - index * 10) {
         setScale(true);
       } else {
@@ -112,9 +111,15 @@ export default function HowItWorks() {
       const rect = sectionRef.current.getBoundingClientRect();
 
       if (rect.bottom <= 1000) {
-        setAddMargin(true);
+        if (!addMargin) {
+          setAddMargin(true);
+          console.log("good → added margin");
+        }
       } else {
-        setAddMargin(false);
+        if (addMargin) {
+          setAddMargin(false);
+          console.log("good → removed margin");
+        }
       }
     }
 
@@ -122,7 +127,7 @@ export default function HowItWorks() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [addMargin]);
   return (
     <section className="py-20 pb-12 relative" ref={sectionRef}>
       <div className="container mx-auto px-4">
