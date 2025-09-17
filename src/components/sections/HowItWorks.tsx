@@ -11,26 +11,43 @@ function StepCard({ step, index, sectionRef }) {
   const inView = useInView(ref);
   const controls = useAnimation();
   const [scale, setScale] = useState(false);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
+
   useEffect(() => {
     if (inView) controls.start({ opacity: 1, y: 0 });
   }, [inView, controls]);
 
   useEffect(() => {
-    function handleScroll() {
+    function updateScale() {
       if (!ref.current || !sectionRef.current) return;
 
       const cardRect = ref.current.getBoundingClientRect();
-      if (cardRect.bottom <= 700 - index * 10) {
-        setScale(true);
-      } else {
-        setScale(false);
+      const shouldScale = cardRect.bottom <= 700 - index * 10;
+
+      if (shouldScale !== scale) {
+        setScale(shouldScale);
+      }
+
+      ticking.current = false;
+    }
+
+    function handleScroll() {
+      lastScrollY.current = window.scrollY;
+
+      if (!ticking.current) {
+        requestAnimationFrame(updateScale);
+        ticking.current = true;
       }
     }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [controls, sectionRef, index]);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scale, index, sectionRef]);
 
   return (
     <motion.div
@@ -41,11 +58,16 @@ function StepCard({ step, index, sectionRef }) {
         y: inView ? 0 : 50,
         scale: scale ? 0.9 : 1,
       }}
-      transition={{ duration: 0.6 }}
-      className={`sticky flex justify-center mb-6 will-change-transform`}
+      transition={{
+        duration: 0.6,
+        scale: { duration: 0.3, ease: "easeOut" },
+      }}
+      className="sticky flex justify-center mb-6"
       style={{
         top: `${240 + index * 15}px`,
         zIndex: 10 * index,
+        backfaceVisibility: "hidden",
+        perspective: 1000,
       }}
     >
       <Card className="w-full max-w-5xl border-border shadow-lg">
@@ -103,40 +125,52 @@ export default function HowItWorks() {
 
   const sectionRef = useRef(null);
   const [addMargin, setAddMargin] = useState(false);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
 
   useEffect(() => {
-    function handleScroll() {
+    function updateMargin() {
       if (!sectionRef.current) return;
 
       const rect = sectionRef.current.getBoundingClientRect();
+      const shouldAddMargin = rect.bottom <= 1000;
 
-      setAddMargin((prev) => {
-        if (rect.bottom <= 1000 && !prev) {
-          console.log("good → added margin");
-          return true;
-        } else if (rect.bottom > 1000 && prev) {
-          console.log("good → removed margin");
-          return false;
-        }
-        return prev; // no change
-      });
+      if (shouldAddMargin !== addMargin) {
+        setAddMargin(shouldAddMargin);
+      }
+
+      ticking.current = false;
+    }
+
+    function handleScroll() {
+      lastScrollY.current = window.scrollY;
+
+      if (!ticking.current) {
+        requestAnimationFrame(updateMargin);
+        ticking.current = true;
+      }
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [addMargin]);
 
   return (
     <section className="py-20 pb-12 relative" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="relative">
           <div
-            className={`sticky top-32 ${
+            className={`sticky top-32 z-20 text-center transition-all duration-300 ease-out ${
               addMargin ? "mb-[430px]" : "mb-12"
-            } z-20 text-center`}
-            style={{ willChange: "margin" }}
+            }`}
+            style={{
+              backfaceVisibility: "hidden",
+              perspective: 1000,
+            }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               How It Works
