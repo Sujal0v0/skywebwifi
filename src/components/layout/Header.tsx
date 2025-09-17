@@ -93,7 +93,15 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
-              <span>2798 Bay Rd Saginaw, Michigan 48603</span>
+              <span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=2798+Bay+Rd,+Saginaw,+Michigan+48603"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  2798 Bay Rd, Saginaw, Michigan 48603
+                </a>
+              </span>
             </div>
           </div>
           <div className="text-primary font-medium">
