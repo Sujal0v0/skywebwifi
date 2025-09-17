@@ -145,7 +145,7 @@ export default function HowItWorks() {
         entries.forEach((entry) => {
           // When section bottom is getting close to leaving viewport, add margin
           const rect = entry.boundingClientRect;
-          const shouldStick = rect.bottom <= 1000;
+          const shouldStick = rect.bottom <= 500;
           setIsHeaderStuck(shouldStick);
         });
       },
@@ -166,7 +166,7 @@ export default function HowItWorks() {
         <div className="relative">
           <div
             ref={headerRef}
-            className="sticky top-32 z-20 text-center"
+            className="sticky top-32 z-0 text-center"
             style={{
               marginBottom: isHeaderStuck ? "430px" : "48px",
               transition: "margin-bottom 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
