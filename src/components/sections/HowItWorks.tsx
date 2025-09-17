@@ -156,7 +156,7 @@ export default function HowItWorks() {
                 sectionRef={sectionRef}
               />
             ))}
-            <div className="h-[40px] w-80 bg-transparent"></div>
+            {/* <div className="h-[40px] w-80 bg-transparent"></div> */}
           </div>
         </div>
       </div>
