@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button";
 import {
   Star,
   Wifi,
-  Car,
-  Trees,
-  Waves,
   MapPin,
   LucideIcon,
+  ShieldCheck,
+  Globe,
+  Wrench,
+  Circle,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -17,22 +18,10 @@ interface quickFeaturesItem {
 
 const Hero = () => {
   const quickFeatures: quickFeaturesItem[] = [
-    {
-      icon: Wifi,
-      text: "Free WiFi",
-    },
-    {
-      icon: Car,
-      text: "Full Hookups",
-    },
-    {
-      icon: Trees,
-      text: "Nature Trails",
-    },
-    {
-      icon: Waves,
-      text: "Lake Access",
-    },
+    { icon: Wifi, text: "Fast & Reliable WiFi" },
+    { icon: ShieldCheck, text: "Top-Rated Security" },
+    { icon: Wrench, text: "Easy Installation" },
+    { icon: Globe, text: "Wide Coverage Area" },
   ];
 
   return (
@@ -44,35 +33,40 @@ const Hero = () => {
           alt="Beautiful RV campground with mountain views"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/50 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="hidden md:inline-flex items-center gap-2 bg-orange/90 text-orange-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Star className="h-4 w-4 fill-current" />
-            <span>5-Star Rated RV Resort</span>
+          <div className="hidden md:inline-flex items-center gap-2 bg-red-600/90 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Circle className="h-2 w-2 fill-current" />
+            <span>Trusted by 800+ Campgrounds</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Your Perfect
+          {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="block bg-warm-gradient bg-clip-text text-transparent">
-              Mountain Retreat
+              WiFi & Camera Systems
             </span>
+            for Campgrounds, RV Parks & Marinas
+          </h1> */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <span className="block text-[#01C6EA]">WiFi & Camera Systems</span>
+            for Campgrounds, RV Parks & Marinas
           </h1>
 
-          <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Experience the ultimate RV camping adventure surrounded by pristine
-            nature, modern amenities, and breathtaking mountain views.
+          <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
+            Trusted by 800+ properties — including Navy Pier Marina — SkyWeb
+            delivers reliable connectivity, advanced security, and new revenue
+            through branded portals and splash pages.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button variant="hero" size="lg" asChild>
-              <Link href="/reservations">Book Your Stay</Link>
+              <Link href="/reservations">Get Connected</Link>
             </Button>
             <Button
               variant="outline"
@@ -80,7 +74,7 @@ const Hero = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link href="/amenities">Explore Amenities</Link>
+              <Link href="/amenities">Learn More</Link>
             </Button>
           </div>
 

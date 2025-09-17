@@ -20,10 +20,10 @@ All colors MUST be HSL.
     --popover-foreground: 150 15% 15%;
 
     /* Forest Green Primary Theme */
-    --primary: 150 45% 25%;
-    --primary-foreground: 45 25% 97%;
-    --primary-light: 150 35% 35%;
-    --primary-dark: 150 55% 15%;
+    --primary: 231 64% 33%;
+    --primary-foreground: 0 0% 100%; /* for contrast */
+    --primary-light: 231 54% 43%; /* lighter */
+    --primary-dark: 231 74% 23%; /* darker */
 
     /* Earth Tone Secondary */
     --secondary: 35 25% 85%;
@@ -54,9 +54,9 @@ All colors MUST be HSL.
     /* Design System Extensions */
     --hero-gradient: linear-gradient(
       135deg,
-      hsl(150 45% 25%) 0%,
-      hsl(180 35% 30%) 50%,
-      hsl(83, 71%, 37%) 100%
+      hsl(221 60% 53%) 0%,
+      hsl(210 55% 30%) 50%,
+      hsl(231 64% 33%) 100%
     );
     --nature-gradient: linear-gradient(
       180deg,
@@ -65,8 +65,8 @@ All colors MUST be HSL.
     );
     --warm-gradient: linear-gradient(
       135deg,
-      hsl(25 65% 60%) 0%,
-      hsl(15 85% 55%) 100%
+      hsl(359 85% 50%) 0%,
+      hsl(360 95% 50%) 100%
     );
     --subtle-gradient: linear-gradient(
       180deg,
