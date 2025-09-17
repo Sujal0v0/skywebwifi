@@ -140,36 +140,24 @@ export default function HowItWorks() {
     const sectionElement = sectionRef.current;
     if (!sectionElement) return;
 
-    // Use scroll event listener instead of intersection observer for more reliable detection
-    const handleScroll = () => {
-      const rect = sectionElement.getBoundingClientRect();
-      const shouldStick = rect.bottom <= 1000;
-
-      // Only update state if it actually changed to prevent unnecessary re-renders
-      setIsHeaderStuck((prev) => (prev !== shouldStick ? shouldStick : prev));
-    };
-
-    // Use requestAnimationFrame to throttle scroll events
-    let ticking = false;
-    const throttledHandleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // When section bottom is getting close to leaving viewport, add margin
+          const rect = entry.boundingClientRect;
+          const shouldStick = rect.bottom <= 1000;
+          setIsHeaderStuck(shouldStick);
         });
-        ticking = true;
+      },
+      {
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        rootMargin: "0px",
       }
-    };
+    );
 
-    // Listen to scroll events on window
-    window.addEventListener("scroll", throttledHandleScroll, { passive: true });
+    observer.observe(sectionElement);
 
-    // Initial check
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", throttledHandleScroll);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -178,9 +166,10 @@ export default function HowItWorks() {
         <div className="relative">
           <div
             ref={headerRef}
-            className="sticky top-32 z-20 text-center transition-all duration-300 ease-out"
+            className="sticky top-32 z-20 text-center"
             style={{
               marginBottom: isHeaderStuck ? "430px" : "48px",
+              transition: "margin-bottom 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
             }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
