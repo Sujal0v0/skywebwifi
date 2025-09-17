@@ -58,7 +58,7 @@ function StepCard({ step, index }) {
       ref={ref}
       className={`sticky flex justify-center mb-6 ${isFirstCard ? "mt-0" : ""}`}
       style={{
-        top: `${280 + index * 15}px`,
+        top: `${260 + index * 15}px`, // First card closer to header
         zIndex: 10 + index, // Forward z-index for proper stacking
       }}
     >
@@ -137,20 +137,21 @@ export default function HowItWorks() {
   const [isHeaderStuck, setIsHeaderStuck] = useState(false);
 
   useEffect(() => {
-    const headerElement = headerRef.current;
     const sectionElement = sectionRef.current;
-    if (!headerElement || !sectionElement) return;
+    if (!sectionElement) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // When section is about to leave viewport, add margin
-          setIsHeaderStuck(entry.intersectionRatio < 0.3);
+          // When section bottom is getting close to leaving viewport, add margin
+          const rect = entry.boundingClientRect;
+          const shouldStick = rect.bottom <= 1000;
+          setIsHeaderStuck(shouldStick);
         });
       },
       {
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5],
-        rootMargin: "-800px 0px 0px 0px", // Trigger when section is 800px from top
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        rootMargin: "0px",
       }
     );
 
@@ -167,8 +168,8 @@ export default function HowItWorks() {
             ref={headerRef}
             className="sticky top-32 z-20 text-center"
             style={{
-              marginBottom: isHeaderStuck ? "430px" : "12px",
-              transition: "margin-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+              marginBottom: isHeaderStuck ? "430px" : "48px",
+              transition: "margin-bottom 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
             }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
