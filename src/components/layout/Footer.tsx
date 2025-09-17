@@ -6,6 +6,7 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -16,20 +17,18 @@ const Footer = () => {
           {/* Brand & Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-orange rounded-full flex items-center justify-center text-orange-foreground font-bold text-xl">
-                RV
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Pine Ridge RV Resort</h3>
-                <p className="text-primary-foreground/80">
-                  Your Home Away From Home
-                </p>
-              </div>
+              <Image
+                src="/skywebwifi-logo-white.svg"
+                alt="Skyweb Wifi Logo"
+                width={400}
+                height={400}
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Nestled in the heart of nature, Pine Ridge RV Resort offers
-              premium camping experiences with modern amenities and breathtaking
-              mountain views. Create memories that last a lifetime.
+              Trusted by 800+ properties — including Navy Pier Marina — SkyWeb
+              delivers reliable connectivity, advanced security, and new revenue
+              through branded portals and splash pages
             </p>
             <div className="flex gap-4">
               <a
@@ -102,24 +101,52 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-orange" />
-                <div>
-                  <p className="font-medium">(555) 123-4567</p>
+                <div className="font-medium">
+                  Business:{" "}
+                  <a
+                    href="tel:9897717515"
+                    className="hover:text-red-400 transition-all duration-150 ease-in-out"
+                  >
+                    989-771-7515
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-orange" />
+                <div className="font-medium">
+                  Residential:{" "}
+                  <a
+                    href="tel:9897928681"
+                    className="hover:text-red-400 transition-all duration-150 ease-in-out"
+                  >
+                    989-792-8681
+                  </a>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-orange" />
                 <div>
-                  <p className="font-medium">info@pineridgerv.com</p>
+                  <p className="font-medium">
+                    <a
+                      href="mailto:support@skywebwifi.com"
+                      className="hover:text-red-400 transition-all duration-150 ease-in-out"
+                    >
+                      support@skywebwifi.com
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-orange" />
-                <div>
-                  <p className="font-medium">
-                    123 Forest Trail
-                    <br />
-                    Mountain View, CA 94041
-                  </p>
+                <div className="font-medium">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=2798+Bay+Rd,+Saginaw,+Michigan+48603"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-red-400 transition-all duration-150 ease-in-out"
+                  >
+                    2798 Bay Rd, Saginaw, Michigan 48603
+                  </a>
                 </div>
               </div>
             </div>
@@ -129,7 +156,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 Pine Ridge RV Resort. All rights reserved.
+            Copyright © 2025 Skyweb Networks | Powered by Skyweb Networks
           </p>
         </div>
       </div>

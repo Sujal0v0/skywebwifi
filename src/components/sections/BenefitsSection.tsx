@@ -80,9 +80,9 @@ const BenefitsSection = () => {
                 </CardContent>
               </Card>
             ))}
-            <div className="col-span-2 text-center mx-auto">
+            <div className="col-span-2 text-center mx-auto mt-4">
               <Button variant="nature" size="lg" asChild>
-                <Link href="/amenities">View All Amenities</Link>
+                <Link href="/amenities">See Case Studies</Link>
               </Button>
             </div>
           </div>
