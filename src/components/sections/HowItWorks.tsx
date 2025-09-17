@@ -42,7 +42,7 @@ function StepCard({ step, index, sectionRef }) {
         scale: scale ? 0.9 : 1,
       }}
       transition={{ duration: 0.6 }}
-      className={`sticky flex justify-center mb-6`}
+      className={`sticky flex justify-center mb-6 will-change-transform`}
       style={{
         top: `${240 + index * 15}px`,
         zIndex: 10 * index,
