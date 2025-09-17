@@ -143,7 +143,7 @@ export default function HowItWorks() {
     // Use scroll event listener instead of intersection observer for more reliable detection
     const handleScroll = () => {
       const rect = sectionElement.getBoundingClientRect();
-      const shouldStick = rect.bottom <= 400; // Increased from 1000 to make it unstuck earlier
+      const shouldStick = rect.bottom <= 0; // Increased from 1000 to make it unstuck earlier
 
       // Only update state if it actually changed to prevent unnecessary re-renders
       setIsHeaderStuck((prev) => (prev !== shouldStick ? shouldStick : prev));
@@ -180,7 +180,7 @@ export default function HowItWorks() {
             ref={headerRef}
             className="sticky top-32 z-0 text-center transition-all duration-300 ease-out"
             style={{
-              marginBottom: isHeaderStuck ? "430px" : "48px",
+              marginBottom: "48px",
             }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
