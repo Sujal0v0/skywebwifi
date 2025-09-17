@@ -169,7 +169,6 @@ export default function HowItWorks() {
             className="sticky top-32 z-20 text-center"
             style={{
               marginBottom: isHeaderStuck ? "430px" : "48px",
-              transition: "margin-bottom 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
             }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
