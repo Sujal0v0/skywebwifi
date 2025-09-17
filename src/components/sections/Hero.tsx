@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="hidden md:inline-flex items-center gap-2 bg-warm-gradient px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="hidden md:inline-flex items-center gap-2 bg-secondary/70 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Circle className="h-2 w-2 fill-current" />
             <span>Trusted by 800+ Campgrounds</span>
           </div>

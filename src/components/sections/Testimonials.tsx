@@ -1,26 +1,26 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Star, Quote } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Star, Quote } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah & Mike Johnson',
-      location: 'Sacramento, CA',
+      name: "Marina Manager",
+      location: "Navy Pier Marina",
       rating: 5,
-      text: 'Absolutely perfect! The sites are spacious, the facilities are immaculate, and the mountain views are breathtaking. We\'ve been coming here for 3 years running!'
+      text: "SkyWeb transformed our marina operations. Guests love the reliable WiFi, and the splash page advertising generates significant monthly revenue for us.",
     },
     {
-      name: 'Robert Chen',
-      location: 'San Jose, CA',
+      name: "Park Owner",
+      location: "Mountain View RV Resort",
       rating: 5,
-      text: 'Best RV park we\'ve stayed at. The staff is incredibly helpful, the amenities are top-notch, and our kids love the playground and lake.'
+      text: "The camera system gives us peace of mind, and guests appreciate the fast WiFi. We're seeing $6K in additional monthly revenue from the branded portal.",
     },
     {
-      name: 'Linda & Dave Martinez',
-      location: 'Los Angeles, CA',
+      name: "Operations Director",
+      location: "Lakeside Campground",
       rating: 5,
-      text: 'A hidden gem! Peaceful, clean, and beautifully maintained. The hiking trails are amazing and the sunsets over the lake are unforgettable.'
-    }
+      text: "Professional installation, excellent support, and the monitoring dashboard helps us stay on top of everything. Our guest satisfaction scores have improved dramatically.",
+    },
   ];
 
   return (
@@ -37,18 +37,27 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-border hover:shadow-soft transition-shadow">
+            <Card
+              key={index}
+              className="border-border hover:shadow-soft transition-shadow"
+            >
               <CardContent className="p-6">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-orange text-orange" />
+                    <Star key={i} className="h-5 w-5 fill-primary" />
                   ))}
                 </div>
                 <Quote className="h-8 w-8 text-muted-foreground mb-4" />
-                <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-muted-foreground mb-4 italic">
+                  "{testimonial.text}"
+                </p>
                 <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                  <p className="font-semibold text-foreground">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {testimonial.location}
+                  </p>
                 </div>
               </CardContent>
             </Card>

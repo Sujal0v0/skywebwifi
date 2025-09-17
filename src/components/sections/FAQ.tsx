@@ -5,32 +5,31 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const FAQ = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
   const faqs = [
     {
-      question: "Do you accept pets?",
+      question: "How long does installation take?",
       answer:
-        "Yes! We welcome well-behaved pets. We have a $5 per night pet fee and require pets to be leashed at all times. We also have a dedicated dog park area.",
+        "Most installations are completed within 2-3 days, depending on property size. We handle all permitting and work around your guest schedules.",
     },
     {
-      question: "What hookups are available?",
+      question: "What kind of revenue can I expect?",
       answer:
-        "All sites include full hookups: 30/50 amp electrical service, fresh water, and sewer connections. We also provide free WiFi throughout the park.",
+        "Properties typically generate $5k-$10k monthly through splash page advertising, premium WiFi tiers, and partner promotions. Revenue varies by location and traffic.",
     },
     {
-      question: "Is there a minimum stay requirement?",
+      question: "Do you provide ongoing support?",
       answer:
-        "During peak season (May-September), we have a 3-night minimum on weekends. Off-season has no minimum stay requirements.",
+        "Yes! We offer 24/7 monitoring and support. Our team proactively manages your system and fixes issues before guests notice problems.",
     },
     {
-      question: "What are your check-in and check-out times?",
+      question: "Can you integrate with existing systems?",
       answer:
-        "Check-in is from 2:00 PM to 8:00 PM. Check-out is by 11:00 AM. Early check-in and late check-out may be available upon request.",
+        "Absolutely. We work with your current infrastructure and can integrate with property management systems, security cameras, and other technology.",
     },
     {
-      question: "Do you have monthly rates?",
+      question: "What's included in the 30-day guarantee?",
       answer:
-        "Yes! We offer competitive monthly rates for extended stays. Please contact us directly for monthly pricing and availability.",
+        "If you're not completely satisfied within 30 days, we'll work with you to resolve any issues or remove the system at no cost.",
     },
   ];
 

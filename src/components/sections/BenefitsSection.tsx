@@ -1,39 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Wifi, Car, Waves, Trees, Coffee, Shirt } from "lucide-react";
+import {
+  Wifi,
+  Car,
+  Waves,
+  Trees,
+  Coffee,
+  Shirt,
+  Clock,
+  ShieldCheck,
+  DollarSign,
+  Smile,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-const AmenitiesHighlight = () => {
-  const amenities = [
+const BenefitsSection = () => {
+  const benefits = [
     {
-      icon: Wifi,
-      title: "Free WiFi",
-      description: "High-speed internet throughout the park",
+      icon: Smile,
+      title: "Guest Satisfaction",
+      description: "Happier guests & better reviews.",
     },
     {
-      icon: Car,
-      title: "Full Hookups",
-      description: "30/50 amp electrical, water & sewer",
+      icon: DollarSign,
+      title: "New Revenue",
+      description: "$5k–$10k/month potential.",
     },
     {
-      icon: Waves,
-      title: "Lake Access",
-      description: "Private fishing and swimming lake",
+      icon: ShieldCheck,
+      title: "Cameras & Security",
+      description: "Safer properties.",
     },
     {
-      icon: Trees,
-      title: "Nature Trails",
-      description: "Miles of hiking and walking paths",
-    },
-    {
-      icon: Coffee,
-      title: "Camp Store",
-      description: "Convenience store with essentials",
-    },
-    {
-      icon: Shirt,
-      title: "Laundry",
-      description: "Clean, modern laundry facilities",
+      icon: Clock,
+      title: "24/7 Monitoring",
+      description: "Problems fixed before guests notice.",
     },
   ];
 
@@ -42,11 +43,11 @@ const AmenitiesHighlight = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Premium Amenities & Facilities
+            More Than Just WiFi
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Everything you need for a comfortable and memorable stay in the
-            great outdoors
+            Complete connectivity solutions that enhance guest experience and
+            boost your bottom line
           </p>
         </div>
 
@@ -61,7 +62,7 @@ const AmenitiesHighlight = () => {
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {amenities.map((amenity, index) => (
+            {benefits.map((amenity, index) => (
               <Card
                 key={index}
                 className="border-border hover:shadow-soft transition-shadow"
@@ -71,27 +72,24 @@ const AmenitiesHighlight = () => {
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                       <amenity.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-foreground">
+                    <h3 className="font-semibold text-lg text-foreground">
                       {amenity.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground text-sm">
-                    {amenity.description}
-                  </p>
+                  <p className="text-muted-foreground">{amenity.description}</p>
                 </CardContent>
               </Card>
             ))}
+            <div className="col-span-2 text-center mx-auto">
+              <Button variant="nature" size="lg" asChild>
+                <Link href="/amenities">View All Amenities</Link>
+              </Button>
+            </div>
           </div>
-        </div>
-
-        <div className="text-center">
-          <Button variant="nature" size="lg" asChild>
-            <Link href="/amenities">View All Amenities</Link>
-          </Button>
         </div>
       </div>
     </section>
   );
 };
 
-export default AmenitiesHighlight;
+export default BenefitsSection;

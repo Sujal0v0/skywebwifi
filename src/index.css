@@ -26,12 +26,12 @@ All colors MUST be HSL.
     --primary-dark: 231 74% 23%; /* darker */
 
     /* Earth Tone Secondary */
-    --secondary: 35 25% 85%;
+    --secondary: 360 95% 50%; /* 35 25% 85% */
     --secondary-foreground: 150 15% 15%;
 
     /* Muted Natural Tones */
-    --muted: 35 15% 90%;
-    --muted-foreground: 150 10% 45%;
+    --muted: 231 20% 80%;
+    --muted-foreground: 231 30% 40%;
 
     /* Warm Accent Colors */
     --accent: 25 65% 60%;
@@ -47,7 +47,7 @@ All colors MUST be HSL.
     --destructive: 0 75% 55%;
     --destructive-foreground: 45 25% 97%;
 
-    --border: 150 15% 85%;
+    --border: 231 20% 85%;
     --input: 150 15% 90%;
     --ring: 150 45% 25%;
 
