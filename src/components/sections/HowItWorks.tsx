@@ -58,7 +58,7 @@ function StepCard({ step, index }) {
       ref={ref}
       className={`sticky flex justify-center mb-6 ${isFirstCard ? "mt-0" : ""}`}
       style={{
-        top: `${240 + index * 15}px`,
+        top: `${280 + index * 15}px`,
         zIndex: 10 + index, // Forward z-index for proper stacking
       }}
     >
