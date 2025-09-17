@@ -110,24 +110,24 @@ export default function HowItWorks() {
 
       const rect = sectionRef.current.getBoundingClientRect();
 
-      if (rect.bottom <= 1000) {
-        if (!addMargin) {
-          setAddMargin(true);
+      setAddMargin((prev) => {
+        if (rect.bottom <= 1000 && !prev) {
           console.log("good → added margin");
-        }
-      } else {
-        if (addMargin) {
-          setAddMargin(false);
+          return true;
+        } else if (rect.bottom > 1000 && prev) {
           console.log("good → removed margin");
+          return false;
         }
-      }
+        return prev; // no change
+      });
     }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [addMargin]);
+  }, []);
+
   return (
     <section className="py-20 pb-12 relative" ref={sectionRef}>
       <div className="container mx-auto px-4">
@@ -156,7 +156,7 @@ export default function HowItWorks() {
                 sectionRef={sectionRef}
               />
             ))}
-            {/* <div className="h-[40px] w-80 bg-transparent"></div> */}
+            <div className="h-[40px] w-80 bg-transparent"></div>
           </div>
         </div>
       </div>
