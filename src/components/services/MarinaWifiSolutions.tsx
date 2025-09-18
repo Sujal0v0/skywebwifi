@@ -80,7 +80,7 @@ export default function MarinaWifiSolutions() {
             {marinaServices.map((service, index) => (
               <Card
                 key={index}
-                className="border-border hover:shadow-soft transition-shadow"
+                className="border-border hover:shadow-soft transition-shadow h-full"
               >
                 <CardContent className="p-6">
                   <div className="flex flex-col items-start gap-4">

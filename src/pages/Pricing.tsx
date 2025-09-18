@@ -394,14 +394,6 @@ const Pricing = () => {
             <Button variant="hero" size="lg" asChild>
               <Link href="/contact">Request a Quote</Link>
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
-              asChild
-            >
-              <Link href="/solutions">View Solutions</Link>
-            </Button>
           </div>
         </div>
       </section>

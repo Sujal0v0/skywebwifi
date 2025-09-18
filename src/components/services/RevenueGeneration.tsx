@@ -105,12 +105,6 @@ export default function RevenueGeneration() {
               </Card>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Button variant="nature" size="lg" asChild>
-              <Link href="/revenue-calculator">See How Much You Can Earn</Link>
-            </Button>
-          </div>
         </div>
       </section>
     </>
