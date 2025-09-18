@@ -43,67 +43,71 @@ export default function RevenueGeneration() {
     },
   ];
   return (
-    <section className="py-20 bg-subtle-gradient">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Revenue Generation
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Wi-Fi That Pays for Itself
-          </p>
+    <>
+      <section className="py-20 bg-hero-gradient text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Revenue Generation
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90">
+              Fast, secure Wi-Fi that keeps guests connected and turns your
+              network into a profit center.
+            </p>
+          </div>
         </div>
+      </section>
+      <section className="py-20 bg-subtle-gradient">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              WiFi That Pays for Itself
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Turn WiFi into a profit center.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="order-2 lg:order-1">
-            <div className="grid grid-cols-1 gap-6">
-              {revenueServices.map((service, index) => (
-                <Card
-                  key={index}
-                  className="border-border hover:shadow-soft transition-shadow"
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <service.icon className="h-6 w-6 text-orange" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-2">
-                          {service.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm mb-3">
-                          {service.description}
-                        </p>
-                        <ul className="text-xs text-muted-foreground space-y-1">
-                          {service.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-center gap-2">
-                              <div className="w-1 h-1 bg-orange rounded-full" />
-                              {detail}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center mb-16">
+            {revenueServices.map((service, index) => (
+              <Card
+                key={index}
+                className="border-border hover:shadow-soft transition-shadow"
+              >
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <service.icon className="h-6 w-6 text-primary" />
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        {service.description}
+                      </p>
+                      <ul className="text-xs text-muted-foreground space-y-1">
+                        {service.details.map((detail, idx) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <div className="w-1 h-1 bg-primary rounded-full" />
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-          <div className="order-1 lg:order-2">
-            <img
-              src={"/assets/revenue-dashboard.jpg"}
-              alt="Revenue dashboard example"
-              className="w-full h-96 object-cover rounded-lg shadow-medium"
-            />
-          </div>
-        </div>
 
-        <div className="text-center mt-12">
-          <Button variant="nature" size="lg" asChild>
-            <Link href="/revenue-calculator">See How Much You Can Earn</Link>
-          </Button>
+          <div className="text-center mt-12">
+            <Button variant="nature" size="lg" asChild>
+              <Link href="/revenue-calculator">See How Much You Can Earn</Link>
+            </Button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

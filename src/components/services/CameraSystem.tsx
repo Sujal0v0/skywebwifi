@@ -43,33 +43,36 @@ export default function CameraSystem() {
     },
   ];
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Camera Systems
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Protect Your Property with Smart Cameras
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <img
-              src={"/assets/camera-systems.jpg"}
-              alt="Camera system installation"
-              className="w-full h-96 object-cover rounded-lg shadow-medium"
-            />
+    <>
+      <section className="py-20 bg-hero-gradient text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Camera Systems
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90">
+              Fast, secure Wi-Fi that keeps guests connected and turns your
+              network into a profit center.
+            </p>
           </div>
-          <div className="grid grid-cols-1 gap-6">
+        </div>
+      </section>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Protect Your Property with Smart Cameras
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center mb-16">
             {cameraServices.map((service, index) => (
               <Card
                 key={index}
                 className="border-border hover:shadow-soft transition-shadow"
               >
                 <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <service.icon className="h-6 w-6 text-primary" />
                     </div>
@@ -94,14 +97,14 @@ export default function CameraSystem() {
               </Card>
             ))}
           </div>
-        </div>
 
-        <div className="text-center mt-12">
-          <Button variant="nature" size="lg" asChild>
-            <Link href="/camera-solutions">Explore Camera Solutions</Link>
-          </Button>
+          <div className="text-center mt-12">
+            <Button variant="nature" size="lg" asChild>
+              <Link href="/camera-solutions">Explore Camera Solutions</Link>
+            </Button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
