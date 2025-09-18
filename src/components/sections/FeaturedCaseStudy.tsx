@@ -54,8 +54,8 @@ export default function FeaturedCaseStudy() {
                 src={"/case-study.png"}
                 alt="Case Study"
                 width={1400}
-                height={1400}
-                className="h-full w-full object-cover"
+                height={933}
+                className="h-full w-full object-contain"
               />
             </CardContent>
           </Card>
