@@ -55,6 +55,7 @@ const Footer = () => {
               {navigation.map((navLink, index) => {
                 return (
                   <Link
+                    key={index}
                     href={navLink.href}
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >

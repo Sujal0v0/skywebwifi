@@ -1,6 +1,6 @@
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Clock, User, Share2 } from "lucide-react";
 import { notFound } from "next/navigation";
@@ -106,7 +106,7 @@ const blogPosts = [
         <li>Check MAC filtering settings on the router</li>
       </ul>
       
-      <h2>Contact Support</h2>
+      <h2>Contact SupporSkywebt</h2>
       <p>If issues persist, contact SkyWeb Support for personalized assistance.</p>
     `,
     image: "/blogs/wifi-troubleshooting.png",
