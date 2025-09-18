@@ -43,12 +43,6 @@ const Footer = () => {
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href="#"
-                className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
             </div>
           </div>
 
