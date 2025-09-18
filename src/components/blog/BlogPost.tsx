@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -160,8 +159,8 @@ const blogPosts = [
   },
 ];
 
-export default async function BlogPost({ params }: { params: { id: string } }) {
-  const { id } = await params; // <-- fix
+export default function BlogPost({ params }: { params: { id: string } }) {
+  const { id } = params; // <-- fix
   const postId = Number(id);
   const post = blogPosts.find((p) => p.id === postId);
 

@@ -1,5 +1,8 @@
+"use client";
 import BlogPost from "@/components/blog/BlogPost";
+import { useParams } from "next/navigation";
 
-export default function Blogs({ params }: { params: { id: string } }) {
+export default function Blogs() {
+  const params = useParams<{ id: string }>();
   return <BlogPost params={params} />;
 }
