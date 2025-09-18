@@ -86,7 +86,7 @@ const Gallery = () => {
     {
       title: "Modern Recreation Center",
       category: "Amenities",
-      description: "Our fully equipped recreation center with games and WiFi",
+      description: "Our fully equipped recreation center with games and Wi-Fi",
       location: "Recreation Center",
       season: "All Seasons",
     },

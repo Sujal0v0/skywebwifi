@@ -108,7 +108,12 @@ const ResortMap = () => {
       description: "Indoor activities, games, and community events",
       hours: "6:00 AM - 11:00 PM",
       location: "Central Area",
-      services: ["Game Room", "Event Space", "WiFi Lounge", "Vending Machines"],
+      services: [
+        "Game Room",
+        "Event Space",
+        "Wi-Fi Lounge",
+        "Vending Machines",
+      ],
     },
     {
       name: "Swimming Pool Complex",

@@ -158,7 +158,7 @@ const GallerySites = () => {
     "Full electrical hookups (30/50 amp)",
     "Fresh water connection",
     "Sewer hookup",
-    "High-speed WiFi access",
+    "High-speed Wi-Fi access",
     "Picnic table",
     "Fire ring (where permitted)",
     "Level gravel pads",

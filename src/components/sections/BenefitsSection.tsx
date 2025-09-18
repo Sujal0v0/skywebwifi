@@ -1,17 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Wifi,
-  Car,
-  Waves,
-  Trees,
-  Coffee,
-  Shirt,
-  Clock,
-  ShieldCheck,
-  DollarSign,
-  Smile,
-} from "lucide-react";
+import { Wifi, Clock, ShieldCheck, DollarSign, Smile } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 const BenefitsSection = () => {
@@ -43,7 +32,7 @@ const BenefitsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            More Than Just WiFi
+            More Than Just Wi-Fi
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Complete connectivity solutions that enhance guest experience and

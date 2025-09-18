@@ -75,7 +75,7 @@ const Contact = () => {
   const bookingInfo = [
     "Service activation within 24 hours after confirmation",
     "Flexible site coverage options: campsites, cabins, pools, and rec halls",
-    "Paid and free guest WiFi tiers",
+    "Paid and free guest Wi-Fi tiers",
     "Optional camera system integration",
     "24/7 monitoring and support",
     "Custom branded login portals for guests",
@@ -88,10 +88,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Let’s Build Your WiFi & Revenue Plan
+              Let’s Build Your Wi-Fi & Revenue Plan
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-              Fast, secure WiFi that keeps guests connected and turns your
+              Fast, secure Wi-Fi that keeps guests connected and turns your
               network into a profit center.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
@@ -284,7 +284,7 @@ const Contact = () => {
                           </Select>
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="paidWifi">Enable Paid WiFi?</Label>
+                          <Label htmlFor="paidWifi">Enable Paid Wi-Fi?</Label>
                           <Select>
                             <SelectTrigger>
                               <SelectValue placeholder="Select option" />
@@ -382,8 +382,9 @@ const Contact = () => {
               {/* Booking Information */}
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl">Service InfoFAQ
-                  FAQrmation</CardTitle>
+                  <CardTitle className="text-xl">
+                    Service InfoFAQ FAQrmation
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">

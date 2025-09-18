@@ -7,13 +7,13 @@ const Testimonials = () => {
       name: "Marina Manager",
       location: "Navy Pier Marina",
       rating: 5,
-      text: "SkyWeb transformed our marina operations. Guests love the reliable WiFi, and the splash page advertising generates significant monthly revenue for us.",
+      text: "SkyWeb transformed our marina operations. Guests love the reliable Wi-Fi, and the splash page advertising generates significant monthly revenue for us.",
     },
     {
       name: "Park Owner",
       location: "Mountain View RV Resort",
       rating: 5,
-      text: "The camera system gives us peace of mind, and guests appreciate the fast WiFi. We're seeing $6K in additional monthly revenue from the branded portal.",
+      text: "The camera system gives us peace of mind, and guests appreciate the fast Wi-Fi. We're seeing $6K in additional monthly revenue from the branded portal.",
     },
     {
       name: "Operations Director",

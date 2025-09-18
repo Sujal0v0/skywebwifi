@@ -6,7 +6,7 @@ const CTASection = () => {
     <section className="py-20 bg-hero-gradient text-primary-foreground">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Let's Build Your WiFi & Revenue Plan
+          Let's Build Your Wi-Fi & Revenue Plan
         </h2>
         <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
           Join 800+ properties generating new revenue while providing

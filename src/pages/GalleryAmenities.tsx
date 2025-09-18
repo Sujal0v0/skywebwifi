@@ -38,7 +38,7 @@ const GalleryAmenities = () => {
       count: "8 Photos",
       icon: Gamepad2,
       color: "bg-orange/10",
-      facilities: ["Game Room", "WiFi Lounge", "Event Space", "Vending Area"],
+      facilities: ["Game Room", "Wi-Fi Lounge", "Event Space", "Vending Area"],
     },
     {
       title: "Camp Store & Services",
@@ -76,12 +76,12 @@ const GalleryAmenities = () => {
     {
       title: "Modern Recreation Center",
       description:
-        "Spacious community center with games, WiFi, and event hosting capabilities",
+        "Spacious community center with games, Wi-Fi, and event hosting capabilities",
       category: "Recreation",
       hours: "6:00 AM - 11:00 PM",
       season: "All Year",
       features: [
-        "High-Speed WiFi",
+        "High-Speed Wi-Fi",
         "Game Tables",
         "Event Space",
         "Climate Controlled",
@@ -183,7 +183,7 @@ const GalleryAmenities = () => {
       category: "Technology",
       description: "Stay connected with modern technology amenities",
       highlights: [
-        "High-speed fiber WiFi",
+        "High-speed fiber Wi-Fi",
         "Device charging stations",
         "Cable TV hookups",
         "Work-friendly spaces",
@@ -450,7 +450,7 @@ const GalleryAmenities = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                        <span>WiFi throughout the resort</span>
+                        <span>Wi-Fi throughout the resort</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />

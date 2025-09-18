@@ -20,10 +20,10 @@ const Services = () => {
       icon: Wifi,
       title: "Comprehensive Coverage",
       description:
-        "Reliable WiFi coverage for all areas of your campground or RV park.",
+        "Reliable Wi-Fi coverage for all areas of your campground or RV park.",
       details: [
         "Coverage for campsites, cabins, pools, and rec halls",
-        "Eliminate guest WiFi complaints",
+        "Eliminate guest Wi-Fi complaints",
         "Handle high-density usage during peak seasons",
         "Scalable solutions for properties of all sizes",
       ],
@@ -44,7 +44,7 @@ const Services = () => {
       icon: DollarSign,
       title: "Revenue Generation",
       description:
-        "Turn your WiFi into a profit center with multiple revenue streams.",
+        "Turn your Wi-Fi into a profit center with multiple revenue streams.",
       details: [
         "Paid premium access tiers",
         "Sponsorship opportunities",
@@ -59,7 +59,7 @@ const Services = () => {
       icon: Anchor,
       title: "Marina-Specific Solutions",
       description:
-        "Specialized WiFi designed for the unique challenges of marina environments.",
+        "Specialized Wi-Fi designed for the unique challenges of marina environments.",
       details: [
         "Long-range coverage across docks and shoreline",
         "Water-resistant hardware for marine environments",
@@ -83,12 +83,12 @@ const Services = () => {
       icon: Camera,
       title: "Integrated Security",
       description:
-        "Combine WiFi with security cameras for comprehensive marina protection.",
+        "Combine Wi-Fi with security cameras for comprehensive marina protection.",
       details: [
         "AI cameras for dock monitoring",
         "License plate recognition at entrance",
         "People counting for safety compliance",
-        "One network for both WiFi and security",
+        "One network for both Wi-Fi and security",
       ],
     },
   ];
@@ -200,7 +200,7 @@ const Services = () => {
       icon: Wifi,
       title: "Integrated Network Solutions",
       description:
-        "One network that powers both your WiFi and camera systems efficiently.",
+        "One network that powers both your Wi-Fi and camera systems efficiently.",
       details: [
         "Unified infrastructure",
         "Reduced equipment costs",
@@ -215,7 +215,7 @@ const Services = () => {
       icon: PlaySquare,
       title: "Site Survey & Design",
       description:
-        "A detailed site survey ensures optimal WiFi coverage for your property.",
+        "A detailed site survey ensures optimal Wi-Fi coverage for your property.",
       details: [
         "Analyze site layout and building structures",
         "Plan access point placement",
@@ -227,7 +227,7 @@ const Services = () => {
       icon: Coffee,
       title: "Professional Installation",
       description:
-        "Expert technicians install WiFi hardware for seamless connectivity.",
+        "Expert technicians install Wi-Fi hardware for seamless connectivity.",
       details: [
         "Mount access points and antennas",
         "Configure network settings",
@@ -268,7 +268,7 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              WiFi & Camera Systems for Campgrounds, RV Parks & Marinas
+              Wi-Fi & Camera Systems for Campgrounds, RV Parks & Marinas
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
               Trusted by 800+ properties — including Navy Pier Marina — SkyWeb
@@ -292,15 +292,15 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Campground & RV Park WiFi Solutions */}
+      {/* Campground & RV Park Wi-Fi Solutions */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Campground & RV Park WiFi Solutions
+              Campground & RV Park Wi-Fi Solutions
             </h2>
             <p className="text-xl text-muted-foreground">
-              WiFi That Campers Rave About — Not Complain About
+              Wi-Fi That Campers Rave About — Not Complain About
             </p>
           </div>
 
@@ -308,7 +308,7 @@ const Services = () => {
             <div>
               <img
                 src={"/assets/campground-wifi.jpg"}
-                alt="Campground WiFi solutions"
+                alt="Campground Wi-Fi solutions"
                 className="w-full h-96 object-cover rounded-lg shadow-medium"
               />
             </div>
@@ -356,12 +356,12 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Marina WiFi Solutions */}
+      {/* Marina Wi-Fi Solutions */}
       <section className="py-20 bg-subtle-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Marina WiFi Solutions
+              Marina Wi-Fi Solutions
             </h2>
             <p className="text-xl text-muted-foreground">
               Connectivity That Reaches Every Dock
@@ -406,7 +406,7 @@ const Services = () => {
             <div className="order-1 lg:order-2">
               <img
                 src={"/assets/marina-wifi.jpg"}
-                alt="Marina WiFi solutions"
+                alt="Marina Wi-Fi solutions"
                 className="w-full h-96 object-cover rounded-lg shadow-medium"
               />
             </div>
@@ -428,7 +428,7 @@ const Services = () => {
               Splash Pages & Branding
             </h2>
             <p className="text-xl text-muted-foreground">
-              Your WiFi. Your Brand.
+              Your Wi-Fi. Your Brand.
             </p>
           </div>
 
@@ -490,7 +490,7 @@ const Services = () => {
               Revenue Generation
             </h2>
             <p className="text-xl text-muted-foreground">
-              WiFi That Pays for Itself
+              Wi-Fi That Pays for Itself
             </p>
           </div>
 
@@ -665,10 +665,10 @@ const Services = () => {
       <section className="py-20 bg-nature-gradient text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let's Build Your WiFi & Revenue Plan
+            Let's Build Your Wi-Fi & Revenue Plan
           </h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Book your consultation today and start delivering reliable WiFi
+            Book your consultation today and start delivering reliable Wi-Fi
             while generating revenue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

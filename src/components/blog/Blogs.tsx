@@ -80,7 +80,7 @@ export default function BlogPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Blogs</h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-              Stay updated with the latest tips, trends, and insights on WiFi,
+              Stay updated with the latest tips, trends, and insights on Wi-Fi,
               connectivity, and revenue optimization for your property.
             </p>
           </div>

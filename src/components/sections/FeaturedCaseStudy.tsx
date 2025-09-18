@@ -13,7 +13,7 @@ export default function FeaturedCaseStudy() {
               <div>
                 <div className="text-center mb-8">
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                    Navy Pier Marina: Seamless WiFi Across 200+ Slips
+                    Navy Pier Marina: Seamless Wi-Fi Across 200+ Slips
                   </h2>
                   <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                     SkyWeb delivered full marina coverage, added dock cameras,

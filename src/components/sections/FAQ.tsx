@@ -14,7 +14,7 @@ const FAQ = () => {
     {
       question: "What kind of revenue can I expect?",
       answer:
-        "Properties typically generate $5k-$10k monthly through splash page advertising, premium WiFi tiers, and partner promotions. Revenue varies by location and traffic.",
+        "Properties typically generate $5k-$10k monthly through splash page advertising, premium Wi-Fi tiers, and partner promotions. Revenue varies by location and traffic.",
     },
     {
       question: "Do you provide ongoing support?",

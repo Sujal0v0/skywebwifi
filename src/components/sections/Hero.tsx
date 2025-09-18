@@ -18,7 +18,7 @@ interface quickFeaturesItem {
 
 const Hero = () => {
   const quickFeatures: quickFeaturesItem[] = [
-    { icon: Wifi, text: "Fast & Reliable WiFi" },
+    { icon: Wifi, text: "Fast & Reliable Wi-Fi" },
     { icon: ShieldCheck, text: "Top-Rated Security" },
     { icon: Wrench, text: "Easy Installation" },
     { icon: Globe, text: "Wide Coverage Area" },
@@ -48,12 +48,12 @@ const Hero = () => {
           {/* Main Headline */}
           {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="block bg-hero-title-gradient bg-clip-text text-transparent">
-              WiFi & Camera Systems
+              Wi-Fi & Camera Systems
             </span>
             for Campgrounds, RV Parks & Marinas
           </h1> */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="block text-secondary">WiFi & Camera Systems</span>
+            <span className="block text-secondary">Wi-Fi & Camera Systems</span>
             for Campgrounds, RV Parks & Marinas
           </h1>
 

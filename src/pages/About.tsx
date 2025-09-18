@@ -60,13 +60,13 @@ const About = () => {
       icon: Headphones,
       title: "Complete Revenue Solution",
       description:
-        "Turn WiFi from an expense into profit with branded portals, paid access tiers, and sponsor advertising.",
+        "Turn Wi-Fi from an expense into profit with branded portals, paid access tiers, and sponsor advertising.",
     },
   ];
 
   const awards = [
     "RV Park & Campground Association - Technology Excellence Award 2023",
-    "Marina Operators Association - Best WiFi Solution 2022",
+    "Marina Operators Association - Best Wi-Fi Solution 2022",
     "Hospitality Technology Network - Innovation Award 2023",
     "Customer Satisfaction - 98% Client Retention Rate",
   ];
@@ -78,7 +78,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About SkyWeb WiFi Solutions
+              About SkyWeb Wi-Fi Solutions
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
               Revolutionizing connectivity for outdoor hospitality since 2010
@@ -112,7 +112,7 @@ const About = () => {
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                 <p>
                   SkyWeb began in 2010 with a simple mission: to solve the
-                  frustrating WiFi experience at campgrounds, RV parks, and
+                  frustrating Wi-Fi experience at campgrounds, RV parks, and
                   marinas. Founded by technology experts with a passion for the
                   outdoors, we recognized that poor connectivity was impacting
                   both guest satisfaction and property revenues.
@@ -128,7 +128,7 @@ const About = () => {
                 <p>
                   Today, SkyWeb is the leading provider of connectivity
                   solutions for outdoor hospitality, helping properties
-                  transform their WiFi from a cost center into a profit
+                  transform their Wi-Fi from a cost center into a profit
                   generator while dramatically improving guest experiences and
                   reviews.
                 </p>
@@ -141,7 +141,7 @@ const About = () => {
                     Our Mission
                   </h3>
                   <p className="text-muted-foreground">
-                    To deliver reliable, high-performance WiFi and camera
+                    To deliver reliable, high-performance Wi-Fi and camera
                     solutions that enhance guest experiences, increase property
                     revenues, and provide peace of mind through exceptional
                     support and monitoring.
@@ -173,7 +173,7 @@ const About = () => {
               Why Choose SkyWeb?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover what makes us the preferred WiFi solution for 800+
+              Discover what makes us the preferred Wi-Fi solution for 800+
               properties
             </p>
           </div>
@@ -235,10 +235,10 @@ const About = () => {
       <section className="py-20 bg-nature-gradient text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Property's WiFi?
+            Ready to Transform Your Property's Wi-Fi?
           </h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Join 800+ properties that have eliminated WiFi complaints and
+            Join 800+ properties that have eliminated Wi-Fi complaints and
             created new revenue streams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

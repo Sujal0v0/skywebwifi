@@ -16,7 +16,7 @@ const SupportFAQ = () => {
     {
       question: "What kind of revenue can I expect?",
       answer:
-        "Properties typically generate $5k-$10k monthly through splash page advertising, premium WiFi tiers, and partner promotions. Revenue varies by location and traffic.",
+        "Properties typically generate $5k-$10k monthly through splash page advertising, premium Wi-Fi tiers, and partner promotions. Revenue varies by location and traffic.",
     },
     {
       question: "Do you provide ongoing support?",
@@ -115,7 +115,7 @@ const SupportFAQ = () => {
       name: "Android Tablet",
       steps: [
         "On the Home screen, tap the Android menu icon galaxy tab Menu key and go to Settings.",
-        "Scroll down and tap About Tablet then tap Status and then scroll down to view WiFi Mac address.",
+        "Scroll down and tap About Tablet then tap Status and then scroll down to view Wi-Fi Mac address.",
       ],
     },
     {
@@ -207,7 +207,7 @@ const SupportFAQ = () => {
           steps: [
             "Go to the Start menu and type CMD into the search bar.",
             "Click on Command Prompt.",
-            "Once this opens type getmac and press Enter, this will show you the WiFi MAC address of your device.",
+            "Once this opens type getmac and press Enter, this will show you the Wi-Fi MAC address of your device.",
           ],
         },
         {
@@ -226,7 +226,7 @@ const SupportFAQ = () => {
             "Press the Windows Start key to open the Start screen.",
             "Type cmd and press Enter to launch the command prompt.",
             "Type ipconfig /all into the command prompt.",
-            "The MAC address using a cabled connection is listed as Physical Address under Ethernet Adapter. For Wifi Mac Address Look for the Physical Address under Wireless Adapter.",
+            "The MAC address using a cabled connection is listed as Physical Address under Ethernet Adapter. For Wi-Fi Mac Address Look for the Physical Address under Wireless Adapter.",
             "Type exit and press Enter to exit the command prompt.",
           ],
         },
@@ -265,7 +265,7 @@ const SupportFAQ = () => {
         {
           name: "Nintendo DS",
           steps: [
-            "Go to the Nintendo WiFi Connection Setup in the game's menu.",
+            "Go to the Nintendo Wi-Fi Connection Setup in the game's menu.",
             "Select Options and System Information.",
             "The MAC Address is displayed on the top line.",
           ],
@@ -317,7 +317,7 @@ const SupportFAQ = () => {
             "Click 'Settings'.",
             "Select 'Device'.",
             "Select 'Status'.",
-            "The WiFi MAC address should be displayed.",
+            "The Wi-Fi MAC address should be displayed.",
           ],
         },
         {
@@ -326,7 +326,7 @@ const SupportFAQ = () => {
             "Click 'Settings'.",
             "Select 'About Device'.",
             "Select 'Hardware Information'.",
-            "The WiFi MAC address should be displayed.",
+            "The Wi-Fi MAC address should be displayed.",
           ],
         },
         {
@@ -334,7 +334,7 @@ const SupportFAQ = () => {
           steps: [
             "Click 'Settings'.",
             "Select 'Wireless and network'.",
-            "Select 'WiFi Settings'.",
+            "Select 'Wi-Fi Settings'.",
             "The MAC address should be displayed.",
           ],
         },
@@ -393,7 +393,7 @@ const SupportFAQ = () => {
         "On the XMB, scroll and click on 'Settings'.",
         "Scroll down and click 'Network'.",
         "Then click 'View Connection Status'.",
-        "You will see the MAC address for WiFi.",
+        "You will see the MAC address for Wi-Fi.",
       ],
     },
     {
@@ -441,7 +441,7 @@ const SupportFAQ = () => {
             "Under Basic Settings check to make sure IP Settings is on Automatic.",
             "Go right to get to the Additional Settings Tab.",
             "Go down to select Advanced Settings.",
-            "Toward the bottom of the screen you should see the Wired MAC & Wifi MAC.",
+            "Toward the bottom of the screen you should see the Wired MAC & Wi-Fi MAC.",
           ],
         },
         {
@@ -454,7 +454,7 @@ const SupportFAQ = () => {
             "Under Basic Settings, check to make sure IP Settings is on Automatic.",
             "Go right to select the Additional Settings Tab.",
             "Go down and select the second item Advanced Settings.",
-            "Toward the bottom of the screen you should see Wired MAC & WiFi MAC.",
+            "Toward the bottom of the screen you should see Wired MAC & Wi-Fi MAC.",
           ],
         },
       ],
