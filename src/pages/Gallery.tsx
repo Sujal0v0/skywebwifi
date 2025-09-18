@@ -235,7 +235,7 @@ const Gallery = () => {
       </section>
 
       {/* Featured Photos */}
-      <section className="py-20 bg-subtle-gradient">
+      <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -325,7 +325,7 @@ const Gallery = () => {
       </section>
 
       {/* Photo Submission */}
-      <section className="py-20 bg-subtle-gradient">
+      <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

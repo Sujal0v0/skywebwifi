@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function FeaturedCaseStudy() {
   return (
-    <section className="py-20 bg-subtle-gradient">
+    <section className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <Card className="border-border shadow-soft">
