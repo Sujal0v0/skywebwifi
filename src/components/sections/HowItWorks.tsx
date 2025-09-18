@@ -51,7 +51,7 @@ function StepCard({ step, index }) {
     return () => observer.disconnect();
   }, [isFirstCard]);
 
-  const scale = scrollProgress > 0.8 ? 0.9 + (1 - scrollProgress) * 0.5 : 1;
+  const scale = scrollProgress > 1 ? 0.9 + (1 - scrollProgress) * 0.5 : 1;
 
   return (
     <div
