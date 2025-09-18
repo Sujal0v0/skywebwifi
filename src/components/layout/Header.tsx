@@ -36,6 +36,19 @@ const Header = () => {
     {
       name: "Services",
       href: "/services",
+      submenu: [
+        {
+          name: "Campground & RV Park Wifi Solutions",
+          href: "/services/campground-and-rv-park-wifi-solutions",
+        },
+        {
+          name: "Marina Wi-Fi Solutions",
+          href: "/services/marina-wifi-solutions",
+        },
+        { name: "Splash Pages", href: "/services/splash-pages" },
+        { name: "Camera System", href: "/services/camera-system" },
+        { name: "Revenue Generation", href: "/services/revenue-generation" },
+      ],
     },
     {
       name: "Pricing & Packages",

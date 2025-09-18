@@ -267,27 +267,12 @@ const Services = () => {
       <section className="py-20 bg-hero-gradient text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Wi-Fi & Camera Systems for Campgrounds, RV Parks & Marinas
-            </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-              Trusted by 800+ properties — including Navy Pier Marina — SkyWeb
-              delivers reliable connectivity, advanced security, and new revenue
-              through branded portals and splash pages.
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Services</h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90">
+              We provide fast, secure, and fully managed WiFi solutions that
+              enhance guest experiences, strengthen security, and unlock new
+              revenue opportunities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="lg" asChild>
-                <Link href="/quote">Get a Free Quote</Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white/10 border-white/30 text-white hover:bg-white/20"
-                asChild
-              >
-                <Link href="/revenue">See Revenue Examples</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
