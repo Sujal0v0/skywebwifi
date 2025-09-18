@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/skywebwifi-logo-white.svg"
-                alt="Skyweb Wifi Logo"
+                alt="SkyWeb Wi-Fi Logo"
                 width={400}
                 height={400}
                 className="h-12 w-auto"
@@ -156,7 +156,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            Copyright © 2025 Skyweb Networks | Powered by Skyweb Networks
+            Copyright © 2025 SkyWeb Networks | Powered by SkyWeb Networks
           </p>
         </div>
       </div>

@@ -10,9 +10,9 @@ const blogPosts = [
     id: 1,
     title: "How to Find the MAC Address of Your Device",
     excerpt:
-      "Step-by-step instructions for locating the MAC address on any device, from smartphones to smart TVs, to connect smoothly to Skyweb Wi-Fi.",
+      "Step-by-step instructions for locating the MAC address on any device, from smartphones to smart TVs, to connect smoothly to SkyWeb Wi-Fi.",
     content: `
-      <p>Finding your device's MAC address is essential for connecting to Skyweb Wi-Fi securely and efficiently. Every device has a unique MAC address that identifies it on a network.</p>
+      <p>Finding your device's MAC address is essential for connecting to SkyWeb Wi-Fi securely and efficiently. Every device has a unique MAC address that identifies it on a network.</p>
       
       <h2>Finding MAC Address on Smartphones</h2>
       <p>For iOS devices:</p>
@@ -41,11 +41,11 @@ const blogPosts = [
       <p>Smart TVs, gaming consoles, and IoT devices often display the MAC address in network settings. Always check the device manual if needed.</p>
       
       <h2>Why It Matters</h2>
-      <p>Using the correct MAC address ensures a smooth connection, improves security, and helps manage devices on Skyweb Wi-Fi.</p>
+      <p>Using the correct MAC address ensures a smooth connection, improves security, and helps manage devices on SkyWeb Wi-Fi.</p>
     `,
     image: "/blogs/mac-address-guide.png",
     category: "Wi-Fi Tips",
-    author: "Skyweb Support Team",
+    author: "SkyWeb Support Team",
     date: "Sep 18, 2025",
     readTime: "5 min read",
     featured: true,
@@ -54,9 +54,9 @@ const blogPosts = [
     id: 2,
     title: "Boost Your Home Wi-Fi Speed: Tips and Tricks",
     excerpt:
-      "Learn practical ways to improve your Skyweb Wi-Fi performance, from router placement to channel optimization and device management.",
+      "Learn practical ways to improve your SkyWeb Wi-Fi performance, from router placement to channel optimization and device management.",
     content: `
-      <p>Slow Wi-Fi can be frustrating. Fortunately, there are several ways to boost your Skyweb Wi-Fi speed and ensure reliable connectivity for all your devices.</p>
+      <p>Slow Wi-Fi can be frustrating. Fortunately, there are several ways to boost your SkyWeb Wi-Fi speed and ensure reliable connectivity for all your devices.</p>
       
       <h2>Optimize Router Placement</h2>
       <p>Place your router in a central location, away from walls and obstructions. Avoid placing it near other electronics that may cause interference.</p>
@@ -72,18 +72,18 @@ const blogPosts = [
     `,
     image: "/blogs/wifi-speed-tips.png",
     category: "Networking",
-    author: "Skyweb Tech Expert",
+    author: "SkyWeb Tech Expert",
     date: "Sep 15, 2025",
     readTime: "7 min read",
     featured: true,
   },
   {
     id: 3,
-    title: "Troubleshooting Common Skyweb Wi-Fi Issues",
+    title: "Troubleshooting Common SkyWeb Wi-Fi Issues",
     excerpt:
-      "A comprehensive guide to fixing the most common connectivity problems with Skyweb Wi-Fi, including slow speeds, dropped connections, and device compatibility.",
+      "A comprehensive guide to fixing the most common connectivity problems with SkyWeb Wi-Fi, including slow speeds, dropped connections, and device compatibility.",
     content: `
-      <p>Even with the best Wi-Fi setup, issues may arise. Here’s a guide to troubleshoot common Skyweb Wi-Fi problems.</p>
+      <p>Even with the best Wi-Fi setup, issues may arise. Here’s a guide to troubleshoot common SkyWeb Wi-Fi problems.</p>
       
       <h2>Slow Wi-Fi</h2>
       <ul>
@@ -107,11 +107,11 @@ const blogPosts = [
       </ul>
       
       <h2>Contact Support</h2>
-      <p>If issues persist, contact Skyweb Support for personalized assistance.</p>
+      <p>If issues persist, contact SkyWeb Support for personalized assistance.</p>
     `,
     image: "/blogs/wifi-troubleshooting.png",
     category: "Support",
-    author: "Skyweb Support Team",
+    author: "SkyWeb Support Team",
     date: "Sep 12, 2025",
     readTime: "6 min read",
     featured: false,
@@ -120,7 +120,7 @@ const blogPosts = [
     id: 4,
     title: "Understanding 2.4GHz vs 5GHz Wi-Fi Networks",
     excerpt:
-      "Learn the differences between 2.4GHz and 5GHz bands, and how to choose the best option for your devices to optimize your Skyweb Wi-Fi experience.",
+      "Learn the differences between 2.4GHz and 5GHz bands, and how to choose the best option for your devices to optimize your SkyWeb Wi-Fi experience.",
     content: `
       <p>Modern Wi-Fi routers often operate on two frequency bands: 2.4GHz and 5GHz. Understanding the differences can help you choose the best network for your needs.</p>
       
@@ -153,7 +153,7 @@ const blogPosts = [
     `,
     image: "/blogs/wifi-bands-explained.png",
     category: "Networking",
-    author: "Skyweb Tech Expert",
+    author: "SkyWeb Tech Expert",
     date: "Sep 10, 2025",
     readTime: "6 min read",
     featured: false,

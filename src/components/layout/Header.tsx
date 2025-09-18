@@ -101,7 +101,7 @@ const Header = () => {
             <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/skywebwifi-logo.svg"
-                alt="Skyweb Wi-Fi Logo"
+                alt="SkyWeb Wi-Fi Logo"
                 width={400}
                 height={400}
                 className="h-12 w-auto"
