@@ -13,6 +13,8 @@ import {
   Palette,
 } from "lucide-react";
 import Link from "next/link";
+import HowItWorksSection from "@/components/services/HowItWorksServices";
+import { ServicesSection } from "@/components/services/ServiceSection";
 
 const Services = () => {
   const processSteps = [
@@ -81,59 +83,9 @@ const Services = () => {
           </div>
         </div>
       </section>
-
+      <ServicesSection />
       {/* How It Works */}
-      <section className="py-20 bg-subtle-gradient">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              How It Works
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              A Simple, Proven Process
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <Card
-                key={index}
-                className="border-border hover:shadow-soft transition-shadow"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <step.icon className="h-6 w-6 text-orange" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-3">
-                        {step.description}
-                      </p>
-                      <ul className="text-xs text-muted-foreground space-y-1">
-                        {step.details.map((detail, idx) => (
-                          <li key={idx} className="flex items-center gap-2">
-                            <div className="w-1 h-1 bg-orange rounded-full" />
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button variant="nature" size="lg" asChild>
-              <Link href="/consultation">Book a Walk-Through</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <HowItWorksSection />
 
       {/* CTA Section */}
       <section className="py-20 bg-hero-gradient text-primary-foreground">
