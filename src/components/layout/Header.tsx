@@ -68,7 +68,9 @@ const Header = () => {
   const isActive = (href: string) => pathname === href;
   const isActiveSection = (href: string, submenu?: NavItem[]) => {
     if (submenu) {
-      return submenu.some((item) => pathname === item.href);
+      return (
+        submenu.some((item) => pathname === item.href) || pathname === href
+      );
     }
     return pathname === href;
   };
@@ -155,7 +157,7 @@ const Header = () => {
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className={`block px-4 py-3 text-sm hover:bg-muted transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                            className={`block px-4 py-3 text-sm hover:bg-muted/50 transition-colors first:rounded-t-lg last:rounded-b-lg ${
                               isActive(subItem.href)
                                 ? "text-primary bg-muted"
                                 : "text-foreground"
