@@ -37,11 +37,16 @@ const Header = () => {
       name: "Services",
       href: "/services",
     },
+    {
+      name: "Pricing & Packages",
+      href: "/pricing",
+    },
     { name: "Support & FAQ", href: "/support" },
     { name: "Blogs", href: "/blog" },
     {
       name: "About",
       href: "/about",
+      submenu: [{ name: "Case Studies", href: "/case-studies" }],
     },
 
     { name: "Contact Us", href: "/contact" },
@@ -59,7 +64,7 @@ const Header = () => {
     <>
       <div className="border-b border-border/50 ">
         <div
-          className={`container hidden md:flex items-center justify-between py-2 text-sm text-muted-foreground transition-all duration-300 `}
+          className={`container hidden md:flex items-center px-4 justify-between py-2 text-sm text-muted-foreground transition-all duration-300 `}
         >
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
@@ -90,7 +95,7 @@ const Header = () => {
         </div>
       </div>
       <header className="h-20 bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-soft">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 bg-gray-50">
           {/* Main navigation */}
           <div className="flex items-center justify-between py-4">
             <Link href="/" className="flex items-center gap-3">

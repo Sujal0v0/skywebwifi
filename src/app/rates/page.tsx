@@ -1,5 +1,5 @@
 import { generateMetadata } from "@/lib/metadata";
-import Rates from "@/pages/Rates";
+import Rates from "@/pages/Pricing";
 
 export const metadata = generateMetadata("/rates");
 

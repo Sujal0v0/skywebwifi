@@ -18,7 +18,7 @@ import GalleryActivities from "./pages/GalleryActivities";
 import GalleryAmenities from "./pages/GalleryAmenities";
 import Reservations from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Rates from "./pages/Rates";
+import Rates from "./pages/Pricing";
 import CancellationPolicy from "./pages/CancellationPolicy";
 
 const queryClient = new QueryClient();

@@ -7,61 +7,210 @@ import {
   BarChart3,
   PlaySquare,
   Camera,
-  Clock,
+  Anchor,
+  Monitor,
+  DollarSign,
+  Palette,
 } from "lucide-react";
 import Link from "next/link";
 
 const Services = () => {
-  const essentialAmenities = [
+  const campgroundServices = [
     {
       icon: Wifi,
-      title: "WiFi That Campers Rave About",
+      title: "Comprehensive Coverage",
       description:
-        "SkyWeb powers 800+ campgrounds and RV parks nationwide, eliminating guest WiFi complaints and creating new revenue streams.",
+        "Reliable WiFi coverage for all areas of your campground or RV park.",
       details: [
         "Coverage for campsites, cabins, pools, and rec halls",
-        "Branded splash pages for guest login and upsells",
-        "Paid and free guest access tiers",
-        "24/7 monitoring and rapid support",
+        "Eliminate guest WiFi complaints",
+        "Handle high-density usage during peak seasons",
+        "Scalable solutions for properties of all sizes",
       ],
     },
     {
-      icon: Coffee,
-      title: "Splash Pages & Branding",
+      icon: Monitor,
+      title: "24/7 Monitoring & Support",
       description:
-        "Every guest connects through a login portal branded for your property.",
+        "Continuous monitoring to ensure optimal performance and guest satisfaction.",
       details: [
-        "Your logo, your colors, your upsells",
-        "Sponsor ads or local business promotions",
-        "Guest data capture for marketing campaigns",
-        "Visual splash page mockups",
+        "24/7 network monitoring",
+        "Rapid support for guest issues",
+        "Regular performance reports",
+        "Proactive maintenance and updates",
       ],
     },
     {
-      icon: BarChart3,
+      icon: DollarSign,
       title: "Revenue Generation",
-      description: "Turn WiFi into a profit center with paid plans and ads.",
-      details: [
-        "Paid guest plans",
-        "Sponsor ads on splash pages",
-        "Upsells for rentals/events",
-        "Real-time dashboards for tracking revenue",
-      ],
-    },
-    {
-      icon: Zap,
-      title: "Camera Systems",
       description:
-        "Protect your property with smart cameras integrated with WiFi.",
+        "Turn your WiFi into a profit center with multiple revenue streams.",
       details: [
-        "Standard Cameras: Reduce theft, improve safety",
-        "AI Cameras: License plate recognition, people counting, dock monitoring",
-        "One network powers WiFi + cameras",
+        "Paid premium access tiers",
+        "Sponsorship opportunities",
+        "Upsell campground amenities",
+        "Real-time revenue tracking dashboards",
       ],
     },
   ];
 
-  const recreationalFacilities = [
+  const marinaServices = [
+    {
+      icon: Anchor,
+      title: "Marina-Specific Solutions",
+      description:
+        "Specialized WiFi designed for the unique challenges of marina environments.",
+      details: [
+        "Long-range coverage across docks and shoreline",
+        "Water-resistant hardware for marine environments",
+        "Solutions for transient and seasonal guests",
+        "Dock monitoring integration",
+      ],
+    },
+    {
+      icon: Wifi,
+      title: "Reliable Dock-to-Dock Coverage",
+      description:
+        "Ensure boaters stay connected from every slip in your marina.",
+      details: [
+        "Eliminate dead zones along entire docks",
+        "Handle interference from water and metal structures",
+        "Support for multiple devices per vessel",
+        "Seamless roaming throughout the marina",
+      ],
+    },
+    {
+      icon: Camera,
+      title: "Integrated Security",
+      description:
+        "Combine WiFi with security cameras for comprehensive marina protection.",
+      details: [
+        "AI cameras for dock monitoring",
+        "License plate recognition at entrance",
+        "People counting for safety compliance",
+        "One network for both WiFi and security",
+      ],
+    },
+  ];
+
+  const splashPageServices = [
+    {
+      icon: Palette,
+      title: "Custom Branding",
+      description:
+        "Create a seamless brand experience from the moment guests connect.",
+      details: [
+        "Your logo, colors, and branding",
+        "Customized welcome messages",
+        "Property-specific imagery",
+        "Consistent guest experience",
+      ],
+    },
+    {
+      icon: DollarSign,
+      title: "Sponsorship Opportunities",
+      description:
+        "Generate additional revenue through local business sponsorships.",
+      details: [
+        "Local business ads on login portal",
+        "Sponsorship packages",
+        "Featured promotions",
+        "Revenue sharing options",
+      ],
+    },
+    {
+      icon: BarChart3,
+      title: "Marketing Integration",
+      description:
+        "Capture guest data and promote your property's amenities and events.",
+      details: [
+        "Guest data capture for marketing",
+        "Promote rentals and activities",
+        "Event announcements",
+        "Email collection for newsletters",
+      ],
+    },
+  ];
+
+  const revenueServices = [
+    {
+      icon: DollarSign,
+      title: "Paid Access Tiers",
+      description:
+        "Offer different levels of service to meet various guest needs and budgets.",
+      details: [
+        "Free basic access with limitations",
+        "Premium high-speed options",
+        "Daily, weekly, and seasonal passes",
+        "Family and group packages",
+      ],
+    },
+    {
+      icon: Monitor,
+      title: "Real-Time Analytics",
+      description:
+        "Track performance and revenue with comprehensive dashboards.",
+      details: [
+        "Real-time usage statistics",
+        "Revenue tracking by source",
+        "Guest adoption rates",
+        "Performance metrics",
+      ],
+    },
+    {
+      icon: Zap,
+      title: "Upsell Opportunities",
+      description:
+        "Promote your property's amenities and services directly through the portal.",
+      details: [
+        "RV storage promotions",
+        "Boat rental offerings",
+        "Event and activity bookings",
+        "Camp store specials",
+      ],
+    },
+  ];
+
+  const cameraServices = [
+    {
+      icon: Camera,
+      title: "Standard Security Cameras",
+      description:
+        "Basic surveillance to protect your property and provide peace of mind.",
+      details: [
+        "Theft deterrence and evidence collection",
+        "Remote property monitoring",
+        "Safety and liability protection",
+        "24/7 recording options",
+      ],
+    },
+    {
+      icon: Zap,
+      title: "AI-Powered Camera Systems",
+      description:
+        "Advanced analytics for smarter security and business insights.",
+      details: [
+        "License plate recognition",
+        "People counting for capacity management",
+        "Dock monitoring for marina safety",
+        "Motion detection and alerts",
+      ],
+    },
+    {
+      icon: Wifi,
+      title: "Integrated Network Solutions",
+      description:
+        "One network that powers both your WiFi and camera systems efficiently.",
+      details: [
+        "Unified infrastructure",
+        "Reduced equipment costs",
+        "Simplified management",
+        "Scalable for future expansion",
+      ],
+    },
+  ];
+
+  const processSteps = [
     {
       icon: PlaySquare,
       title: "Site Survey & Design",
@@ -87,7 +236,7 @@ const Services = () => {
       ],
     },
     {
-      icon: BarChart3,
+      icon: Palette,
       title: "Branded Portal Setup",
       description:
         "Set up a login portal that reflects your property brand and offers upsells.",
@@ -99,7 +248,7 @@ const Services = () => {
       ],
     },
     {
-      icon: Wifi,
+      icon: Monitor,
       title: "24/7 Monitoring & Revenue Tracking",
       description:
         "Continuous monitoring to maintain service quality and track revenue.",
@@ -109,35 +258,6 @@ const Services = () => {
         "Track revenue from paid access and ads",
         "Analytics and reporting",
       ],
-    },
-  ];
-
-  const onsiteServices = [
-    {
-      icon: Wifi,
-      title: "SkyWeb WiFi Solutions",
-      description:
-        "Reliable WiFi coverage for campgrounds, RV parks, and marinas.",
-      details: [
-        "Eliminate guest complaints",
-        "Create new revenue streams",
-        "Branded splash pages",
-        "24/7 monitoring",
-      ],
-      hours: "Available 24/7",
-    },
-    {
-      icon: Camera,
-      title: "Smart Camera Systems",
-      description:
-        "Integrate cameras with your WiFi network for enhanced security.",
-      details: [
-        "Standard & AI cameras",
-        "License plate recognition",
-        "People counting and dock monitoring",
-        "One network powers WiFi + cameras",
-      ],
-      hours: "Available 24/7",
     },
   ];
 
@@ -172,7 +292,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Essential Services */}
+      {/* Campground & RV Park WiFi Solutions */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -180,22 +300,20 @@ const Services = () => {
               Campground & RV Park WiFi Solutions
             </h2>
             <p className="text-xl text-muted-foreground">
-              SkyWeb powers 800+ campgrounds and RV parks nationwide,
-              eliminating guest WiFi complaints and creating new revenue
-              streams.
+              WiFi That Campers Rave About — Not Complain About
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <img
-                src={"/assets/amenities.jpg"}
-                alt="Campground WiFi solutions and hardware"
+                src={"/assets/campground-wifi.jpg"}
+                alt="Campground WiFi solutions"
                 className="w-full h-96 object-cover rounded-lg shadow-medium"
               />
             </div>
             <div className="grid grid-cols-1 gap-6">
-              {essentialAmenities.map((amenity, index) => (
+              {campgroundServices.map((service, index) => (
                 <Card
                   key={index}
                   className="border-border hover:shadow-soft transition-shadow"
@@ -203,17 +321,17 @@ const Services = () => {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <amenity.icon className="h-6 w-6 text-primary" />
+                        <service.icon className="h-6 w-6 text-primary" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-2">
-                          {amenity.title}
+                          {service.title}
                         </h3>
                         <p className="text-muted-foreground text-sm mb-3">
-                          {amenity.description}
+                          {service.description}
                         </p>
                         <ul className="text-xs text-muted-foreground space-y-1">
-                          {amenity.details.map((detail, idx) => (
+                          {service.details.map((detail, idx) => (
                             <li key={idx} className="flex items-center gap-2">
                               <div className="w-1 h-1 bg-primary rounded-full" />
                               {detail}
@@ -227,6 +345,266 @@ const Services = () => {
               ))}
             </div>
           </div>
+
+          <div className="text-center mt-12">
+            <Button variant="nature" size="lg" asChild>
+              <Link href="/campground-case-studies">
+                See Campground Case Studies
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Marina WiFi Solutions */}
+      <section className="py-20 bg-subtle-gradient">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Marina WiFi Solutions
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Connectivity That Reaches Every Dock
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="order-2 lg:order-1">
+              <div className="grid grid-cols-1 gap-6">
+                {marinaServices.map((service, index) => (
+                  <Card
+                    key={index}
+                    className="border-border hover:shadow-soft transition-shadow"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <service.icon className="h-6 w-6 text-orange" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-foreground mb-2">
+                            {service.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm mb-3">
+                            {service.description}
+                          </p>
+                          <ul className="text-xs text-muted-foreground space-y-1">
+                            {service.details.map((detail, idx) => (
+                              <li key={idx} className="flex items-center gap-2">
+                                <div className="w-1 h-1 bg-orange rounded-full" />
+                                {detail}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <img
+                src={"/assets/marina-wifi.jpg"}
+                alt="Marina WiFi solutions"
+                className="w-full h-96 object-cover rounded-lg shadow-medium"
+              />
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="nature" size="lg" asChild>
+              <Link href="/marina-case-studies">See Marina Case Studies</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Splash Pages & Branding */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Splash Pages & Branding
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Your WiFi. Your Brand.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <img
+                src={"/assets/splash-pages.jpg"}
+                alt="Splash page examples"
+                className="w-full h-96 object-cover rounded-lg shadow-medium"
+              />
+            </div>
+            <div className="grid grid-cols-1 gap-6">
+              {splashPageServices.map((service, index) => (
+                <Card
+                  key={index}
+                  className="border-border hover:shadow-soft transition-shadow"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <service.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-2">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          {service.description}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          {service.details.map((detail, idx) => (
+                            <li key={idx} className="flex items-center gap-2">
+                              <div className="w-1 h-1 bg-primary rounded-full" />
+                              {detail}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="nature" size="lg" asChild>
+              <Link href="/splash-demos">View Splash Page Demos</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Revenue Generation */}
+      <section className="py-20 bg-subtle-gradient">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Revenue Generation
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              WiFi That Pays for Itself
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="order-2 lg:order-1">
+              <div className="grid grid-cols-1 gap-6">
+                {revenueServices.map((service, index) => (
+                  <Card
+                    key={index}
+                    className="border-border hover:shadow-soft transition-shadow"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <service.icon className="h-6 w-6 text-orange" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-foreground mb-2">
+                            {service.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm mb-3">
+                            {service.description}
+                          </p>
+                          <ul className="text-xs text-muted-foreground space-y-1">
+                            {service.details.map((detail, idx) => (
+                              <li key={idx} className="flex items-center gap-2">
+                                <div className="w-1 h-1 bg-orange rounded-full" />
+                                {detail}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <img
+                src={"/assets/revenue-dashboard.jpg"}
+                alt="Revenue dashboard example"
+                className="w-full h-96 object-cover rounded-lg shadow-medium"
+              />
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="nature" size="lg" asChild>
+              <Link href="/revenue-calculator">See How Much You Can Earn</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Camera Systems */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Camera Systems
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Protect Your Property with Smart Cameras
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <img
+                src={"/assets/camera-systems.jpg"}
+                alt="Camera system installation"
+                className="w-full h-96 object-cover rounded-lg shadow-medium"
+              />
+            </div>
+            <div className="grid grid-cols-1 gap-6">
+              {cameraServices.map((service, index) => (
+                <Card
+                  key={index}
+                  className="border-border hover:shadow-soft transition-shadow"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <service.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-2">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          {service.description}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          {service.details.map((detail, idx) => (
+                            <li key={idx} className="flex items-center gap-2">
+                              <div className="w-1 h-1 bg-primary rounded-full" />
+                              {detail}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="nature" size="lg" asChild>
+              <Link href="/camera-solutions">Explore Camera Solutions</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -238,13 +616,12 @@ const Services = () => {
               How It Works
             </h2>
             <p className="text-xl text-muted-foreground">
-              A simple, proven process to deliver reliable WiFi and generate
-              revenue.
+              A Simple, Proven Process
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {recreationalFacilities.map((step, index) => (
+            {processSteps.map((step, index) => (
               <Card
                 key={index}
                 className="border-border hover:shadow-soft transition-shadow"
@@ -275,56 +652,11 @@ const Services = () => {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* On-site Services */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              On-site Services
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Additional conveniences to enhance your property.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {onsiteServices.map((service, index) => (
-              <Card
-                key={index}
-                className="border-border hover:shadow-soft transition-shadow"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <service.icon className="h-6 w-6 text-accent" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-foreground mb-2">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-2">
-                        {service.description}
-                      </p>
-                      <div className="inline-flex items-center gap-2 bg-accent/10 px-3 py-1 rounded-full text-xs font-medium text-accent">
-                        <Clock className="h-3 w-3" />
-                        {service.hours}
-                      </div>
-                    </div>
-                  </div>
-                  <ul className="text-xs text-muted-foreground space-y-1">
-                    {service.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-accent rounded-full" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="text-center mt-12">
+            <Button variant="nature" size="lg" asChild>
+              <Link href="/consultation">Book a Walk-Through</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -333,7 +665,7 @@ const Services = () => {
       <section className="py-20 bg-nature-gradient text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let’s Build Your WiFi & Revenue Plan
+            Let's Build Your WiFi & Revenue Plan
           </h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
             Book your consultation today and start delivering reliable WiFi

@@ -148,7 +148,7 @@ const About = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-l-4 border-l-orange">
+              <Card className="border-l-4 border-l-secondary">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-2">
                     Our Vision

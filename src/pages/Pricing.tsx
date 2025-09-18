@@ -18,113 +18,110 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const Rates = () => {
+const Pricing = () => {
   const baseRates = [
     {
-      type: "Daily Rate",
-      standard: "$45",
-      premium: "$55",
-      description: "Perfect for weekend getaways and short trips",
+      type: "100 Sites",
+      standard: "$1,500/month",
+      premium: "$3,000/month",
+      description: "Perfect for small to medium properties",
       includes: [
-        "Full hookups",
-        "WiFi access",
-        "Amenity access",
-        "Picnic table & fire ring",
+        "Full system installation",
+        "Network management",
+        "Customer support",
+        "Basic maintenance",
       ],
     },
     {
-      type: "Weekly Rate",
-      standard: "$280",
-      premium: "$350",
-      description: "Great value for extended stays (7 nights)",
+      type: "200 Sites",
+      standard: "$3,500/month",
+      premium: "$7,000/month",
+      description: "Ideal for larger properties and resorts",
       includes: [
-        "All daily inclusions",
-        "10% discount",
-        "Late checkout available",
-        "Complimentary firewood",
+        "All 100-site features",
+        "Enhanced bandwidth",
+        "Priority support",
+        "Advanced analytics",
       ],
     },
     {
-      type: "Monthly Rate",
-      standard: "$1,000",
-      premium: "$1,300",
-      description: "Best value for long-term guests (30 nights)",
+      type: "300+ Sites",
+      standard: "$8,000/month",
+      premium: "$10,000+/month",
+      description: "Enterprise solution for largest properties",
       includes: [
-        "All weekly inclusions",
-        "25% discount",
-        "Reserved parking",
-        "Priority booking for next month",
+        "All 200-site features",
+        "Dedicated account manager",
+        "Custom branding",
+        "24/7 premium support",
       ],
     },
   ];
 
-  const seasonalRates = [
+  const ownershipOptions = [
     {
-      season: "Peak Season",
-      months: "June - August",
-      multiplier: "Standard Rates",
-      description: "Summer months with perfect weather",
-      color: "bg-orange/10 border-orange/20",
-    },
-    {
-      season: "High Season",
-      months: "April - May, September - October",
-      multiplier: "-15% Off",
-      description: "Beautiful spring and fall weather",
+      option: "Ownership",
+      description: "Own your system, keep 100% of revenue",
+      icon: Crown,
       color: "bg-primary/10 border-primary/20",
     },
     {
-      season: "Low Season",
-      months: "November - March",
-      multiplier: "-30% Off",
-      description: "Peaceful winter camping experience",
-      color: "bg-accent/10 border-accent/20",
+      option: "Hosted",
+      description: "No upfront cost, revenue-sharing model",
+      icon: Users,
+      color: "bg-primary/10 border-primary/20",
+    },
+    {
+      option: "Financing",
+      description: "Spread payments while earning revenue",
+      icon: Percent,
+      color: "bg-primary/10 border-primary/20",
     },
   ];
 
   const extraFees = [
     {
-      item: "Additional Guests (over 4)",
-      fee: "$5/night per person",
-      icon: Users,
+      item: "Custom Branding",
+      fee: "One-time $500",
+      icon: Star,
     },
-    { item: "Pet Fee", fee: "$5/night per pet", icon: PawPrint },
-    { item: "50 Amp Electrical", fee: "$3/night extra", icon: Zap },
-    { item: "Late Check-out", fee: "$25 (after 2 PM)", icon: Calendar },
+    { item: "Premium Support", fee: "$200/month", icon: Zap },
+    { item: "Advanced Analytics", fee: "$150/month", icon: Calendar },
+    { item: "Extended Warranty", fee: "$100/month", icon: Gift },
   ];
 
   const promotions = [
     {
-      title: "First Time Guest Special",
-      discount: "20% Off",
-      description: "First-time visitors get 20% off their first stay",
-      code: "WELCOME20",
+      title: "First Time Installation",
+      discount: "15% Off",
+      description: "New customers get 15% off initial setup",
+      code: "WELCOME15",
       icon: Gift,
-      color: "bg-orange/10",
+      color: "bg-primary/10",
     },
     {
-      title: "Extended Stay Discount",
-      discount: "15% Off",
-      description: "Stay 14+ nights and save an additional 15%",
-      code: "EXTENDED15",
+      title: "Multi-Property Discount",
+      discount: "20% Off",
+      description: "Manage multiple properties? Save 20%",
+      code: "MULTI20",
+      icon: Crown,
+      color: "bg-primary/10",
+    },
+    {
+      title: "Annual Contract",
+      discount: "10% Off",
+      description: "Sign a yearly contract for 10% savings",
+      code: "ANNUAL10",
       icon: Calendar,
       color: "bg-primary/10",
     },
     {
-      title: "Loyalty Program",
-      discount: "Up to 25% Off",
-      description: "Return guests earn points for discounts",
-      code: "LOYALTY",
-      icon: Crown,
-      color: "bg-accent/10",
-    },
-    {
-      title: "Military & Senior Discount",
-      discount: "10% Off",
-      description: "Year-round discount for military and seniors 65+",
-      code: "HERO10",
+      title: "Non-Profit Organization",
+      discount: "25% Off",
+      description: "Special pricing for non-profit organizations",
+      code: "NONPROFIT25",
       icon: Star,
-      color: "bg-muted",
+      color: "bg-primary/10",
     },
   ];
 
@@ -135,15 +132,15 @@ const Rates = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Rates & Pricing
+              Pricing & Packages
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-              Competitive rates for premium RV camping experiences
+              Flexible Options for Every Property
             </p>
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
               <Percent className="h-4 w-4" />
               <span>
-                Multiple discounts available • Book direct for best rates
+                Multiple options available • Buy, finance, or let us host
               </span>
             </div>
           </div>
@@ -155,10 +152,11 @@ const Rates = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Base Rates
+              Revenue Potential
             </h2>
             <p className="text-xl text-muted-foreground">
-              Choose from standard or premium sites based on your preferences
+              Choose from standard or premium packages based on your property
+              size
             </p>
           </div>
 
@@ -176,7 +174,7 @@ const Rates = () => {
                   <div className="text-center space-y-2">
                     <div className="space-y-1">
                       <p className="text-sm text-muted-foreground">
-                        Standard Sites
+                        Standard Package
                       </p>
                       <p className="text-3xl font-bold text-primary">
                         {rate.standard}
@@ -184,9 +182,9 @@ const Rates = () => {
                     </div>
                     <div className="space-y-1">
                       <p className="text-sm text-muted-foreground">
-                        Premium Sites
+                        Premium Package
                       </p>
-                      <p className="text-2xl font-semibold text-orange">
+                      <p className="text-2xl font-semibold text-secondary">
                         {rate.premium}
                       </p>
                     </div>
@@ -213,57 +211,43 @@ const Rates = () => {
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-4">
-              Premium sites feature lake views, extra space, and enhanced
-              privacy
+              Premium packages include enhanced features and priority support
             </p>
             <Button variant="nature" size="lg" asChild>
-              <Link href="/reservations">Check Availability</Link>
+              <Link href="/contact">Request a Custom Quote</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Seasonal Pricing */}
+      {/* Ownership Options */}
       <section className="py-20 bg-subtle-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Seasonal Pricing
+              Ownership Options
             </h2>
             <p className="text-xl text-muted-foreground">
-              Rates vary by season to offer you the best value year-round
+              You choose how you want to work with us
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {seasonalRates.map((season, index) => (
-              <Card key={index} className={`border-2 ${season.color}`}>
+            {ownershipOptions.map((option, index) => (
+              <Card key={index} className={`border-2 ${option.color}`}>
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    {season.season}
-                  </h3>
-                  <p className="text-lg font-semibold text-primary mb-2">
-                    {season.months}
-                  </p>
-                  <div className="text-2xl font-bold text-orange mb-3">
-                    {season.multiplier}
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <option.icon className="h-6 w-6 text-primary" />
                   </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">
+                    {option.option}
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    {season.description}
+                    {option.description}
                   </p>
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="mt-12 text-center bg-muted/50 p-6 rounded-lg max-w-4xl mx-auto">
-            <h3 className="text-lg font-semibold mb-2">
-              Seasonal Rate Example
-            </h3>
-            <p className="text-muted-foreground">
-              Peak season daily rate: $45 (standard) | High season: $38 | Low
-              season: $32
-            </p>
           </div>
         </div>
       </section>
@@ -273,10 +257,10 @@ const Rates = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Additional Fees
+              Additional Services
             </h2>
             <p className="text-xl text-muted-foreground">
-              Transparent pricing for optional services and add-ons
+              Enhance your package with these optional services
             </p>
           </div>
 
@@ -287,8 +271,8 @@ const Rates = () => {
                 className="border-border hover:shadow-soft transition-shadow"
               >
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <fee.icon className="h-6 w-6 text-orange" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <fee.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">
                     {fee.item}
@@ -309,7 +293,7 @@ const Rates = () => {
               Promotions & Discounts
             </h2>
             <p className="text-xl text-muted-foreground">
-              Save more with our special offers and loyalty programs
+              Save more with our special offers
             </p>
           </div>
 
@@ -329,7 +313,7 @@ const Rates = () => {
                         <h3 className="font-semibold text-foreground">
                           {promo.title}
                         </h3>
-                        <span className="bg-orange text-orange-foreground px-2 py-1 rounded text-sm font-bold">
+                        <span className="bg-secondary text-white px-2 py-1 rounded text-sm font-bold">
                           {promo.discount}
                         </span>
                       </div>
@@ -356,24 +340,21 @@ const Rates = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="border-primary/20">
               <CardHeader>
-                <CardTitle className="text-xl">
-                  Important Pricing Information
-                </CardTitle>
+                <CardTitle className="text-xl">Important Information</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-sm text-muted-foreground">
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                     <span>
-                      All rates are per night and include up to 4 guests per
-                      site
+                      All pricing estimates based on standard configurations
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                     <span>
-                      Rates subject to availability and may change during
-                      special events
+                      Final pricing may vary based on property specifics and
+                      requirements
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
@@ -385,16 +366,12 @@ const Rates = () => {
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                     <span>
-                      Holiday and special event rates may apply (Memorial Day,
-                      4th of July, Labor Day)
+                      Installation fees may apply for custom configurations
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                    <span>
-                      California state taxes and local fees additional where
-                      applicable
-                    </span>
+                    <span>Taxes additional where applicable</span>
                   </li>
                 </ul>
               </CardContent>
@@ -407,15 +384,15 @@ const Rates = () => {
       <section className="py-20 bg-warm-gradient text-orange-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Book Your Stay?
+            Ready to Get Started?
           </h2>
           <p className="text-xl mb-8 text-orange-foreground/90 max-w-2xl mx-auto">
-            Reserve your site today and take advantage of our competitive rates
-            and special offers.
+            Contact us today for a custom quote tailored to your property's
+            specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
-              <Link href="/reservations">Book Now</Link>
+              <Link href="/contact">Request a Quote</Link>
             </Button>
             <Button
               variant="outline"
@@ -423,7 +400,7 @@ const Rates = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link href="/cancellation">Cancellation Policy</Link>
+              <Link href="/solutions">View Solutions</Link>
             </Button>
           </div>
         </div>
@@ -432,4 +409,4 @@ const Rates = () => {
   );
 };
 
-export default Rates;
+export default Pricing;
