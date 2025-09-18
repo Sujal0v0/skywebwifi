@@ -12,9 +12,9 @@ import Link from "next/link";
 const services = [
   {
     id: "campground",
-    title: "WiFi That Campers Rave About — Not Complain About",
+    title: "Wi-Fi That Campers Rave About — Not Complain About",
     description:
-      "SkyWeb powers 800+ campgrounds and RV parks nationwide, eliminating guest WiFi complaints and creating new revenue streams. Coverage for campsites, cabins, pools, and rec halls.",
+      "SkyWeb powers 800+ campgrounds and RV parks nationwide, eliminating guest Wi-Fi complaints and creating new revenue streams. Coverage for campsites, cabins, pools, and rec halls.",
     icon: Wifi,
     href: "/services/campground-and-rv-park-wifi-solutions",
   },
@@ -22,13 +22,13 @@ const services = [
     id: "marina",
     title: "Connectivity That Reaches Every Dock",
     description:
-      "Marinas face unique WiFi challenges — long docks, water interference, transient guests. SkyWeb solves them with proven designs like Navy Pier Marina.",
+      "Marinas face unique Wi-Fi challenges — long docks, water interference, transient guests. SkyWeb solves them with proven designs like Navy Pier Marina.",
     icon: Anchor,
     href: "/services/marina-wifi-solutions",
   },
   {
     id: "branding",
-    title: "Your WiFi. Your Brand.",
+    title: "Your Wi-Fi. Your Brand.",
     description:
       "Every guest connects through a login portal branded for your property with your logo, colors, and upsells. Sponsor ads and guest data capture included.",
     icon: Palette,
@@ -36,9 +36,9 @@ const services = [
   },
   {
     id: "revenue",
-    title: "WiFi That Pays for Itself",
+    title: "Wi-Fi That Pays for Itself",
     description:
-      "Turn WiFi into a profit center with paid guest plans, sponsor ads on splash pages, upsells for rentals/events, and real-time revenue dashboards.",
+      "Turn Wi-Fi into a profit center with paid guest plans, sponsor ads on splash pages, upsells for rentals/events, and real-time revenue dashboards.",
     icon: DollarSign,
     href: "/services/revenue-generation",
   },

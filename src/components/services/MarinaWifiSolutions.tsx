@@ -48,7 +48,7 @@ export default function MarinaWifiSolutions() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Marina WiFi Solutions
+              Marina Wi-Fi Solutions
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90">
               Fast, secure Wi-Fi that keeps guests connected and turns your
@@ -64,7 +64,7 @@ export default function MarinaWifiSolutions() {
               Connectivity That Reaches Every Dock
             </h2>
             <p className="text-xl text-muted-foreground">
-              Marinas face unique WiFi challenges — long docks, water
+              Marinas face unique Wi-Fi challenges — long docks, water
               interference, transient guests. SkyWeb solves them with proven
               designs like Navy Pier Marina.
             </p>

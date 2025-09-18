@@ -76,7 +76,7 @@ const Services = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Services</h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90">
-              We provide fast, secure, and fully managed WiFi solutions that
+              We provide fast, secure, and fully managed Wi-Fi solutions that
               enhance guest experiences, strengthen security, and unlock new
               revenue opportunities.
             </p>

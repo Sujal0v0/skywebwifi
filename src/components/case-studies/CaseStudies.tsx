@@ -7,20 +7,20 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       title: "Navy Pier Marina",
-      description: "Dock-wide WiFi + cameras, new ad revenue",
+      description: "Dock-wide Wi-Fi + cameras, new ad revenue",
       result: "200+ slips, splash page ads, 80% fewer complaints",
       icon: <CheckCircle className="h-5 w-5 text-primary" />,
     },
     {
       title: "Wekiva Falls RV Resort",
-      description: "$8,200/month WiFi revenue",
+      description: "$8,200/month Wi-Fi revenue",
       result: "85% adoption, ROI in <12 months, complaints down 70%",
       icon: <TrendingUp className="h-5 w-5 text-primary" />,
     },
     {
       title: "Evergreen Pines Campground",
       description: "$6,500/month revenue, upsells boosted 15%",
-      result: "Complaints down 70%, Good Sam 'A' rating for WiFi",
+      result: "Complaints down 70%, Good Sam 'A' rating for Wi-Fi",
       icon: <Star className="h-5 w-5 text-primary" />,
     },
     {
@@ -36,14 +36,14 @@ const CaseStudies = () => {
       title: "Wekiva Falls RV Resort",
       highlight: "The owner made Sky Web an offer...",
       content:
-        "He said he would pay us $5000.00 to put our infrastructure in and if it worked after 2 weeks, he would write us a check for the remaining amount. SKYWEB TOOK THE CHALLENGE! After 2 weeks he was ecstatic and wrote us our check. Complaints disappeared and Good Sam's gave them an 'A' rating on their WiFi.",
+        "He said he would pay us $5000.00 to put our infrastructure in and if it worked after 2 weeks, he would write us a check for the remaining amount. SKYWEB TOOK THE CHALLENGE! After 2 weeks he was ecstatic and wrote us our check. Complaints disappeared and Good Sam's gave them an 'A' rating on their Wi-Fi.",
       category: "RV Resort WIFI",
     },
     {
       title: "Port St. Lucie RV Resort",
       highlight: "Hurricane resilience...",
       content:
-        "With Hurricane Irma arriving soon we evacuated our RV Park. Before leaving we powered down our access points and disconnected the SkyWeb Gateway and took it with us as we evacuated also. Upon our return we reconnected the Gateway to our ISP and powered it up. Within minutes our WiFi system was back in full service. We could not be happier with SkyWeb.",
+        "With Hurricane Irma arriving soon we evacuated our RV Park. Before leaving we powered down our access points and disconnected the SkyWeb Gateway and took it with us as we evacuated also. Upon our return we reconnected the Gateway to our ISP and powered it up. Within minutes our Wi-Fi system was back in full service. We could not be happier with SkyWeb.",
       category: "Camping WIFI",
     },
     {
@@ -79,7 +79,7 @@ const CaseStudies = () => {
             From Complaints to Compliments
           </h2>
           <p className="text-xl text-muted-foreground">
-            Discover how SkyWeb transformed these properties with reliable WiFi
+            Discover how SkyWeb transformed these properties with reliable Wi-Fi
             solutions
           </p>
         </div>

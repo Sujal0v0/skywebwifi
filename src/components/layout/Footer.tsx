@@ -26,9 +26,9 @@ const Footer = () => {
               />
             </div>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Trusted by 800+ properties — including Navy Pier Marina — SkyWeb
-              delivers reliable connectivity, advanced security, and new revenue
-              through branded portals and splash pages
+              Trusted by 800+ properties, SkyWeb delivers reliable connectivity,
+              advanced security, and new revenue through branded portals and
+              splash pages
             </p>
             <div className="flex gap-4">
               <a

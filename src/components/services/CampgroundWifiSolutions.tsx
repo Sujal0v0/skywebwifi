@@ -78,7 +78,7 @@ export default function CampgroundWifiSolutions() {
             </h2>
             <p className="text-xl text-muted-foreground">
               SkyWeb powers 800+ campgrounds and RV parks nationwide,
-              eliminating guest WiFi complaints and creating new revenue
+              eliminating guest Wi-Fi complaints and creating new revenue
               streams.
             </p>
           </div>
