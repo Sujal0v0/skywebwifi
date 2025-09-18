@@ -56,7 +56,7 @@ All colors MUST be HSL.
       135deg,
       hsl(221 60% 53%) 0%,
       hsl(210 55% 30%) 50%,
-      hsl(231 64% 33%) 100%
+      hsl(231, 53%, 43%) 100%
     );
 
     --hero-title-gradient: linear-gradient(
@@ -73,8 +73,8 @@ All colors MUST be HSL.
     );
     --warm-gradient: linear-gradient(
       135deg,
-      hsl(359 85% 50%) 0%,
-      hsl(360 95% 50%) 100%
+      hsl(359, 53%, 40%) 0%,
+      hsl(6, 73%, 48%) 100%
     );
     --subtle-gradient: linear-gradient(
       180deg,
