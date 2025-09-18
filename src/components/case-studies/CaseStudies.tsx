@@ -119,7 +119,7 @@ const CaseStudies = () => {
 
         {/* Detailed Case Studies */}
         <div className="mb-16">
-          <div className="mx-auto grid grid-cols-2 gap-6">
+          <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             {detailedCaseStudies.map((study, index) => (
               <Card
                 key={index}
