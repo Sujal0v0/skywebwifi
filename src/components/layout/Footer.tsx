@@ -1,3 +1,4 @@
+"use client";
 import {
   Phone,
   Mail,
@@ -8,6 +9,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { navigation } from "./Header";
 
 const Footer = () => {
   return (
@@ -50,42 +52,16 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <nav className="flex flex-col gap-2">
-              <Link
-                href="/"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/amenities"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
-                Amenities
-              </Link>
-              <Link
-                href="/rates"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
-                Rates & Pricing
-              </Link>
-              <Link
-                href="/reservations"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
-                Reservations
-              </Link>
-              <Link
-                href="/about/rules"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
-                Park Rules
-              </Link>
+              {navigation.map((navLink, index) => {
+                return (
+                  <Link
+                    href={navLink.href}
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  >
+                    {navLink.name}
+                  </Link>
+                );
+              })}
             </nav>
           </div>
 

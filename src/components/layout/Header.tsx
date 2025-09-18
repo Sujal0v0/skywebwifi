@@ -12,6 +12,40 @@ type NavItem = {
   submenu?: { name: string; href: string }[];
 };
 
+export const navigation: NavItem[] = [
+  { name: "Home", href: "/" },
+  {
+    name: "Services",
+    href: "/services",
+    submenu: [
+      {
+        name: "Campground & RV Park Wifi Solutions",
+        href: "/services/campground-and-rv-park-wifi-solutions",
+      },
+      {
+        name: "Marina Wi-Fi Solutions",
+        href: "/services/marina-wifi-solutions",
+      },
+      { name: "Splash Pages", href: "/services/splash-pages" },
+      { name: "Camera System", href: "/services/camera-system" },
+      { name: "Revenue Generation", href: "/services/revenue-generation" },
+    ],
+  },
+  {
+    name: "Pricing & Packages",
+    href: "/pricing",
+  },
+  { name: "Support & FAQ", href: "/support" },
+  { name: "Blogs", href: "/blog" },
+  {
+    name: "About",
+    href: "/about",
+    submenu: [{ name: "Case Studies", href: "/case-studies" }],
+  },
+
+  { name: "Contact Us", href: "/contact" },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -30,40 +64,6 @@ const Header = () => {
       }, 400) // delay in ms before submenu closes
     );
   };
-
-  const navigation: NavItem[] = [
-    { name: "Home", href: "/" },
-    {
-      name: "Services",
-      href: "/services",
-      submenu: [
-        {
-          name: "Campground & RV Park Wifi Solutions",
-          href: "/services/campground-and-rv-park-wifi-solutions",
-        },
-        {
-          name: "Marina Wi-Fi Solutions",
-          href: "/services/marina-wifi-solutions",
-        },
-        { name: "Splash Pages", href: "/services/splash-pages" },
-        { name: "Camera System", href: "/services/camera-system" },
-        { name: "Revenue Generation", href: "/services/revenue-generation" },
-      ],
-    },
-    {
-      name: "Pricing & Packages",
-      href: "/pricing",
-    },
-    { name: "Support & FAQ", href: "/support" },
-    { name: "Blogs", href: "/blog" },
-    {
-      name: "About",
-      href: "/about",
-      submenu: [{ name: "Case Studies", href: "/case-studies" }],
-    },
-
-    { name: "Contact Us", href: "/contact" },
-  ];
 
   const isActive = (href: string) => pathname === href;
   const isActiveSection = (href: string, submenu?: NavItem[]) => {
