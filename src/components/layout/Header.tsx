@@ -109,8 +109,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <header className="h-20 bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-soft">
-        <div className="container mx-auto px-4 bg-gray-50">
+      <header className="h-20 bg-background backdrop-blur-sm sticky top-0 z-50 shadow-lg">
+        <div className="container mx-auto px-4 bg-background">
           {/* Main navigation */}
           <div className="flex items-center justify-between py-4">
             <Link href="/" className="flex items-center gap-3">

@@ -28,7 +28,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-subtle-gradient">
+    <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -71,7 +71,7 @@ const BenefitsSection = () => {
             ))}
             <div className="col-span-1 md:col-span-2 text-center mx-auto mt-4">
               <Button variant="nature" size="lg" asChild>
-                <Link href="/amenities">See Case Studies</Link>
+                <Link href="/case-studies">See Case Studies</Link>
               </Button>
             </div>
           </div>

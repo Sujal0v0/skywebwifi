@@ -37,16 +37,12 @@ export default function FeaturedCaseStudy() {
                     <div className="text-3xl font-bold text-primary mb-2">
                       $8K
                     </div>
-                    <div className="text-muted-foreground">
-                      Monthly Ad Revenue
-                    </div>
+                    <div className="text-muted-foreground">Monthly Revenue</div>
                   </div>
                 </div>
                 <div className="text-center">
                   <Button variant="default" size="lg" asChild>
-                    <Link href="/case-studies/navy-pier-marina">
-                      Read the Full Story
-                    </Link>
+                    <Link href="/case-studies">Read the Full Story</Link>
                   </Button>
                 </div>
               </div>
