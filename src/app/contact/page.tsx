@@ -1,8 +1,8 @@
 import { generateMetadata } from "@/lib/metadata";
-import Reservations from "@/pages/Reservations";
+import Contact from "@/pages/Contact";
 
 export const metadata = generateMetadata("/reservations");
 
 export default function Page() {
-  return <Reservations />;
+  return <Contact />;
 }

@@ -40,7 +40,7 @@ import {
   Zap,
 } from "lucide-react";
 
-const Reservations = () => {
+const Contact = () => {
   const [checkIn, setCheckIn] = useState<Date>();
   const [checkOut, setCheckOut] = useState<Date>();
   const { toast } = useToast();
@@ -88,19 +88,19 @@ const Reservations = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Reserve Your SkyWeb WiFi & Camera Service
+              Let’s Build Your WiFi & Revenue Plan
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-              Deliver fast, secure WiFi to your guests while generating new
-              revenue streams
+              Fast, secure WiFi that keeps guests connected and turns your
+              network into a profit center.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 bg-white/10 p-4 rounded-lg"
+                  className="flex items-start gap-3 bg-white/10 p-4 rounded-lg"
                 >
-                  <feature.icon className="h-6 w-6 text-orange" />
+                  <feature.icon className="h-8 w-8 text-secondary/90" />
                   <div className="text-left">
                     <p className="font-semibold text-sm">{feature.title}</p>
                     <p className="text-xs text-primary-foreground/80">
@@ -337,7 +337,26 @@ const Reservations = () => {
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-semibold">(555) 987-6543</p>
+                      <a
+                        href="tel:9897717515"
+                        className="hover:text-blue-800 transition-all duration-150 ease-in-out font-semibold"
+                      >
+                        989-771-7515
+                      </a>
+                      <p className="text-sm text-muted-foreground">
+                        Mon-Fri 8 AM - 8 PM
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 text-primary" />
+                    <div>
+                      <a
+                        href="tel:9897928681"
+                        className="hover:text-blue-800 transition-all duration-150 ease-in-out font-semibold"
+                      >
+                        989-792-8681
+                      </a>
                       <p className="text-sm text-muted-foreground">
                         Mon-Fri 8 AM - 8 PM
                       </p>
@@ -346,7 +365,12 @@ const Reservations = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-semibold">support@skywebwifi.com</p>
+                      <a
+                        href="mailto:support@skywebwifi.com"
+                        className="hover:text-blue-800 transition-all duration-150 ease-in-out font-semibold"
+                      >
+                        support@skywebwifi.com
+                      </a>
                       <p className="text-sm text-muted-foreground">
                         Response within 24 hours
                       </p>
@@ -358,7 +382,8 @@ const Reservations = () => {
               {/* Booking Information */}
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl">Service Information</CardTitle>
+                  <CardTitle className="text-xl">Service InfoFAQ
+                  FAQrmation</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
@@ -375,11 +400,11 @@ const Reservations = () => {
                 </CardContent>
               </Card>
 
-              {/* Group Reservations */}
-              <Card className="border-orange/20">
+              {/* Group Contact */}
+              <Card className="border-secondary/20">
                 <CardHeader>
                   <CardTitle className="text-xl flex items-center gap-2">
-                    <Users className="h-5 w-5 text-orange" />
+                    <Users className="h-5 w-5 text-secondary" />
                     Group Installations
                   </CardTitle>
                 </CardHeader>
@@ -462,4 +487,4 @@ const Reservations = () => {
   );
 };
 
-export default Reservations;
+export default Contact;

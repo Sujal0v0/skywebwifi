@@ -1,8 +1,8 @@
 import { generateMetadata } from "@/lib/metadata";
-import Amenities from "@/pages/Amenities";
+import Services from "@/pages/Services";
 
 export const metadata = generateMetadata("/amenities");
 
 export default function Page() {
-  return <Amenities />;
+  return <Services />;
 }

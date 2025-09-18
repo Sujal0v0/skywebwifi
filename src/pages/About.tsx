@@ -201,7 +201,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Awards & Certifications */}
+      {/* Awards & Certifications
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -229,7 +229,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <ProofSection />
       {/* CTA Section */}
       <section className="py-20 bg-nature-gradient text-primary-foreground">

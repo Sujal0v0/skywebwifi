@@ -34,9 +34,9 @@ All colors MUST be HSL.
     --muted-foreground: 231 30% 40%;
 
     /* Warm Accent Colors */
-    --accent: 25 65% 60%;
-    --accent-foreground: 45 25% 97%;
-    --accent-light: 25 55% 70%;
+    --accent: 0 70% 55%;
+    --accent-foreground: 0 20% 98%;
+    --accent-light: 0 65% 65%;
 
     /* Sunset Orange for CTAs */
     --orange: 15 85% 55%;
@@ -109,81 +109,6 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    /* Dark mode with forest night theme */
-    --background: 150 25% 8%;
-    --foreground: 45 25% 95%;
-
-    --card: 150 20% 12%;
-    --card-foreground: 45 25% 95%;
-
-    --popover: 150 20% 12%;
-    --popover-foreground: 45 25% 95%;
-
-    --primary: 150 35% 45%;
-    --primary-foreground: 150 25% 8%;
-    --primary-light: 150 30% 55%;
-    --primary-dark: 150 45% 25%;
-
-    --secondary: 150 15% 20%;
-    --secondary-foreground: 45 25% 95%;
-
-    --muted: 150 10% 18%;
-    --muted-foreground: 150 8% 65%;
-
-    --accent: 25 60% 55%;
-    --accent-foreground: 150 25% 8%;
-    --accent-light: 25 50% 65%;
-
-    --orange: 15 80% 50%;
-    --orange-foreground: 150 25% 8%;
-    --orange-light: 15 70% 60%;
-
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 45 25% 95%;
-
-    --border: 150 15% 25%;
-    --input: 150 15% 20%;
-    --ring: 150 35% 45%;
-
-    /* Dark gradients */
-    --hero-gradient: linear-gradient(
-      135deg,
-      hsl(150 35% 15%) 0%,
-      hsl(180 25% 20%) 50%,
-      hsl(25 60% 40%) 100%
-    );
-    --nature-gradient: linear-gradient(
-      180deg,
-      hsl(150 25% 25%) 0%,
-      hsl(150 15% 35%) 100%
-    );
-    --warm-gradient: linear-gradient(
-      135deg,
-      hsl(25 60% 40%) 0%,
-      hsl(15 80% 35%) 100%
-    );
-    --subtle-gradient: linear-gradient(
-      180deg,
-      hsl(150 20% 12%) 0%,
-      hsl(150 10% 18%) 100%
-    );
-
-    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-    --shadow-medium: 0 8px 30px -6px hsl(0 0% 0% / 0.4);
-    --shadow-strong: 0 15px 40px -10px hsl(0 0% 0% / 0.5);
-    --shadow-warm: 0 8px 25px -8px hsl(25 60% 40% / 0.4);
-
-    --sidebar-background: 150 25% 10%;
-    --sidebar-foreground: 45 25% 95%;
-    --sidebar-primary: 150 35% 45%;
-    --sidebar-primary-foreground: 150 25% 8%;
-    --sidebar-accent: 150 15% 18%;
-    --sidebar-accent-foreground: 45 25% 95%;
-    --sidebar-border: 150 15% 20%;
-    --sidebar-ring: 150 35% 45%;
   }
 }
 

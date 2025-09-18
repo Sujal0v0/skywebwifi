@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const Amenities = () => {
+const Services = () => {
   const essentialAmenities = [
     {
       icon: Wifi,
@@ -172,7 +172,7 @@ const Amenities = () => {
         </div>
       </section>
 
-      {/* Essential Amenities */}
+      {/* Essential Services */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -358,4 +358,4 @@ const Amenities = () => {
   );
 };
 
-export default Amenities;
+export default Services;

@@ -34,15 +34,16 @@ const Header = () => {
   const navigation: NavItem[] = [
     { name: "Home", href: "/" },
     {
+      name: "Services",
+      href: "/services",
+    },
+    { name: "Support & FAQ", href: "/support" },
+    {
       name: "About",
       href: "/about",
     },
-    {
-      name: "Services",
-      href: "/amenities",
-    },
 
-    { name: "Contact Us", href: "/reservations" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   const isActive = (href: string) => pathname === href;
