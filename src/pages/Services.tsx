@@ -99,7 +99,7 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="lg" asChild>
-              <Link href="/quote">Get a Free Quote</Link>
+              <Link href="/contact">Get a Free Quote</Link>
             </Button>
             <Button
               variant="outline"
@@ -107,7 +107,7 @@ const Services = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link href="/demo">Book a Demo</Link>
+              <Link href="/contact">Book a Demo</Link>
             </Button>
           </div>
         </div>

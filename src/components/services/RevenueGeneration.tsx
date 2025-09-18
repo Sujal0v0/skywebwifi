@@ -44,8 +44,13 @@ export default function RevenueGeneration() {
   ];
   return (
     <>
-      <section className="py-20 bg-hero-gradient text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section
+        className="relative py-20 text-primary-foreground bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/services/revenue.jpg')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Revenue Generation

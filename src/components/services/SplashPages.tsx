@@ -2,6 +2,7 @@ import { BarChart3, DollarSign, Palette } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function SplashPage() {
   const splashPageServices = [
@@ -101,11 +102,76 @@ export default function SplashPage() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+      <section>
+        <div className="container mx-auto px-4">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Branded Guest Login Portal
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Engage your guests through a fully branded login portal tailored
+              for your property.
+            </p>
+          </div>
 
-          <div className="text-center mt-12">
-            <Button variant="nature" size="lg" asChild>
-              <Link href="/splash-demos">View Splash Page Demos</Link>
-            </Button>
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 items-center">
+            {/* Text Content */}
+            <div className="space-y-6 text-foreground max-w-xl">
+              <p className="text-lg md:text-xl">
+                Welcome your guests with a{" "}
+                <span className="font-bold text-primary">
+                  fully branded login portal
+                </span>
+                , tailor-made for your campground. Guests can sign up instantly
+                and enjoy Wi-Fi with no wait time !
+              </p>
+
+              <ul className="list-inside space-y-3 text-lg">
+                <li>
+                  <span className="font-semibold text-primary">
+                    Campground Logo:
+                  </span>{" "}
+                  Showcase your brand for a professional experience
+                </li>
+                <li>
+                  <span className="font-semibold text-primary">
+                    Free Access:
+                  </span>{" "}
+                  Quick and seamless connectivity for your guests
+                </li>
+                <li>
+                  <span className="font-semibold text-primary">
+                    Paid Access:
+                  </span>{" "}
+                  Monetize your network effortlessly
+                </li>
+                <li>
+                  <span className="font-semibold text-primary">
+                    Fully Branded Login Pages:
+                  </span>{" "}
+                  Maintain your property's unique identity
+                </li>
+                <li>
+                  <span className="font-semibold text-primary">
+                    Customer Support:
+                  </span>{" "}
+                  Dedicated assistance whenever needed
+                </li>
+              </ul>
+            </div>
+
+            {/* Image */}
+            <Image
+              src={"/services/customer-portal.png"}
+              alt="Customer Portal"
+              width={700}
+              height={700}
+              className="rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </section>

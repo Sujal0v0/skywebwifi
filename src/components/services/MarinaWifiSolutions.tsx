@@ -44,8 +44,14 @@ export default function MarinaWifiSolutions() {
   ];
   return (
     <>
-      <section className="py-20 bg-hero-gradient text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section
+        className="relative py-20 text-primary-foreground bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/services/marina-wifi-solutions.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Marina Wi-Fi Solutions
@@ -101,12 +107,6 @@ export default function MarinaWifiSolutions() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button variant="nature" size="lg" asChild>
-              <Link href="/marina-case-studies">See Marina Case Studies</Link>
-            </Button>
           </div>
         </div>
       </section>

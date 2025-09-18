@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { DollarSign, Layout, Monitor, Wifi } from "lucide-react";
+import CampgroundSection from "./campground/CampgroundSection";
 
 export default function CampgroundWifiSolutions() {
   const campgroundServices = [
@@ -57,8 +58,15 @@ export default function CampgroundWifiSolutions() {
 
   return (
     <>
-      <section className="py-20 bg-hero-gradient text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section
+        className="relative py-20 text-primary-foreground bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/services/campground.jpg')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Campground & RV Park Wi-Fi Solutions
@@ -70,6 +78,7 @@ export default function CampgroundWifiSolutions() {
           </div>
         </div>
       </section>
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -83,7 +92,7 @@ export default function CampgroundWifiSolutions() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             {campgroundServices.map((service, index) => (
               <Card
                 key={index}
@@ -115,16 +124,9 @@ export default function CampgroundWifiSolutions() {
               </Card>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Button variant="nature" size="lg" asChild>
-              <Link href="/campground-case-studies">
-                See Campground Case Studies
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
+      <CampgroundSection />
     </>
   );
 }
