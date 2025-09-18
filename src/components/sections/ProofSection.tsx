@@ -7,6 +7,27 @@ export default function ProofSection() {
     { name: "Navy Pier Marina", image: "/clients/navy-pier-marina-logo.png" },
     { name: "Thousand Trails", image: "/clients/thousand-trails-logo.png" },
     { name: "KOA", image: "/clients/koa.png" },
+    {
+      name: "Advanced Outdoor Solution",
+      image: "/clients/advanced-outdoor-solutions-logo.png",
+    },
+    {
+      name: "Arizona Association of RV Parks and Campgrounds",
+      image: "/clients/arizona-association-logo.webp",
+    },
+    { name: "ARVC", image: "/clients/arvc-logo.png" },
+    { name: "DNR", image: "/clients/dnr-logo.png" },
+    {
+      name: "Jelly Park Camp Resort",
+      image: "/clients/jelly-park-camp-resort-logo.png",
+    },
+    { name: "Michigan ARVC", image: "/clients/mi-arvc-logo.png" },
+    {
+      name: "M.Shapiro Real Estate Group",
+      image: "/clients/mshapiro-logo.avif",
+    },
+    { name: "NCA", image: "/clients/nca-logo.png" },
+    { name: "Taco Members", image: "/clients/tacomembers-logo.png" },
   ];
   return (
     <section className="py-16 bg-background">
@@ -19,7 +40,7 @@ export default function ProofSection() {
             Trusted by industry leaders for quality and reliability.
           </p>
           {/* Client Logos */}
-          <div className="flex justify-center items-center gap-12 my-12 flex-wrap">
+          <div className="flex justify-center items-center gap-x-12 gap-y-16 my-12 flex-wrap">
             {clients.map((client, index) => {
               return (
                 <Image
@@ -28,7 +49,7 @@ export default function ProofSection() {
                   alt={client.name}
                   width={300}
                   height={300}
-                  className="h-40 w-auto"
+                  className="h-32 w-auto"
                 />
               );
             })}

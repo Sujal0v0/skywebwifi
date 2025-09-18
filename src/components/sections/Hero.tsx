@@ -53,7 +53,10 @@ const Hero = () => {
             for Campgrounds, RV Parks & Marinas
           </h1> */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="block text-secondary">Wi-Fi & Camera Systems</span>
+            <span className="block text-primary relative">
+              <div className="absolute inset-0 w-full h-full bg-white/40 blur-lg"></div>
+              <span className="relative">Wi-Fi & Camera Systems</span>
+            </span>
             for Campgrounds, RV Parks & Marinas
           </h1>
 
