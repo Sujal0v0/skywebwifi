@@ -31,10 +31,6 @@ export const navigation: NavItem[] = [
       { name: "Revenue Generation", href: "/services/revenue-generation" },
     ],
   },
-  {
-    name: "Pricing & Packages",
-    href: "/pricing",
-  },
   { name: "Support & FAQ", href: "/support" },
   { name: "Blogs", href: "/blog" },
   {
