@@ -107,7 +107,7 @@ const Services = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <Link href="/contact">Book a Demo</Link>
+              <Link href="/about">About Our Company</Link>
             </Button>
           </div>
         </div>

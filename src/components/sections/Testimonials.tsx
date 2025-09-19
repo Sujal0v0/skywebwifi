@@ -1,25 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Marina Manager",
-      location: "Navy Pier Marina",
+      name: "Leanne Thompson",
+      image: "/testimonials/leanne-thompson.jpg",
+      location: "Spencer RV Park",
       rating: 5,
-      text: "SkyWeb transformed our marina operations. Guests love the reliable Wi-Fi, and the splash page advertising generates significant monthly revenue for us.",
+      text: "Tenants are finally happy!!! I’ve got several comments already today!! Thank you John! ",
     },
     {
-      name: "Park Owner",
-      location: "Mountain View RV Resort",
+      name: "Jimmy Berkatis",
+      image: "/testimonials/jimmy-berkatis.jpg",
+      location: "Homestead RV park",
       rating: 5,
-      text: "The camera system gives us peace of mind, and guests appreciate the fast Wi-Fi. We're seeing $6K in additional monthly revenue from the branded portal.",
+      text: "John did an awesome job top to bottom. Politeness with conversations, return calls promptly very meticulous in fieldwork and setting of a component and explains things thoroughly. You’ve got a good man here. Dittos with Dan, they make a great team",
     },
     {
-      name: "Operations Director",
-      location: "Lakeside Campground",
+      name: "James Brook",
+      image: "/testimonials/james-brook.jpg",
+      location: "",
       rating: 5,
-      text: "Professional installation, excellent support, and the monitoring dashboard helps us stay on top of everything. Our guest satisfaction scores have improved dramatically.",
+      text: "I called SkyWeb and spoke with Ryan. He was friendly, explained everything so I could understand without any pressure to purchase. He offered all assistance for connection of devices since I was planning on purchasing for multiple devices. Ryan is very professional, kind, attentive to my questions and concerns, and he is a great asset to your company. Thank you.",
     },
   ];
 
@@ -52,6 +56,13 @@ const Testimonials = () => {
                   "{testimonial.text}"
                 </p>
                 <div>
+                  <Image
+                    src={testimonial.image}
+                    width={100}
+                    height={100}
+                    alt={testimonial.name}
+                    className="h-10 w-10 rounded-full mb-2"
+                  />
                   <p className="font-semibold text-foreground">
                     {testimonial.name}
                   </p>

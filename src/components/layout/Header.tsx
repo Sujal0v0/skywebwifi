@@ -181,7 +181,7 @@ const Header = () => {
             {/* CTA Button */}
             <div className="hidden md:block">
               <Button variant="cta" asChild>
-                <Link href="/reservations">Book Now</Link>
+                <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
 
@@ -237,11 +237,8 @@ const Header = () => {
                   </div>
                 ))}
                 <Button variant="cta" asChild className="mt-2">
-                  <Link
-                    href="/reservations"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Book Now
+                  <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                    Get a Quote
                   </Link>
                 </Button>
               </nav>

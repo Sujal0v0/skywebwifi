@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { DollarSign, Layout, Monitor, Wifi } from "lucide-react";
 import CampgroundSection from "./campground/CampgroundSection";
+import CTASection from "../sections/CTASection";
 
 export default function CampgroundWifiSolutions() {
   const campgroundServices = [
@@ -127,6 +128,7 @@ export default function CampgroundWifiSolutions() {
         </div>
       </section>
       <CampgroundSection />
+      <CTASection />
     </>
   );
 }

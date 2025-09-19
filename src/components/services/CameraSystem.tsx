@@ -1,3 +1,4 @@
+import CTASection from "../sections/CTASection";
 import { Card, CardContent } from "../ui/card";
 import AICamera from "./camera-system/AICamera";
 import LiveView from "./camera-system/LiveView";
@@ -185,6 +186,7 @@ export default function CameraSystem() {
         </div>
       </section>
       <AICamera />
+      <CTASection />
     </>
   );
 }

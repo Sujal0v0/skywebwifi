@@ -232,7 +232,7 @@ const About = () => {
       </section> */}
       <ProofSection />
       {/* CTA Section */}
-      <section className="py-20 bg-nature-gradient text-primary-foreground">
+      <section className="py-20 bg-hero-gradient text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Property's Wi-Fi?
@@ -243,7 +243,7 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="lg" asChild>
-              <Link href="/reservations">Get a Free Quote</Link>
+              <Link href="/contact">Get a Free Quote</Link>
             </Button>
             <Button
               variant="outline"

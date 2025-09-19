@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, TrendingUp, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import CTASection from "../sections/CTASection";
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -76,22 +77,23 @@ const CaseStudies = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 bg-background">
-      <div className="container mx-auto px-4">
-        {/* Header Section */}
+    <>
+      <div className="min-h-screen py-20 bg-background">
+        <div className="container mx-auto px-4">
+          {/* Header Section */}
 
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            From Complaints to Compliments
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Discover how SkyWeb transformed these properties with reliable Wi-Fi
-            solutions
-          </p>
-        </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              From Complaints to Compliments
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Discover how SkyWeb transformed these properties with reliable
+              Wi-Fi solutions
+            </p>
+          </div>
 
-        {/* Summary Tiles */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          {/* Summary Tiles */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {caseStudies.map((study, index) => (
             <Card
               key={index}
@@ -117,41 +119,45 @@ const CaseStudies = () => {
           ))}
         </div> */}
 
-        {/* Detailed Case Studies */}
-        <div className="mb-16">
-          <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            {detailedCaseStudies.map((study, index) => (
-              <Card
-                key={index}
-                className="border-border hover:shadow-soft transition-shadow"
-              >
-                <Image
-                  src={study.image}
-                  alt={study.title}
-                  width={800}
-                  height={800}
-                  className="w-full aspect-video"
-                />
-                <CardContent className="p-8">
-                  <div className="flex flex-col md:flex-row md:items-start gap-6">
-                    <div className="flex-1">
-                      <div className="inline-flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full text-xs font-medium text-primary mb-4">
-                        {study.category}
+          {/* Detailed Case Studies */}
+          <div className="mb-16">
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+              {detailedCaseStudies.map((study, index) => (
+                <Card
+                  key={index}
+                  className="border-border hover:shadow-soft transition-shadow"
+                >
+                  <Image
+                    src={study.image}
+                    alt={study.title}
+                    width={800}
+                    height={800}
+                    className="w-full aspect-video"
+                  />
+                  <CardContent className="p-8">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="flex-1">
+                        <div className="inline-flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full text-xs font-medium text-primary mb-4">
+                          {study.category}
+                        </div>
+                        <h3 className="text-2xl font-bold mb-3">
+                          {study.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-4 italic">
+                          {study.highlight}
+                        </p>
+                        <p className="text-foreground">{study.content}</p>
                       </div>
-                      <h3 className="text-2xl font-bold mb-3">{study.title}</h3>
-                      <p className="text-muted-foreground mb-4 italic">
-                        {study.highlight}
-                      </p>
-                      <p className="text-foreground">{study.content}</p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <CTASection />
+    </>
   );
 };
 

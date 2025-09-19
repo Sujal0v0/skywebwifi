@@ -3,6 +3,7 @@ import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import CTASection from "../sections/CTASection";
 
 export default function SplashPage() {
   const splashPageServices = [
@@ -175,6 +176,7 @@ export default function SplashPage() {
           </div>
         </div>
       </section>
+      <CTASection />
     </>
   );
 }

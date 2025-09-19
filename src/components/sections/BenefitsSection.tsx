@@ -57,15 +57,19 @@ const BenefitsSection = () => {
                 className="border-border hover:shadow-soft transition-shadow"
               >
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-3">
+                  <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                       <amenity.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-lg text-foreground">
-                      {amenity.title}
-                    </h3>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-md text-foreground">
+                        {amenity.title}
+                      </h3>{" "}
+                      <p className="text-muted-foreground">
+                        {amenity.description}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-muted-foreground">{amenity.description}</p>
                 </CardContent>
               </Card>
             ))}

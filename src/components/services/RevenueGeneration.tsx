@@ -2,6 +2,7 @@ import { DollarSign, Monitor, Zap } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import CTASection from "../sections/CTASection";
 
 export default function RevenueGeneration() {
   const revenueServices = [
@@ -107,6 +108,7 @@ export default function RevenueGeneration() {
           </div>
         </div>
       </section>
+      <CTASection />
     </>
   );
 }
