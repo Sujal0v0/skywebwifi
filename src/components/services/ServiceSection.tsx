@@ -26,14 +26,14 @@ const services = [
     icon: Anchor,
     href: "/services/marina-wifi-solutions",
   },
-  {
-    id: "branding",
-    title: "Your Wi-Fi. Your Brand.",
-    description:
-      "Every guest connects through a login portal branded for your property with your logo, colors, and upsells. Sponsor ads and guest data capture included.",
-    icon: Palette,
-    href: "/services/splash-pages",
-  },
+  // {
+  //   id: "branding",
+  //   title: "Your Wi-Fi. Your Brand.",
+  //   description:
+  //     "Every guest connects through a login portal branded for your property with your logo, colors, and upsells. Sponsor ads and guest data capture included.",
+  //   icon: Palette,
+  //   href: "/services/splash-pages",
+  // },
   {
     id: "revenue",
     title: "Wi-Fi That Pays for Itself",
