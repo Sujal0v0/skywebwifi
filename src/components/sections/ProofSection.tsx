@@ -82,7 +82,7 @@ export default function ProofSection() {
                     <Users className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-lg text-foreground">
-                    800+ Properties Served
+                    600+ Properties Served
                   </h3>
                 </div>
               </CardContent>

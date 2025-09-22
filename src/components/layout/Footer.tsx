@@ -28,7 +28,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Trusted by 800+ properties, SkyWeb delivers reliable connectivity,
+              Trusted by 600+ properties, SkyWeb delivers reliable connectivity,
               advanced security, and new revenue through branded portals and
               splash pages
             </p>

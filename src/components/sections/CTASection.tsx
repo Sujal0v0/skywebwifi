@@ -9,7 +9,7 @@ const CTASection = () => {
           Let's Build Your Wi-Fi & Revenue Plan
         </h2>
         <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-          Join 800+ properties generating new revenue while providing
+          Join 600+ properties generating new revenue while providing
           exceptional guest experiences.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

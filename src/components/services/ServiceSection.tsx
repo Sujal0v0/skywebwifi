@@ -14,7 +14,7 @@ const services = [
     id: "campground",
     title: "Wi-Fi That Campers Rave About — Not Complain About",
     description:
-      "SkyWeb powers 800+ campgrounds and RV parks nationwide, eliminating guest Wi-Fi complaints and creating new revenue streams. Coverage for campsites, cabins, pools, and rec halls.",
+      "SkyWeb powers 600+ campgrounds and RV parks nationwide, eliminating guest Wi-Fi complaints and creating new revenue streams. Coverage for campsites, cabins, pools, and rec halls.",
     icon: Wifi,
     href: "/services/campground-and-rv-park-wifi-solutions",
   },

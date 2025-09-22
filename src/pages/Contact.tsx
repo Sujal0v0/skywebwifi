@@ -68,7 +68,7 @@ const Contact = () => {
     {
       icon: Star,
       title: "Reliable Service",
-      description: "Trusted by 800+ campgrounds and RV parks nationwide",
+      description: "Trusted by 600+ campgrounds and RV parks nationwide",
     },
   ];
 

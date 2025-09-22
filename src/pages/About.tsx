@@ -28,7 +28,7 @@ const About = () => {
   const features = [
     {
       icon: Users,
-      title: "800+ Properties Served",
+      title: "600+ Properties Served",
       description:
         "Trusted by campgrounds, RV parks, and marinas nationwide with proven results and satisfied clients.",
     },
@@ -90,7 +90,7 @@ const About = () => {
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
                 <MapPin className="h-4 w-4" />
-                <span>800+ Properties Served</span>
+                <span>600+ Properties Served</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
                 <Award className="h-4 w-4" />
@@ -173,7 +173,7 @@ const About = () => {
               Why Choose SkyWeb?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover what makes us the preferred Wi-Fi solution for 800+
+              Discover what makes us the preferred Wi-Fi solution for 600+
               properties
             </p>
           </div>
@@ -238,7 +238,7 @@ const About = () => {
             Ready to Transform Your Property's Wi-Fi?
           </h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Join 800+ properties that have eliminated Wi-Fi complaints and
+            Join 600+ properties that have eliminated Wi-Fi complaints and
             created new revenue streams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -87,7 +87,7 @@ export default function CampgroundWifiSolutions() {
               Wi-Fi That Campers Rave About — Not Complain About
             </h2>
             <p className="text-xl text-muted-foreground">
-              SkyWeb powers 800+ campgrounds and RV parks nationwide,
+              SkyWeb powers 600+ campgrounds and RV parks nationwide,
               eliminating guest Wi-Fi complaints and creating new revenue
               streams.
             </p>

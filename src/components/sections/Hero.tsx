@@ -42,7 +42,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="hidden md:inline-flex items-center gap-2 bg-primary/70 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Circle className="h-2 w-2 fill-current" />
-            <span>Trusted by 800+ Campgrounds</span>
+            <span>Trusted by 600+ Campgrounds</span>
           </div>
 
           {/* Main Headline */}
@@ -61,7 +61,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
-            Trusted by 800+ properties — including Navy Pier Marina — SkyWeb
+            Trusted by 600+ properties — SkyWeb
             delivers reliable connectivity, advanced security, and new revenue
             through branded portals and splash pages.
           </p>
@@ -71,7 +71,7 @@ const Hero = () => {
             <Button variant="hero" size="lg" asChild>
               <Link href="/contact">Get a Free Quote</Link>
             </Button>
-            <Button
+            {/* <Button
               variant="outline"
               size="lg"
               className="bg-black/10 border-white/30 text-white hover:bg-white/20 "
@@ -80,7 +80,7 @@ const Hero = () => {
               <Link href="/services/revenue-generation">
                 See Revenue Examples
               </Link>
-            </Button>
+            </Button> */}
           </div>
 
           {/* Quick Features */}
