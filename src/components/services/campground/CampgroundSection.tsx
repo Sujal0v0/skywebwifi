@@ -51,7 +51,7 @@ export default function CampgroundSection() {
               <Image
                 width={700}
                 height={700}
-                src="/services/FairPointMarinaHMoverlay.jpg"
+                src="/services/park-map.png"
                 alt="Advanced Wi-Fi Infrastructure"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
