@@ -101,11 +101,10 @@ export default function CameraSystem() {
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Camera Systems
+              Smart AI Cameras for a Safer, Smarter World
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90">
-              Fast, secure Wi-Fi that keeps guests connected and turns your
-              network into a profit center.
+              See everything. Recognize anything. Respond instantly. Our AI-powered camera system transforms surveillance into actionable intelligence — keeping your property, people, and operations secure.
             </p>
           </div>
         </div>
